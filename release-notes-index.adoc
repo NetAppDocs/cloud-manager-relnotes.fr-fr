@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: release-notes-index.html 
+---
+= Index des notes de version
+:toc: macro
+:hardbreaks:
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Affichez l'ensemble des notes de version pour chaque service.
+
+
+
+== Stockage
+
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/whats-new.html["Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/whats-new.html["Amazon FSX pour ONTAP"^]
+* Cloud Volumes ONTAP
++
+** https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notes de version pour Cloud Volumes ONTAP"^]
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Notes de version pour la gestion Cloud Volumes ONTAP dans BlueXP"^]
+
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-service-gcp/whats-new.html["Cloud Volumes Service pour Google Cloud"^]
+* https://docs.netapp.com/us-en/cloud-manager-e-series/whats-new.html["Systèmes E-Series"^]
+* https://docs.netapp.com/us-en/cloud-manager-kubernetes/whats-new.html["Clusters Kubernetes"^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/whats-new.html["Clusters ONTAP sur site"^]
+* https://docs.netapp.com/us-en/cloud-manager-storagegrid/whats-new.html["StorageGRID"^]
+
+
+
+
+== Services de données
+
+* https://docs.netapp.com/us-en/cloud-manager-app-template/whats-new.html["AppTemplate"^]
+* https://docs.netapp.com/us-en/cloud-manager-backup-restore/whats-new.html["La sauvegarde dans le cloud"^]
+* https://docs.netapp.com/us-en/cloud-manager-data-sense/whats-new.html["Sens des données cloud"^]
+* https://docs.netapp.com/us-en/cloud-manager-sync/whats-new.html["Cloud Sync"^]
+* https://docs.netapp.com/us-en/cloud-manager-tiering/whats-new.html["Tiering dans le cloud"^]
+* https://docs.netapp.com/us-en/cloud-manager-compute/whats-new.html["Calcul"^]
+* https://docs.netapp.com/us-en/cloud-manager-file-cache/whats-new.html["Cache global de fichiers"^]
+* https://docs.netapp.com/us-en/cloud-manager-ransomware/whats-new.html["Attaques par ransomware"^]
+* https://docs.netapp.com/us-en/cloud-manager-replication/whats-new.html["La réplication"^]
+
+
+
+
+== L'administration
+
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/whats-new.html["Configuration et administration"^]
+
