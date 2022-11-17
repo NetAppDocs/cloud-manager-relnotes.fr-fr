@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head class="at-element-marker">
+  <title>Changements récents dans BlueXP | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Changements récents dans BlueXP | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/fr-fr/cloud-manager-relnotes/whats-new.html" />
+	<meta property="og:description" content="Découvrez les derniers changements apportés aux services Cloud intégrés à la plateforme BlueXP. Pour plus de détails, consultez la série complète des notes d..." />
+  <meta property="og:image" content="https://docs.netapp.com/fr-fr/cloud-manager-relnotes/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Découvrez les derniers changements apportés aux services Cloud intégrés à la plateforme BlueXP. Pour plus de détails, consultez la série complète des notes d...">
+  <meta name="keywords" content=" what"s new, features, new, release notes, enhancements, fixes, new features, cloud, cloud manager, bluexp"><!-- Icons -->
+  <link rel="icon" href="/fr-fr/cloud-manager-relnotes/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/fr-fr/cloud-manager-relnotes/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/fr-fr/cloud-manager-relnotes/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/fr-fr/cloud-manager-relnotes/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/fr-fr/cloud-manager-relnotes/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/fr-fr/cloud-manager-relnotes/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/fr-fr/cloud-manager-relnotes/js/na-search.js'></script><script src='/fr-fr/cloud-manager-relnotes/js/na-pagenav.js'></script><script src='/fr-fr/cloud-manager-relnotes/js/na-utility.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/clouddocs.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/toc.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/fr-fr/cloud-manager-relnotes"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/custom-dropdown.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/FileSaver.min.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/jszip-utils.min.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/jszip.min.js'></script>
+  <script src='/fr-fr/cloud-manager-relnotes/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-relnotes/issues/new?body=Page%3A%20[Changements récents dans BlueXP](https://docs.netapp.com/fr-fr/cloud-manager-relnotes/whats-new.html)&template=public-issue-template.md" class="page-nav-contribute-link" role="button"><img src="/fr-fr/cloud-manager-relnotes/images/discuss-sm.svg" alt="" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-relnotes/blob/main/whats-new.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/cloud-manager-relnotes/images/edit-sm.svg" alt="" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/cloud-manager-relnotes/images/article-sm.svg" alt="" class="github-icon" />Guide des contributeurs</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">SUR CETTE PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Produits et solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support et formation</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Communauté</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Témoignages clients</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/fr-fr/cloud-manager-relnotes/search.html"
+          data-type="widget" 
+          data-placeholder="Rechercher une documentation"
+          data-no-results-found="Aucun résultat n'a été trouvé pour {query}"
+          data-did-you-mean="Rechercher {suggestion}."
+          data-no-results-found-did-you-mean="Aucun résultat n’a été trouvé pour {query}. Voulez-vous dire {suggestion} ?"
+          data-results-found="{hitCount} résultats trouvés"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/cloud-manager-relnotes/whats-new.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/fr-fr/cloud-manager-relnotes/images/collapse.png" alt="Réduire le panneau de navigation"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/fr-fr/cloud-manager-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDFs disponibles<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/fr-fr/cloud-manager-relnotes/pdfs/fullsite-sidebar/Notes_de_version_BlueXP.pdf" >
+          <img src="/fr-fr/cloud-manager-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDF de ce site de documentation</a>
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/fr-fr/cloud-manager-relnotes/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Collection de documents PDF séparés<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/fr-fr/cloud-manager-family/"><img src="/fr-fr/cloud-manager-relnotes/images/left_arrow.png" alt=""><pre>Toute la documentation BlueXP</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notes de version BlueXP"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/cloud-manager-relnotes/index.html">
+        Notes de version BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modifications récentes"
+      data-li-level="1#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/fr-fr/cloud-manager-relnotes/whats-new.html">
+        Modifications récentes
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Index BlueXP"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/cloud-manager-relnotes/release-notes-index.html">
+        Index BlueXP
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/fr-fr/cloud-manager-relnotes/images/expand.png" alt="Développer le panneau de navigation"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/us-en/cloud/">Documents dans le cloud</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/fr-fr/cloud-manager-family/">BlueXP</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/fr-fr/cloud-manager-relnotes/">Release&nbsp;Notes</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La version française est une traduction automatique. La version anglaise prévaut sur la française en cas de divergence. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Changements récents dans BlueXP</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-11-17 07:01:26 +0000">11/17/2022</time>
+    
+  
+
+<span>Contributeurs
+</span>
+
+
+<a target="_blank" class="ext-link-indicator" href="/fr-fr/cloud-manager-relnotes/feed.xml"><img width="48" height="20" src="/fr-fr/cloud-manager-relnotes/common/media/rss-button.png" alt="RSS" title="S’abonner aux actualisations RSS pour cette page" /></a>
+
+</p>
+
+<div id="toc" class="toc">
+<div id="toctitle">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#introduction-de-bluexp">Introduction de BlueXP</a></li>
+<li><a href="#fonctionnalités-administratives">Fonctionnalités administratives</a>
+<ul class="sectlevel2">
+<li><a href="#6-novembre-2022">6 novembre 2022</a></li>
+<li><a href="#1er-novembre-2022">1er novembre 2022</a></li>
+<li><a href="#18-septembre-2022">18 septembre 2022</a></li>
+<li><a href="#31-juillet-2022">31 juillet 2022</a></li>
+</ul>
+</li>
+<li><a href="#azure-netapp-files">Azure NetApp Files</a>
+<ul class="sectlevel2">
+<li><a href="#11-avril-2021">11 avril 2021</a></li>
+<li><a href="#8-mars-2021">8 mars 2021</a></li>
+<li><a href="#3-août-2020">3 août 2020</a></li>
+</ul>
+</li>
+<li><a href="#amazon-fsx-pour-ontap">Amazon FSX pour ONTAP</a>
+<ul class="sectlevel2">
+<li><a href="#18-septembre-2022-2">18 septembre 2022</a></li>
+<li><a href="#31-juillet-2022-2">31 juillet 2022</a></li>
+<li><a href="#3-juillet-2022">3 juillet 2022</a></li>
+</ul>
+</li>
+<li><a href="#modèle-dapplication">Modèle d&#8217;application</a>
+<ul class="sectlevel2">
+<li><a href="#3-mars-2022">3 mars 2022</a></li>
+<li><a href="#9-février-2022">9 février 2022</a></li>
+<li><a href="#31-octobre-2021">31 octobre 2021</a></li>
+</ul>
+</li>
+<li><a href="#la-sauvegarde-dans-le-cloud">La sauvegarde dans le cloud</a>
+<ul class="sectlevel2">
+<li><a href="#2-novembre-2022">2 novembre 2022</a></li>
+<li><a href="#28-septembre-2022">28 septembre 2022</a></li>
+<li><a href="#19-septembre-2022">19 septembre 2022</a></li>
+<li><a href="#18-août-2022">18 août 2022</a></li>
+</ul>
+</li>
+<li><a href="#sens-des-données-cloud">Sens des données cloud</a>
+<ul class="sectlevel2">
+<li><a href="#13-novembre-2022-version-1-17">13 novembre 2022 (version 1.17)</a></li>
+<li><a href="#6-septembre-2022-version-1-16">6 septembre 2022 (version 1.16)</a></li>
+<li><a href="#7-août-2022-version-1-15">7 août 2022 (version 1.15)</a></li>
+</ul>
+</li>
+<li><a href="#cloud-sync">Cloud Sync</a>
+<ul class="sectlevel2">
+<li><a href="#30-octobre-2022">30 octobre 2022</a></li>
+<li><a href="#4-septembre-2022">4 septembre 2022</a></li>
+<li><a href="#31-juillet-2022-3">31 juillet 2022</a></li>
+<li><a href="#3-juillet-2022-2">3 juillet 2022</a></li>
+</ul>
+</li>
+<li><a href="#tiering-dans-le-cloud">Tiering dans le cloud</a>
+<ul class="sectlevel2">
+<li><a href="#6-novembre-2022-2">6 novembre 2022</a></li>
+<li><a href="#19-septembre-2022-2">19 septembre 2022</a></li>
+<li><a href="#3-août-2022">3 août 2022</a></li>
+</ul>
+</li>
+<li><a href="#cloud-volumes-ontap">Cloud Volumes ONTAP</a>
+<ul class="sectlevel2">
+<li><a href="#6-novembre-2022-3">6 novembre 2022</a></li>
+<li><a href="#18-septembre-2022-3">18 septembre 2022</a></li>
+<li><a href="#31-juillet-2022-4">31 juillet 2022</a></li>
+<li><a href="#18-juillet-2022">18 juillet 2022</a></li>
+</ul>
+</li>
+<li><a href="#cloud-volumes-service-pour-gcp">Cloud Volumes Service pour GCP</a>
+<ul class="sectlevel2">
+<li><a href="#9-septembre-2020">9 septembre 2020</a></li>
+</ul>
+</li>
+<li><a href="#calcul">Calcul</a>
+<ul class="sectlevel2">
+<li><a href="#7-décembre-2020">7 décembre 2020</a></li>
+<li><a href="#18-octobre-2020">18 octobre 2020</a></li>
+</ul>
+</li>
+<li><a href="#conseiller-digital">Conseiller digital</a>
+<ul class="sectlevel2">
+<li><a href="#1er-novembre-2022-2">1er novembre 2022</a></li>
+</ul>
+</li>
+<li><a href="#systèmes-e-series">Systèmes E-Series</a>
+<ul class="sectlevel2">
+<li><a href="#18-septembre-2022-4">18 septembre 2022</a></li>
+</ul>
+</li>
+<li><a href="#cache-global-de-fichiers">Cache global de fichiers</a>
+<ul class="sectlevel2">
+<li><a href="#24-octobre-2022-version-2-1">24 octobre 2022 (version 2.1)</a></li>
+<li><a href="#25-juillet-2022-version-2-0">25 juillet 2022 (version 2.0)</a></li>
+<li><a href="#23-juin-2022-version-1-3-1">23 juin 2022 (version 1.3.1)</a></li>
+</ul>
+</li>
+<li><a href="#kubernetes">Kubernetes</a>
+<ul class="sectlevel2">
+<li><a href="#06-novembre-2022">06 novembre 2022</a></li>
+<li><a href="#18-septembre-2022-5">18 septembre 2022</a></li>
+<li><a href="#31-juillet-2022-5">31 juillet 2022</a></li>
+</ul>
+</li>
+<li><a href="#contrôle">Contrôle</a></li>
+<li><a href="#clusters-ontap-sur-site">Clusters ONTAP sur site</a>
+<ul class="sectlevel2">
+<li><a href="#18-septembre-2022-6">18 septembre 2022</a></li>
+<li><a href="#7-juin-2022">7 juin 2022</a></li>
+<li><a href="#27-février-2022">27 février 2022</a></li>
+</ul>
+</li>
+<li><a href="#protection-contre-les-ransomwares">Protection contre les ransomwares</a>
+<ul class="sectlevel2">
+<li><a href="#7-novembre-2022">7 novembre 2022</a></li>
+<li><a href="#6-septembre-2022">6 septembre 2022</a></li>
+<li><a href="#7-août-2022">7 août 2022</a></li>
+</ul>
+</li>
+<li><a href="#la-réplication">La réplication</a>
+<ul class="sectlevel2">
+<li><a href="#18-septembre-2022-7">18 septembre 2022</a></li>
+<li><a href="#31-juillet-2022-6">31 juillet 2022</a></li>
+<li><a href="#2-septembre-2021">2 septembre 2021</a></li>
+</ul>
+</li>
+<li><a href="#service-snapcenter">Service SnapCenter</a></li>
+<li><a href="#storagegrid">StorageGRID</a>
+<ul class="sectlevel2">
+<li><a href="#18-septembre-2022-8">18 septembre 2022</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Découvrez les derniers changements apportés aux services cloud intégrés à la plateforme BlueXP (anciennement Cloud Manager). Pour en savoir plus, consultez la <a href="release-notes-index.html">"ensemble complet de notes de version"</a> pour chaque service.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="introduction-de-bluexp">Introduction de BlueXP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Manager a été renommé BlueXP le 1er novembre 2022. <a href="https://docs.netapp.com/us-en/cloud-manager-family/concept-overview.html" target="_blank" rel="noopener">"En savoir plus sur BlueXP"</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fonctionnalités-administratives">Fonctionnalités administratives</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cette section décrit les nouvelles fonctionnalités liées aux fonctions d&#8217;administration de BlueXP : comptes, connecteurs, informations d&#8217;identification du fournisseur cloud, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="6-novembre-2022">6 novembre 2022</h3>
+<div class="sect3">
+<h4 id="connecteur-3-9-23">Connecteur 3.9.23</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Vos abonnements PAYGO et vos contrats annuels pour BlueXP sont désormais disponibles pour la consultation et la gestion à partir du portefeuille numérique.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-manage-subscriptions.html" target="_blank" rel="noopener">"Découvrez comment gérer vos abonnements"</a></p>
+</div>
+</li>
+<li>
+<p>Cette version du connecteur inclut également des améliorations Cloud Volumes ONTAP.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#6-november-2022" target="_blank" rel="noopener">"Découvrez les améliorations apportées à Cloud Volumes ONTAP"</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="1er-novembre-2022">1er novembre 2022</h3>
+<div class="paragraph">
+<p>Cloud Manager vous invite à mettre à jour les identifiants associés à vos comptes sur le site de support NetApp lorsque le jeton de mise à jour associé à votre compte expire au bout de 3 mois. <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html#update-nss-credentials" target="_blank" rel="noopener">"Découvrez comment gérer des comptes NSS"</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-septembre-2022">18 septembre 2022</h3>
+<div class="sect3">
+<h4 id="connecteur-3-9-22">Connecteur 3.9.22</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Nous avons amélioré l&#8217;assistant de déploiement de connecteur en ajoutant un <em>Guide produit</em> qui fournit des étapes permettant de répondre aux exigences minimales pour l&#8217;installation de connecteurs : autorisations, authentification et mise en réseau.</p>
+</li>
+<li>
+<p>Vous pouvez désormais créer un dossier de demande de support NetApp directement depuis Cloud Manager dans <strong>support Dashboard</strong>.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-get-help.html#netapp-support">"Découvrez comment créer un dossier"</a>.</p>
+</div>
+</li>
+<li>
+<p>Cette version du connecteur inclut également des améliorations Cloud Volumes ONTAP.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#18-september-2022" target="_blank" rel="noopener">"Découvrez les améliorations apportées à Cloud Volumes ONTAP"</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022">31 juillet 2022</h3>
+<div class="sect3">
+<h4 id="connecteur-3-9-21">Connecteur 3.9.21</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Nous avons introduit une nouvelle façon de découvrir les ressources clouds que vous n&#8217;êtes pas encore géré dans Cloud Manager.</p>
+<div class="paragraph">
+<p>Sur la toile, l&#8217;onglet <strong>Mes opportunités</strong> fournit un emplacement centralisé pour découvrir les ressources existantes que vous pouvez ajouter à Cloud Manager afin d&#8217;assurer la cohérence des services de données et des opérations dans l&#8217;ensemble de votre environnement multicloud hybride.</p>
+</div>
+<div class="paragraph">
+<p>Dans cette version initiale, My Opportunities vous permet de découvrir les systèmes de fichiers FSX pour ONTAP existants dans votre compte AWS.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-using-my-opportunities" target="_blank" rel="noopener">"Découvrez comment découvrir FSX pour ONTAP à l&#8217;aide de Mes opportunités"</a></p>
+</div>
+</li>
+<li>
+<p>Cette version du connecteur inclut également des améliorations Cloud Volumes ONTAP.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#31-july-2022" target="_blank" rel="noopener">"Découvrez les améliorations apportées à Cloud Volumes ONTAP"</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="azure-netapp-files">Azure NetApp Files</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="11-avril-2021">11 avril 2021</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-des-modèles-de-volume">Prise en charge des modèles de volume</h4>
+<div class="paragraph">
+<p>Un nouveau service modèles d&#8217;applications vous permet de configurer un modèle de volume pour Azure NetApp Files. Le modèle devrait faciliter votre travail car certains paramètres de volume seront déjà définis dans le modèle, tels que le pool de capacité, la taille, le protocole, VNet et le sous-réseau où le volume doit résider, etc. Lorsqu&#8217;un paramètre est déjà prédéfini, il vous suffit de passer au paramètre de volume suivant.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-app-template/concept-resource-templates.html" target="_blank" rel="noopener">"Découvrez les modèles d&#8217;application et comment les utiliser dans votre environnement"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html">"Découvrez comment créer un volume Azure NetApp Files à partir d&#8217;un modèle"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="8-mars-2021">8 mars 2021</h3>
+<div class="sect3">
+<h4 id="changer-de-niveau-de-service-de-manière-dynamique">Changer de niveau de service de manière dynamique</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais modifier le niveau de service d&#8217;un volume de manière dynamique afin de répondre aux besoins d&#8217;une charge de travail et d&#8217;optimiser vos coûts. Le volume est déplacé vers l&#8217;autre pool de capacité sans aucun impact sur le volume.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-volumes.html#change-the-volumes-service-level">"Découvrez comment modifier le niveau de service d&#8217;un volume"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3-août-2020">3 août 2020</h3>
+<div class="sect3">
+<h4 id="configuration-et-gestion-azure-netapp-files">Configuration et gestion Azure NetApp Files</h4>
+<div class="paragraph">
+<p>Configurez et gérez Azure NetApp Files directement à partir de Cloud Manager. Une fois que vous avez créé un environnement de travail Azure NetApp Files, vous pouvez effectuer les tâches suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Créer des volumes NFS et SMB.</p>
+</li>
+<li>
+<p>Gestion des pools de capacité et des copies Snapshot de volumes</p>
+<div class="paragraph">
+<p>Cloud Manager vous permet de créer, de supprimer et de restaurer des snapshots de volumes. Vous avez également la possibilité de créer de nouveaux pools de capacité et de spécifier leurs niveaux de service.</p>
+</div>
+</li>
+<li>
+<p>Modifiez un volume en modifiant sa taille et en gérant les balises.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>La possibilité de créer et de gérer Azure NetApp Files directement à partir de Cloud Manager remplace la fonctionnalité précédente de migration de données.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="amazon-fsx-pour-ontap">Amazon FSX pour ONTAP</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="18-septembre-2022-2">18 septembre 2022</h3>
+<div class="paragraph">
+<p>C&#8217;est possible maintenant <a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS">"Modifiez la capacité de stockage et les IOPS"</a> À tout moment après avoir créé l&#8217;environnement de travail FSX pour ONTAP.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022-2">31 juillet 2022</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Si vous avez fourni vos identifiants AWS à Cloud Manager, la nouvelle fonctionnalité <strong>Mes opportunités</strong> peut détecter et suggérer FSX pour les systèmes de fichiers ONTAP à ajouter et à gérer via Cloud Manager. Vous pouvez également consulter les services de données disponibles via l&#8217;onglet <strong>Mes opportunités</strong>.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system">"Découvrez FSX pour ONTAP à l&#8217;aide de Mes opportunités"</a></p>
+</div>
+</li>
+<li>
+<p>C&#8217;est possible maintenant <a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity">"modification de la capacité de débit"</a> À tout moment après avoir créé l&#8217;environnement de travail FSX pour ONTAP.</p>
+</li>
+<li>
+<p>C&#8217;est possible maintenant <a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#replicate-and-sync-data">"réplication et synchronisation des données"</a> Vers les systèmes sur site et autres systèmes FSX pour ONTAP utilisant FSX pour ONTAP comme source.</p>
+</li>
+<li>
+<p>C&#8217;est possible maintenant <a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes">"Créer des volumes iSCSI dans FSX pour ONTAP à l&#8217;aide de Cloud Manager"</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3-juillet-2022">3 juillet 2022</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Vous pouvez désormais sélectionner un modèle de déploiement HA à une ou plusieurs zones de disponibilité.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment">"Créer un environnement de travail FSX pour ONTAP"</a></p>
+</div>
+</li>
+<li>
+<p>L&#8217;authentification de compte AWS GovCloud est désormais prise en charge dans Cloud Manager.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role">"Configurer le rôle IAM"</a></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modèle-dapplication">Modèle d&#8217;application</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="3-mars-2022">3 mars 2022</h3>
+<div class="sect3">
+<h4 id="vous-pouvez-désormais-créer-un-modèle-pour-trouver-des-environnements-de-travail-spécifiques">Vous pouvez désormais créer un modèle pour trouver des environnements de travail spécifiques</h4>
+<div class="paragraph">
+<p>À l&#8217;aide de l&#8217;action « Rechercher les ressources existantes », vous pouvez identifier l&#8217;environnement de travail, puis utiliser d&#8217;autres actions de modèle, telles que la création d&#8217;un volume, pour effectuer facilement des actions sur les environnements de travail existants. <a href="https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#examples-of-finding-existing-resources-and-enabling-services-using-templates">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possibilité-de-créer-un-environnement-de-travail-cloud-volumes-ontap-ha-dans-aws">Possibilité de créer un environnement de travail Cloud Volumes ONTAP HA dans AWS</h4>
+<div class="paragraph">
+<p>La création d&#8217;un environnement de travail Cloud Volumes ONTAP dans AWS a été étendue pour inclure la création d&#8217;un système haute disponibilité en plus d&#8217;un système à un seul nœud. <a href="https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment">"Découvrez comment créer un modèle pour un environnement de travail Cloud Volumes ONTAP"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="9-février-2022">9 février 2022</h3>
+<div class="sect3">
+<h4 id="vous-pouvez-à-présent-créer-un-modèle-pour-rechercher-des-volumes-spécifiques-existants-puis-activer-cloud-backup">Vous pouvez à présent créer un modèle pour rechercher des volumes spécifiques existants, puis activer Cloud Backup</h4>
+<div class="paragraph">
+<p>En utilisant la nouvelle action « trouver une ressource », vous pouvez identifier tous les volumes sur lesquels vous souhaitez activer Cloud Backup, puis exécuter l&#8217;action Cloud Backup pour activer la sauvegarde sur ces volumes.</p>
+</div>
+<div class="paragraph">
+<p>Prise en charge actuelle pour les volumes sur les systèmes Cloud Volumes ONTAP et ONTAP sur site <a href="https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#find-existing-volumes-and-activate-cloud-backup">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-octobre-2021">31 octobre 2021</h3>
+<div class="sect3">
+<h4 id="vous-pouvez-désormais-marquer-vos-relations-de-synchronisation-afin-de-pouvoir-les-regrouper-ou-les-catégoriser-pour-en-faciliter-laccès">Vous pouvez désormais marquer vos relations de synchronisation afin de pouvoir les regrouper ou les catégoriser pour en faciliter l&#8217;accès</h4>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html">"En savoir plus sur le balisage des ressources"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="la-sauvegarde-dans-le-cloud">La sauvegarde dans le cloud</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="2-novembre-2022">2 novembre 2022</h3>
+<div class="sect3">
+<h4 id="possibilité-dexporter-danciennes-copies-snapshot-dans-vos-fichiers-de-sauvegarde-de-base">Possibilité d&#8217;exporter d&#8217;anciennes copies Snapshot dans vos fichiers de sauvegarde de base</h4>
+<div class="paragraph">
+<p>Si des copies Snapshot locales des volumes de votre environnement de travail correspondent aux étiquettes de votre planning de sauvegarde (par exemple, quotidienne, hebdomadaire, etc.), vous pouvez exporter ces snapshots historiques vers le stockage objet sous forme de fichiers de sauvegarde. Cela vous permet d&#8217;initialiser vos sauvegardes dans le cloud en déplaçant d&#8217;anciennes copies Snapshot vers la copie de sauvegarde de base.</p>
+</div>
+<div class="paragraph">
+<p>Cette option est disponible lors de l&#8217;activation de Cloud Backup pour vos environnements de travail. Vous pouvez également modifier ce paramètre ultérieurement dans <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-settings-ontap.html">"Page Paramètres avancés"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-backup-peut-désormais-être-utilisé-pour-larchivage-des-volumes-dont-vous-navez-plus-besoin-sur-le-système-source">Cloud Backup peut désormais être utilisé pour l&#8217;archivage des volumes dont vous n&#8217;avez plus besoin sur le système source</h4>
+<div class="paragraph">
+<p>Vous pouvez maintenant supprimer la relation de sauvegarde d&#8217;un volume. Vous disposez ainsi d&#8217;un mécanisme d&#8217;archivage pour arrêter la création de nouveaux fichiers de sauvegarde et supprimer le volume source, mais conserver tous les fichiers de sauvegarde existants. Cela vous permet de restaurer ultérieurement le volume à partir du fichier de sauvegarde, si nécessaire, tout en libérant de l&#8217;espace du système de stockage source. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backups-ontap.html#deleting-volume-backup-relationships">"Découvrez comment"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="le-service-de-support-a-été-ajouté-pour-recevoir-les-alertes-cloud-backup-par-e-mail-et-dans-le-centre-de-notification">Le service de support a été ajouté pour recevoir les alertes Cloud Backup par e-mail et dans le centre de notification</h4>
+<div class="paragraph">
+<p>Cloud Backup a été intégré au service BlueXP notification. Vous pouvez afficher les notifications Cloud Backup en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour qu&#8217;il envoie des notifications par e-mail en tant qu&#8217;alertes de sorte que vous puissiez être informé de l&#8217;activité système importante, même lorsque vous n&#8217;êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent connaître les activités de sauvegarde et de restauration. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#use-the-job-monitor-to-view-backup-and-restore-job-status">"Découvrez comment"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-nouvelle-page-paramètres-avancés-vous-permet-de-modifier-les-paramètres-de-sauvegarde-au-niveau-du-cluster">La nouvelle page Paramètres avancés vous permet de modifier les paramètres de sauvegarde au niveau du cluster</h4>
+<div class="paragraph">
+<p>Cette nouvelle page vous permet de modifier de nombreux paramètres de sauvegarde au niveau du cluster que vous avez définis lors de l&#8217;activation de Cloud Backup pour chaque système ONTAP. Vous pouvez également modifier certains paramètres appliqués comme paramètres de sauvegarde par défaut. L&#8217;ensemble des paramètres de sauvegarde que vous pouvez modifier comprend :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Les clés de stockage qui donnent à votre système ONTAP l&#8217;autorisation d&#8217;accéder au stockage objet</p>
+</li>
+<li>
+<p>Bande passante réseau allouée pour télécharger les sauvegardes dans le stockage objet</p>
+</li>
+<li>
+<p>Paramètre de sauvegarde automatique (et règle) pour les volumes futurs</p>
+</li>
+<li>
+<p>Classe de stockage d&#8217;archivage (AWS uniquement)</p>
+</li>
+<li>
+<p>Indique si des copies Snapshot historiques sont incluses dans les fichiers de sauvegarde de base initiaux</p>
+</li>
+<li>
+<p>Si les snapshots « annuels » sont supprimés du système source</p>
+</li>
+<li>
+<p>L&#8217;IPspace ONTAP connecté au stockage objet (en cas de sélection incorrecte lors de l&#8217;activation)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-manage-backup-settings-ontap.html">"En savoir plus sur la gestion des paramètres de sauvegarde au niveau du cluster"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="vous-pouvez-désormais-restaurer-des-fichiers-de-sauvegarde-à-laide-de-la-fonction-de-recherche-et-de-restauration-lors-de-lutilisation-dun-connecteur-sur-site">Vous pouvez désormais restaurer des fichiers de sauvegarde à l&#8217;aide de la fonction de recherche et de restauration lors de l&#8217;utilisation d&#8217;un connecteur sur site</h4>
+<div class="paragraph">
+<p>Dans la version précédente, la prise en charge a été ajoutée pour créer des fichiers de sauvegarde dans le cloud public lorsque le connecteur est déployé sur site. Dans cette version, le service de support a continué d&#8217;être utilisé pour restaurer des sauvegardes à partir d&#8217;Amazon S3 ou d&#8217;Azure Blob lorsque le connecteur est déployé sur site. La fonction de recherche et restauration prend également en charge la restauration des sauvegardes depuis les systèmes StorageGRID vers les systèmes ONTAP sur site.</p>
+</div>
+<div class="paragraph">
+<p>À l&#8217;heure actuelle, le connecteur doit être déployé dans Google Cloud Platform lorsque vous utilisez les fonctions de recherche et de restauration pour restaurer des sauvegardes à partir de Google Cloud Storage.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-page-surveillance-des-travaux-a-été-mise-à-jour">La page surveillance des travaux a été mise à jour</h4>
+<div class="paragraph">
+<p>Les mises à jour suivantes ont été effectuées sur le <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html">"Surveillance des travaux"</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Une colonne pour « charge de travail » est disponible. Vous pouvez donc filtrer la page pour afficher les travaux des services de sauvegarde suivants : volumes, applications, machines virtuelles et Kubernetes.</p>
+</li>
+<li>
+<p>Vous pouvez ajouter de nouvelles colonnes pour « Nom d&#8217;utilisateur » et « Type de travail » si vous souhaitez afficher ces détails pour une tâche de sauvegarde spécifique.</p>
+</li>
+<li>
+<p>La page Détails du travail affiche tous les sous-travaux en cours d&#8217;exécution pour terminer le travail principal.</p>
+</li>
+<li>
+<p>La page est automatiquement réactualisée toutes les 15 minutes pour que vous puissiez toujours voir les derniers résultats d&#8217;état des travaux. Et vous pouvez cliquer sur le bouton <strong>Actualiser</strong> pour mettre la page à jour immédiatement.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="améliorations-de-la-sauvegarde-entre-plusieurs-comptes-aws">Améliorations de la sauvegarde entre plusieurs comptes AWS</h4>
+<div class="paragraph">
+<p>Si vous souhaitez utiliser un autre compte AWS pour vos sauvegardes Cloud Volumes ONTAP que celui que vous utilisez pour les volumes source, vous devez ajouter les identifiants de compte AWS de destination dans BlueXP. Vous devez également ajouter les autorisations « s3:PutBuckePolicy » et « s3:PutketOwnershipControls » au rôle qui fournit BlueXP avec les autorisations. Auparavant, il fallait configurer de nombreux paramètres sur la console AWS. Plus besoin de le faire.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="28-septembre-2022">28 septembre 2022</h3>
+<div class="sect3">
+<h4 id="améliorations-de-cloud-backup-pour-les-applications">Améliorations de Cloud Backup pour les applications</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Prise en charge de Google Cloud Platform (GCP) et de StorageGRID pour sauvegarder des copies Snapshot cohérentes au niveau des applications</p>
+</li>
+<li>
+<p>Création de règles personnalisées</p>
+</li>
+<li>
+<p>Prend en charge le stockage d&#8217;archivage</p>
+</li>
+<li>
+<p>Sauvegarde des applications SAP HANA</p>
+</li>
+<li>
+<p>Sauvegardez les applications Oracle et SQL qui se trouvent sur l&#8217;environnement VMware</p>
+</li>
+<li>
+<p>Sauvegarder les applications à partir d&#8217;un système de stockage secondaire sur site</p>
+</li>
+<li>
+<p>Désactiver les sauvegardes</p>
+</li>
+<li>
+<p>Annuler l&#8217;enregistrement du serveur SnapCenter</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="améliorations-de-cloud-backup-pour-les-machines-virtuelles">Améliorations de Cloud Backup pour les machines virtuelles</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Prend en charge StorageGRID pour sauvegarder un ou plusieurs datastores</p>
+</li>
+<li>
+<p>Création de règles personnalisées</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="19-septembre-2022">19 septembre 2022</h3>
+<div class="sect3">
+<h4 id="vous-pouvez-configurer-le-verrouillage-des-données-et-les-attaques-par-ransomware-pour-les-fichiers-de-sauvegarde-dans-les-systèmes-storagegrid">Vous pouvez configurer le verrouillage des données et les attaques par ransomware pour les fichiers de sauvegarde dans les systèmes StorageGRID</h4>
+<div class="paragraph">
+<p>La dernière version a introduit <em>DataLock et ransomware protection</em> pour les sauvegardes stockées dans des compartiments Amazon S3. Cette version étend la prise en charge des fichiers de sauvegarde stockés dans les systèmes StorageGRID. Si votre cluster utilise ONTAP 9.11.1 ou version ultérieure et que votre système StorageGRID exécute la version 11.6.0.3 ou ultérieure, cette nouvelle option de règles de sauvegarde est disponible. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection" target="_blank" rel="noopener">"Découvrez comment protéger vos sauvegardes avec DataLock et des attaques par ransomware"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Notez que vous devrez exécuter un connecteur avec la version 3.9.22 ou une version ultérieure du logiciel. Le connecteur doit être installé dans vos locaux et peut être installé sur un site avec ou sans accès à Internet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-restauration-au-niveau-des-dossiers-est-désormais-disponible-à-partir-de-vos-fichiers-de-sauvegarde">La restauration au niveau des dossiers est désormais disponible à partir de vos fichiers de sauvegarde</h4>
+<div class="paragraph">
+<p>Vous pouvez maintenant restaurer un dossier à partir d&#8217;un fichier de sauvegarde si vous avez besoin d&#8217;accéder à tous les fichiers de ce dossier (répertoire ou partage). La restauration d&#8217;un dossier est bien plus efficace que la restauration d&#8217;un volume entier. Cette fonctionnalité est disponible pour les opérations de restauration à l&#8217;aide de la méthode Parcourir et restaurer et de la méthode Rechercher et restaurer lors de l&#8217;utilisation de ONTAP 9.11.1 ou version ultérieure. Pour le moment, vous ne pouvez sélectionner et restaurer qu&#8217;un seul dossier, et seuls les fichiers de ce dossier sont restaurés - aucun sous-dossier, ni fichier dans des sous-dossiers, n&#8217;est restauré.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-restauration-au-niveau-des-fichiers-est-désormais-disponible-à-partir-des-sauvegardes-qui-ont-été-transférées-vers-le-stockage-darchivage">La restauration au niveau des fichiers est désormais disponible à partir des sauvegardes qui ont été transférées vers le stockage d&#8217;archivage</h4>
+<div class="paragraph">
+<p>Auparavant, il était possible de restaurer uniquement les volumes à partir des fichiers de sauvegarde déplacés vers un stockage d&#8217;archivage (AWS et Azure uniquement). Vous pouvez désormais restaurer des fichiers individuels à partir de ces fichiers de sauvegarde archivés. Cette fonctionnalité est disponible pour les opérations de restauration à l&#8217;aide de la méthode Parcourir et restaurer et de la méthode Rechercher et restaurer lors de l&#8217;utilisation de ONTAP 9.11.1 ou version ultérieure.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-restauration-au-niveau-des-fichiers-offre-désormais-la-possibilité-décraser-le-fichier-source-dorigine">La restauration au niveau des fichiers offre désormais la possibilité d&#8217;écraser le fichier source d&#8217;origine</h4>
+<div class="paragraph">
+<p>Par le passé, un fichier restauré sur le volume d&#8217;origine a toujours été restauré en tant que nouveau fichier avec le préfixe « Restore_&lt;nom_fichier&gt; ». Vous pouvez maintenant choisir d&#8217;écraser le fichier source d&#8217;origine lors de la restauration du fichier à l&#8217;emplacement d&#8217;origine du volume. Cette fonctionnalité est disponible pour les opérations de restauration à l&#8217;aide de la méthode Browse &amp; Restore et de la méthode Search &amp; Restore.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="effectuez-un-glisser-déposer-pour-activer-la-sauvegarde-dans-le-cloud-sur-les-systèmes-storagegrid">Effectuez un glisser-déposer pour activer la sauvegarde dans le cloud sur les systèmes StorageGRID</h4>
+<div class="paragraph">
+<p>Si le <a href="https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html" target="_blank" rel="noopener">"StorageGRID"</a> Destination de vos sauvegardes existe en tant qu&#8217;environnement de travail sur la toile. Vous pouvez faire glisser votre environnement de travail ONTAP sur site vers la destination pour lancer l&#8217;assistant de configuration de Cloud Backup.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-août-2022">18 août 2022</h3>
+<div class="sect3">
+<h4 id="des-fonctionnalités-de-prise-en-charge-ont-été-ajoutées-pour-protéger-les-données-dapplications-cloud-natives">Des fonctionnalités de prise en charge ont été ajoutées pour protéger les données d&#8217;applications cloud natives</h4>
+<div class="paragraph">
+<p>Cloud Backup pour applications est un service SaaS qui fournit des fonctionnalités de protection des données pour les applications exécutées sur NetApp Cloud Storage. Cloud Backup pour les applications activées dans BlueXP offre des sauvegardes et des restaurations efficaces et cohérentes avec les applications, basées sur des règles, de bases de données Oracle résidant sur Amazon FSX pour NetApp ONTAP.https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html["En savoir plus &gt;&gt;"^].</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-fonction-de-recherche-et-de-restauration-est-désormais-prise-en-charge-avec-les-fichiers-de-sauvegarde-dans-azure-blob">La fonction de recherche et de restauration est désormais prise en charge avec les fichiers de sauvegarde dans Azure Blob</h4>
+<div class="paragraph">
+<p>La méthode de recherche et de restauration des volumes et des fichiers est désormais disponible pour les utilisateurs qui stockent leurs fichiers de sauvegarde dans le stockage Azure Blob. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#prerequisites-2" target="_blank" rel="noopener">"Découvrez comment restaurer vos volumes et fichiers à l&#8217;aide de Search  Restore"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Notez que des autorisations supplémentaires sont nécessaires dans le rôle connecteur pour utiliser cette fonctionnalité. Un connecteur déployé avec la version 3.9.21 du logiciel (août 2022) inclut ces autorisations. Vous devrez ajouter manuellement les autorisations si vous avez déployé le connecteur à l&#8217;aide d&#8217;une version antérieure. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-azure.html#verify-or-add-permissions-to-the-connector" target="_blank" rel="noopener">"Voir comment ajouter ces autorisations, si nécessaire"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nous-avons-ajouté-la-possibilité-de-protéger-vos-fichiers-de-sauvegarde-contre-les-suppressions-et-les-attaques-par-ransomware">Nous avons ajouté la possibilité de protéger vos fichiers de sauvegarde contre les suppressions et les attaques par ransomware</h4>
+<div class="paragraph">
+<p>Cloud Backup dispose désormais de la prise en charge du verrouillage des objets pour les sauvegardes sécurisées par ransomware. Si votre cluster utilise ONTAP 9.11.1 ou version ultérieure et que votre destination de sauvegarde est Amazon S3, une nouvelle option de stratégie de sauvegarde appelée <em>DataLock et protection contre les attaques par ransomware</em> est maintenant disponible. DataLock protège vos fichiers de sauvegarde contre la modification ou la suppression, et la protection contre les ransomwares analyse vos fichiers de sauvegarde pour rechercher des signes d&#8217;attaque par ransomware sur vos fichiers de sauvegarde. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection" target="_blank" rel="noopener">"Découvrez comment protéger vos sauvegardes avec DataLock et des attaques par ransomware"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Notez que des autorisations supplémentaires sont nécessaires dans le rôle connecteur pour utiliser cette fonctionnalité. Un connecteur déployé à l&#8217;aide du logiciel version 3.9.21 inclut ces autorisations. Vous devrez ajouter manuellement les autorisations si vous avez déployé le connecteur à l&#8217;aide d&#8217;une version antérieure. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-aws.html#set-up-s3-permissions" target="_blank" rel="noopener">"Voir comment ajouter ces autorisations, si nécessaire"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cloud-backup-prend-désormais-en-charge-les-règles-créées-à-laide-détiquettes-snapmirror-personnalisées">Cloud Backup prend désormais en charge les règles créées à l&#8217;aide d&#8217;étiquettes SnapMirror personnalisées</h4>
+<div class="paragraph">
+<p>Auparavant, Cloud Backup prenait uniquement en charge les étiquettes SnapMirror prédéfinies : toutes les heures, tous les jours, toutes les semaines, toutes les heures et tous les ans. Désormais, Cloud Backup peut détecter les règles SnapMirror qui comportent des étiquettes SnapMirror personnalisées que vous avez créées à l&#8217;aide de System Manager ou de l&#8217;interface de ligne de commande. Ces nouvelles étiquettes sont accessibles dans l&#8217;interface utilisateur de Cloud Backup, ce qui vous permet de sauvegarder des volumes avec le label SnapMirror de votre choix dans le cloud.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="autres-améliorations-de-la-politique-de-sauvegarde-pour-les-systèmes-ontap">Autres améliorations de la politique de sauvegarde pour les systèmes ONTAP</h4>
+<div class="paragraph">
+<p>Certaines pages de stratégie de sauvegarde ont été redessinées afin de faciliter l&#8217;affichage de toutes les règles de sauvegarde disponibles pour les volumes de chaque cluster ONTAP. Vous pouvez ainsi consulter les détails des règles disponibles de façon à appliquer les meilleures règles à vos volumes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="effectuez-un-glisser-déposer-pour-activer-cloud-backup-sur-azure-blob-et-google-cloud-storage">Effectuez un glisser-déposer pour activer Cloud Backup sur Azure Blob et Google Cloud Storage</h4>
+<div class="paragraph">
+<p>Si le <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-azure-blob.html" target="_blank" rel="noopener">"Blob d&#8217;Azure"</a> ou <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-gcp-storage.html" target="_blank" rel="noopener">"Google Cloud Storage"</a> La destination de vos sauvegardes existe en tant qu&#8217;environnement de travail sur la toile. Vous pouvez faire glisser votre environnement de travail ONTAP ou Cloud Volumes ONTAP sur site (installé dans Azure ou GCP) vers la destination pour lancer l&#8217;assistant de configuration de la sauvegarde.</p>
+</div>
+<div class="paragraph">
+<p>Cette fonctionnalité existe déjà pour les compartiments Amazon S3.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sens-des-données-cloud">Sens des données cloud</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="13-novembre-2022-version-1-17">13 novembre 2022 (version 1.17)</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-de-la-numérisation-des-comptes-sharepoint-sur-site">Prise en charge de la numérisation des comptes SharePoint sur site</h4>
+<div class="paragraph">
+<p>Il est désormais possible d&#8217;analyser les comptes SharePoint Online et les comptes SharePoint sur site (SharePoint Server). Si vous devez installer SharePoint sur vos propres serveurs ou sur des sites sans accès à Internet, vous pouvez maintenant avoir Data Sense scan les fichiers utilisateur dans ces comptes. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-sharepoint.html#adding-a-sharepoint-on-premise-account" target="_blank" rel="noopener">"En savoir plus &gt;&gt;"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possibilité-de-réanalyser-plusieurs-répertoires-dossiers-ou-partages">Possibilité de réanalyser plusieurs répertoires (dossiers ou partages)</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais analyser plusieurs répertoires (dossiers ou partages) immédiatement afin que les modifications soient répercutées dans le système. Cela vous permet de hiérarchiser la réanalyse de certaines données avant d&#8217;autres données. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository" target="_blank" rel="noopener">"Voir la procédure de nouvelle analyse d&#8217;un répertoire"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possibilité-dajouter-des-nœuds-de-numérisation-supplémentaires-sur-site-pour-analyser-des-sources-de-données-spécifiques">Possibilité d&#8217;ajouter des nœuds de numérisation supplémentaires sur site pour analyser des sources de données spécifiques</h4>
+<div class="paragraph">
+<p>Si vous avez installé Data SENSE sur site et que vous avez besoin d&#8217;une puissance de traitement plus élevée pour analyser certaines sources de données, vous pouvez ajouter d&#8217;autres nœuds de « scanner » et les affecter pour analyser ces sources de données. Vous pouvez ajouter les nœuds du scanner immédiatement après avoir installé le nœud du gestionnaire, ou vous pouvez ajouter un nœud du scanner ultérieurement.</p>
+</div>
+<div class="paragraph">
+<p>Si nécessaire, les nœuds du scanner peuvent être installés sur des systèmes hôtes qui sont physiquement plus proches des sources de données que vous scannez. Plus le nœud du scanner est proche des données, mieux c&#8217;est, car il réduit la latence du réseau autant que possible lors de l&#8217;acquisition des données. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html#add-scanner-nodes-to-an-existing-deployment" target="_blank" rel="noopener">"Découvrez comment installer des nœuds de scanner pour analyser d&#8217;autres sources de données"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="les-installateurs-sur-site-effectuent-désormais-une-pré-vérification-avant-de-commencer-linstallation">Les installateurs sur site effectuent désormais une pré-vérification avant de commencer l&#8217;installation</h4>
+<div class="paragraph">
+<p>Lors de l&#8217;installation de Data Sense sur un système Linux, le programme d&#8217;installation vérifie si le système répond à toutes les exigences nécessaires (CPU, RAM, capacité, réseau, etc.) avant de démarrer l&#8217;installation. Cela permet de détecter les problèmes <strong>avant</strong>, vous passez du temps sur l&#8217;installation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-septembre-2022-version-1-16">6 septembre 2022 (version 1.16)</h3>
+<div class="sect3">
+<h4 id="possibilité-de-réanalyser-immédiatement-un-référentiel-pour-refléter-les-modifications-apportées-aux-fichiers">Possibilité de réanalyser immédiatement un référentiel pour refléter les modifications apportées aux fichiers</h4>
+<div class="paragraph">
+<p>Si vous devez relancer une nouvelle analyse d&#8217;un référentiel particulier immédiatement afin que les modifications soient répercutées dans le système, vous pouvez sélectionner le référentiel et le relancer. Cela vous permet de hiérarchiser la réanalyse de certaines données avant d&#8217;autres données. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository" target="_blank" rel="noopener">"Voir la procédure de nouvelle analyse d&#8217;un répertoire"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nouveau-filtre-pour-létat-de-lacquisition-de-détection-de-données-dans-la-page-recherche-de-données">Nouveau filtre pour l&#8217;état de l&#8217;acquisition de détection de données dans la page recherche de données</h4>
+<div class="paragraph">
+<p>Le filtre "Etat de l&#8217;analyse" vous permet de répertorier les fichiers qui se trouvent dans une étape spécifique de l&#8217;analyse de détection de données. Vous pouvez sélectionner une option pour afficher la liste des fichiers qui sont <strong>en attente première numérisation</strong>, <strong>terminé</strong> en cours de numérisation, <strong>en attente de numérisation</strong> ou dont <strong>échoué</strong> doit être scanné.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page" target="_blank" rel="noopener">"Voir la liste de tous les filtres que vous pouvez utiliser pour examiner vos données"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="les-sujets-de-données-sont-désormais-considérés-comme-faisant-partie-des-données-personnelles-trouvées-dans-les-acquisitions">Les sujets de données sont désormais considérés comme faisant partie des « données personnelles » trouvées dans les acquisitions</h4>
+<div class="paragraph">
+<p>Data Sense reconnaît maintenant les sujets de données dans le cadre des résultats personnels qui apparaissent dans le tableau de bord de conformité. En outre, lorsque vous effectuez une recherche dans la page Investigation, vous pouvez sélectionner « sujets de données » sous « données personnelles » pour afficher uniquement les fichiers contenant des données.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="les-fichiers-de-navigation-de-détection-de-données-sont-désormais-considérés-comme-faisant-partie-des-catégories-trouvées-dans-les-scans">Les fichiers de navigation de détection de données sont désormais considérés comme faisant partie des « catégories » trouvées dans les scans</h4>
+<div class="paragraph">
+<p>Data Sense reconnaît maintenant des fichiers de navigation dans les catégories qui apparaissent dans le Tableau de bord de conformité. Il s&#8217;agit de fichiers que Data Sense crée lors du déplacement des fichiers de l&#8217;emplacement source vers un partage NFS. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share" target="_blank" rel="noopener">"Découvrez comment créer des fichiers de navigation"</a>.</p>
+</div>
+<div class="paragraph">
+<p>De plus, lorsque vous effectuez une recherche dans la page Investigation, vous pouvez sélectionner « fil d&#8217;Ariane de détection des données » sous « Catégorie » pour afficher uniquement les fichiers de navigation de détection des données.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="7-août-2022-version-1-15">7 août 2022 (version 1.15)</h3>
+<div class="sect3">
+<h4 id="cinq-nouveaux-types-de-données-personnelles-de-la-nouvelle-zélande-sont-identifiés-par-data-sense">Cinq nouveaux types de données personnelles de la Nouvelle-Zélande sont identifiés par Data Sense</h4>
+<div class="paragraph">
+<p>Data Sense peut identifier et catégoriser les fichiers contenant les types de données suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Numéro de compte bancaire de la Nouvelle-Zélande</p>
+</li>
+<li>
+<p>Numéro de permis de conduire de la Nouvelle-Zélande</p>
+</li>
+<li>
+<p>Numéro IRD de Nouvelle-Zélande (ID taxe)</p>
+</li>
+<li>
+<p>Numéro NHI (National Health Index) de la Nouvelle-Zélande </p>
+</li>
+<li>
+<p>Numéro de passeport de la Nouvelle-Zélande</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="reference-private-data-categories.html#types-of-personal-data">"Consultez tous les types de données personnelles que Data Sense peut identifier dans vos données"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possibilité-dajouter-un-fichier-de-navigation-pour-indiquer-pourquoi-un-fichier-a-été-déplacé">Possibilité d&#8217;ajouter un fichier de navigation pour indiquer pourquoi un fichier a été déplacé</h4>
+<div class="paragraph">
+<p>Lorsque vous utilisez la fonction détection de données pour déplacer les fichiers source vers un partage NFS, vous pouvez maintenant laisser un fichier de navigation à l&#8217;emplacement du fichier déplacé. Un fichier de navigation permet à vos utilisateurs de comprendre pourquoi un fichier a été déplacé de son emplacement d&#8217;origine. Pour chaque fichier déplacé, le système crée un fichier de navigation à l&#8217;emplacement source nommé <code>&lt;filename&gt;-breadcrumb-&lt;date&gt;.txt</code> pour afficher l&#8217;emplacement où le fichier a été déplacé et l&#8217;utilisateur qui a déplacé le fichier. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share" target="_blank" rel="noopener">"En savoir plus &gt;&gt;"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="les-données-personnelles-et-les-données-personnelles-sensibles-contenues-dans-vos-répertoires-sont-affichées-dans-les-résultats-de-lenquête">Les données personnelles et les données personnelles sensibles contenues dans vos répertoires sont affichées dans les résultats de l&#8217;enquête</h4>
+<div class="paragraph">
+<p>La page Data Investigation affiche maintenant les résultats des données personnelles et des données personnelles sensibles trouvées dans vos répertoires (dossiers et partages). <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-files-that-contain-personal-data" target="_blank" rel="noopener">"Voir un exemple ici"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="afficher-létat-du-nombre-de-volumes-de-compartiments-etc-classés">Afficher l&#8217;état du nombre de volumes, de compartiments, etc. Classés</h4>
+<div class="paragraph">
+<p>Lorsque vous visualisez les différents référentiels, Data Sense est analyse (volumes, compartiments, etc.), vous pouvez maintenant voir combien d&#8217;entre eux ont été « mappés » et combien d&#8217;entre eux ont été « classés ». Le classement est plus long lorsque l&#8217;identification complète de l&#8217;IA est effectuée sur toutes les données. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-the-scan-status-for-your-repositories" target="_blank" rel="noopener">"Voir comment afficher ces informations"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="vous-pouvez-maintenant-ajouter-des-modèles-personnalisés-que-data-sense-identifie-dans-vos-données">Vous pouvez maintenant ajouter des modèles personnalisés que Data Sense identifie dans vos données</h4>
+<div class="paragraph">
+<p>Il existe deux façons d&#8217;ajouter des « données personnelles » personnalisées que Data Sense identifiera dans les analyses futures. Vous disposez ainsi d&#8217;une vision globale de l&#8217;emplacement des données potentiellement sensibles dans les fichiers de votre entreprise.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vous pouvez ajouter des mots-clés personnalisés à partir d&#8217;un fichier texte.</p>
+</li>
+<li>
+<p>Vous pouvez ajouter un motif personnel à l&#8217;aide d&#8217;une expression régulière (regex).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ces mots-clés et modèles sont ajoutés aux modèles prédéfinis existants que Data Sense utilise déjà et les résultats seront visibles sous la section modèles personnels. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html" target="_blank" rel="noopener">"En savoir plus &gt;&gt;"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-sync">Cloud Sync</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="30-octobre-2022">30 octobre 2022</h3>
+<div class="sect3">
+<h4 id="synchronisation-continue-de-microsoft-azure">Synchronisation continue de Microsoft Azure</h4>
+<div class="paragraph">
+<p>Le paramètre Continuous Sync est désormais pris en charge depuis un compartiment de stockage Azure source vers un stockage cloud via un courtier de données Azure.</p>
+</div>
+<div class="paragraph">
+<p>Après la synchronisation initiale des données, Cloud Sync écoute les modifications apportées au compartiment de stockage Azure source et synchronise en continu les modifications apportées à la cible lorsqu&#8217;elles se produisent. Ce paramètre est disponible lors de la synchronisation à partir d&#8217;un compartiment de stockage Azure vers le stockage Azure Blob, CIFS, Google Cloud Storage, IBM Cloud Object Storage, NFS et StorageGRID.</p>
+</div>
+<div class="paragraph">
+<p>Le courtier de données Azure a besoin d&#8217;un rôle personnalisé et des autorisations suivantes pour utiliser ce paramètre :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">'Microsoft.Storage/storageAccounts/read',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/write',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/read',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/delete',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action',
+'Microsoft.EventGrid/systemTopics/read',
+'Microsoft.EventGrid/systemTopics/write',
+'Microsoft.EventGrid/systemTopics/delete',
+'Microsoft.EventGrid/eventSubscriptions/write',
+'Microsoft.Storage/storageAccounts/write'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html#settings">"En savoir plus sur le paramètre de synchronisation continue"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-septembre-2022">4 septembre 2022</h3>
+<div class="sect3">
+<h4 id="assistance-google-drive-supplémentaire">Assistance Google Drive supplémentaire</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Sync prend désormais en charge des relations de synchronisation supplémentaires pour Google Drive :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Google Drive vers les serveurs NFS</p>
+</li>
+<li>
+<p>Google Drive vers les serveurs SMB</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Vous pouvez également générer des rapports pour les relations de synchronisation incluant Google Drive.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-reports.html">"En savoir plus sur les rapports"</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="amélioration-de-la-synchronisation-continue">Amélioration de la synchronisation continue</h4>
+<div class="paragraph">
+<p>Vous pouvez maintenant activer le paramètre de synchronisation continue sur les types de relations de synchronisation suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Un compartiment S3 vers un serveur NFS</p>
+</li>
+<li>
+<p>Google Cloud Storage sur un serveur NFS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html#settings">"En savoir plus sur le paramètre de synchronisation continue"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="notifications-par-e-mail">Notifications par e-mail</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais recevoir des notifications Cloud Sync par e-mail.</p>
+</div>
+<div class="paragraph">
+<p>Pour recevoir les notifications par e-mail, vous devez activer le paramètre <strong>Notifications</strong> sur la relation de synchronisation, puis configurer les paramètres alertes et notification dans BlueXP.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-relationships.html#setting-up-notifications">"Apprenez à configurer les notifications"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022-3">31 juillet 2022</h3>
+<div class="sect3">
+<h4 id="google-drive">Google Drive</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais synchroniser les données d&#8217;un serveur NFS ou SMB vers Google Drive. « Mon lecteur » et « lecteurs partagés » sont pris en charge en tant que cibles.</p>
+</div>
+<div class="paragraph">
+<p>Avant de créer une relation de synchronisation incluant Google Drive, vous devez configurer un compte de service disposant des autorisations requises et d&#8217;une clé privée. <a href="https://docs.netapp.com/us-en/cloud-manager-sync/reference-requirements.html#google-drive">"En savoir plus sur les exigences de Google Drive"</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html">"Affichez la liste des relations de synchronisation prises en charge"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-supplémentaire-dazure-data-lake">Prise en charge supplémentaire d&#8217;Azure Data Lake</h4>
+<div class="paragraph">
+<p>Cloud Sync prend désormais en charge des relations de synchronisation supplémentaires pour Azure Data Lake Storage Gen2 :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon S3 vers Azure Data Lake Storage Gen2</p>
+</li>
+<li>
+<p>Stockage objet cloud IBM sur Azure Data Lake Storage Gen2</p>
+</li>
+<li>
+<p>De StorageGRID à Azure Data Lake Storage Gen2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html">"Affichez la liste des relations de synchronisation prises en charge"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nouvelles-façons-de-configurer-les-relations-de-synchronisation">Nouvelles façons de configurer les relations de synchronisation</h4>
+<div class="paragraph">
+<p>Nous avons ajouté des moyens supplémentaires pour configurer les relations de synchronisation directement à partir de BlueXP Canvas.</p>
+</div>
+<div class="sect4">
+<h5 id="glisser-déposer">Glisser-déposer</h5>
+<div class="paragraph">
+<p>Vous pouvez maintenant configurer une relation de synchronisation à partir du Canvas en faisant glisser et en déposant un environnement de travail sur un autre.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-sync/main/media/screenshot-enable-drag-and-drop.png" alt="Capture d&#8217;écran qui montre le Centre de notification dans BlueXP."></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="configuration-du-panneau-droit">Configuration du panneau droit</h5>
+<div class="paragraph">
+<p>Vous pouvez maintenant configurer une relation de synchronisation pour le stockage Azure Blob ou pour Google Cloud Storage en sélectionnant l&#8217;environnement de travail dans Canvas, puis en sélectionnant l&#8217;option de synchronisation dans le panneau de droite.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-sync/main/media/screenshot-enable-panel.png" alt="Capture d&#8217;écran qui montre le Centre de notification dans BlueXP."></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3-juillet-2022-2">3 juillet 2022</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-dazure-data-lake-storage-gen2">Prise en charge d&#8217;Azure Data Lake Storage Gen2</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais synchroniser les données d&#8217;un serveur NFS ou SMB vers Azure Data Lake Storage Gen2.</p>
+</div>
+<div class="paragraph">
+<p>Lors de la création d&#8217;une relation de synchronisation incluant Azure Data Lake, vous devez fournir à Cloud Sync la chaîne de connexion du compte de stockage. Il doit s&#8217;agir d&#8217;une chaîne de connexion standard et non d&#8217;une signature d&#8217;accès partagée (SAS).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html">"Affichez la liste des relations de synchronisation prises en charge"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="synchronisation-continue-depuis-google-cloud-storage">Synchronisation continue depuis Google Cloud Storage</h4>
+<div class="paragraph">
+<p>Le paramètre Continuous Sync est désormais pris en charge à partir d&#8217;un compartiment Google Cloud Storage source vers une cible de stockage cloud.</p>
+</div>
+<div class="paragraph">
+<p>Après la synchronisation initiale des données, Cloud Sync écoute les modifications apportées au compartiment Google Cloud Storage source et synchronise en continu les modifications apportées à la cible au fur et à mesure de leur apparition. Ce paramètre est disponible lors de la synchronisation à partir d&#8217;un compartiment Google Cloud Storage vers S3, Google Cloud Storage, Azure Blob Storage, StorageGRID ou IBM Storage.</p>
+</div>
+<div class="paragraph">
+<p>Le compte de service associé à votre courtier de données nécessite les autorisations suivantes pour utiliser ce paramètre :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">- pubsub.subscriptions.consume
+- pubsub.subscriptions.create
+- pubsub.subscriptions.delete
+- pubsub.subscriptions.list
+- pubsub.topics.attachSubscription
+- pubsub.topics.create
+- pubsub.topics.delete
+- pubsub.topics.list
+- pubsub.topics.setIamPolicy
+- storage.buckets.update</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html#settings">"En savoir plus sur le paramètre de synchronisation continue"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-de-la-région-google-cloud">Prise en charge de la région Google Cloud</h4>
+<div class="paragraph">
+<p>Le courtier en données Cloud Sync est désormais pris en charge dans les régions Google Cloud suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Columbus (US-east5)</p>
+</li>
+<li>
+<p>Dallas (US-south1)</p>
+</li>
+<li>
+<p>Madrid (europe-Sud-Ouest 1)</p>
+</li>
+<li>
+<p>Milan (europe-Ouest 8)</p>
+</li>
+<li>
+<p>Paris (europe-Ouest 9)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nouveau-type-de-machine-google-cloud">Nouveau type de machine Google Cloud</h4>
+<div class="paragraph">
+<p>Le type de machine par défaut pour le courtier en données dans Google Cloud est maintenant n2-standard-4.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tiering-dans-le-cloud">Tiering dans le cloud</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="6-novembre-2022-2">6 novembre 2022</h3>
+<div class="sect3">
+<h4 id="effectuez-un-glisser-déposer-pour-activer-le-tiering-cloud-sur-azure-blob-google-cloud-storage-et-storagegrid">Effectuez un glisser-déposer pour activer le Tiering cloud sur Azure Blob, Google Cloud Storage et StorageGRID</h4>
+<div class="paragraph">
+<p>Si la destination de Tiering Azure Blob, Google Cloud Storage ou StorageGRID existe en tant qu&#8217;environnement de travail sur la toile, vous pouvez faire glisser votre environnement de travail ONTAP sur site vers la destination pour lancer l&#8217;assistant d&#8217;installation de Tiering.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="19-septembre-2022-2">19 septembre 2022</h3>
+<div class="sect3">
+<h4 id="lassistant-de-tiering-vous-permet-de-configurer-aws-privatelink-lors-du-tiering-sur-le-stockage-s3">L&#8217;assistant de Tiering vous permet de configurer AWS PrivateLink lors du Tiering sur le stockage S3</h4>
+<div class="paragraph">
+<p>Dans les versions précédentes, il était très fastidieux de connecter votre cluster de façon sécurisée à un compartiment S3 via un terminal VPC. Vous pouvez maintenant suivre les étapes préalables à <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface">"Configurez votre système pour une connexion privée à l&#8217;aide d&#8217;une interface de terminal VPC"</a>, Puis vous pouvez sélectionner PrivateLink pendant l&#8217;assistant de configuration de Tiering sur la page réseau.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html">"Examinez les exigences et les étapes du Tiering des données inactives vers Amazon S3"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="effectuez-un-glisser-déposer-pour-activer-netapp-cloud-tiering-sur-amazon-s3">Effectuez un glisser-déposer pour activer NetApp Cloud Tiering sur Amazon S3</h4>
+<div class="paragraph">
+<p>Si la destination de Tiering Amazon S3 existe en tant qu&#8217;environnement de travail sur la Canvas, vous pouvez faire glisser votre environnement de travail ONTAP sur site vers la destination pour lancer l&#8217;assistant de configuration de Tiering.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="choisissez-le-comportement-de-hiérarchisation-lors-de-la-suppression-du-magasin-dobjets-miroir-dans-une-configuration-metrocluster">Choisissez le comportement de hiérarchisation lors de la suppression du magasin d&#8217;objets miroir dans une configuration MetroCluster</h4>
+<div class="paragraph">
+<p>Lorsque vous supprimez le magasin d’objets miroir d’une configuration MetroCluster, vous êtes invité à indiquer si vous souhaitez également supprimer le magasin d’objets primaire. Vous pouvez choisir de conserver le magasin d&#8217;objets principal rattaché à l&#8217;agrégat, ou de le supprimer.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3-août-2022">3 août 2022</h3>
+<div class="sect3">
+<h4 id="capacité-à-configurer-dautres-magasins-dobjets-pour-dautres-agrégats-de-votre-cluster">Capacité à configurer d&#8217;autres magasins d&#8217;objets pour d&#8217;autres agrégats de votre cluster</h4>
+<div class="paragraph">
+<p>L&#8217;interface de NetApp Cloud Tiering a ajouté un nouveau jeu de pages pour la configuration du stockage objet. Vous pouvez ajouter de nouveaux magasins d&#8217;objets, connecter plusieurs magasins d&#8217;objets à un agrégat pour la mise en miroir FabricPool, échanger les magasins d&#8217;objets principal et miroir, supprimer les connexions au magasin d&#8217;objets avec des agrégats, et plus encore. <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html">"En savoir plus sur la nouvelle fonctionnalité de stockage objet."</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-des-licences-cloud-tiering-dans-les-configurations-metrocluster">Prise en charge des licences Cloud Tiering dans les configurations MetroCluster</h4>
+<div class="paragraph">
+<p>Les licences Cloud Tiering peuvent désormais être partagées avec vos clusters dans les configurations MetroCluster. Vous n&#8217;avez plus besoin d&#8217;utiliser les licences FabricPool obsolètes dans ces scénarios. Les licences Cloud Tiering sont ainsi plus faciles à utiliser sur un plus grand nombre de clusters. <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations">"Découvrez comment licences et configurer ces types de clusters."</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-ontap">Cloud Volumes ONTAP</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="6-novembre-2022-3">6 novembre 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.23 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="déplacement-de-groupes-de-ressources-dans-azure">Déplacement de groupes de ressources dans Azure</h4>
+<div class="paragraph">
+<p>Vous pouvez maintenant déplacer un environnement de travail d&#8217;un groupe de ressources vers un autre groupe de ressources dans Azure dans le même abonnement Azure.</p>
+</div>
+<div class="paragraph">
+<p>Pour plus d&#8217;informations, voir <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-moving-resource-groups-azure.html">"Déplacement de groupes de ressources"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="certification-ndmp-copie">Certification NDMP-copie</h4>
+<div class="paragraph">
+<p>NDMP-copy est désormais certifié pour Cloud Volume ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>Pour plus d&#8217;informations sur la configuration et l&#8217;utilisation de NDMP, reportez-vous à la section <a href="https://docs.netapp.com/us-en/ontap/ndmp/index.html">"Présentation de la configuration NDMP"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-du-chiffrement-de-disque-géré-pour-azure">Prise en charge du chiffrement de disque géré pour Azure</h4>
+<div class="paragraph">
+<p>Une nouvelle autorisation Azure a été ajoutée qui vous permet maintenant de chiffrer tous les disques gérés lors de leur création.</p>
+</div>
+<div class="paragraph">
+<p>Pour plus d&#8217;informations sur cette nouvelle fonctionnalité, voir <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-azure-encryption.html">"Configuration de Cloud Volumes ONTAP pour utiliser une clé gérée par le client dans Azure"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-septembre-2022-3">18 septembre 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.22 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="améliorations-du-portefeuille-numérique">Améliorations du portefeuille numérique</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Le porte-monnaie numérique présente maintenant un résumé du package de licences d&#8217;E/S optimisées et de la capacité WORM provisionnée pour les systèmes Cloud Volumes ONTAP de votre compte.</p>
+<div class="paragraph">
+<p>Ces informations vous permettront de mieux comprendre la facturation et l&#8217;achat de capacité supplémentaire.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Découvrez comment afficher la capacité consommée dans votre compte"</a>.</p>
+</div>
+</li>
+<li>
+<p>Vous pouvez désormais passer d&#8217;une méthode de charge à la méthode de charge optimisée.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Apprenez à changer les méthodes de charge"</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="optimisation-des-coûts-et-des-performances">Optimisation des coûts et des performances</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais optimiser les coûts et les performances d&#8217;un système Cloud Volumes ONTAP directement à partir de la fenêtre Canvas.</p>
+</div>
+<div class="paragraph">
+<p>Après avoir sélectionné un environnement de travail, vous pouvez choisir l&#8217;option <strong>optimiser les coûts et les performances</strong> pour changer le type d&#8217;instance de Cloud Volumes ONTAP. La sélection d&#8217;une instance de plus petite taille peut vous aider à réduire les coûts, tandis que le passage à une instance de plus grande taille peut vous aider à optimiser les performances.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-optimize-cost-performance.png" alt="Capture d&#8217;écran de l&#8217;option optimiser le coût et les performances disponible sur la toile après avoir sélectionné un environnement de travail."></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="notifications-autosupport">Notifications AutoSupport</h4>
+<div class="paragraph">
+<p>BlueXP va maintenant générer une notification si un système Cloud Volumes ONTAP ne parvient pas à envoyer de messages AutoSupport. La notification comprend un lien vers des instructions qui vous aideront à résoudre les problèmes de mise en réseau.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022-4">31 juillet 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.21 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="licence-mtekm">Licence MTEKM</h4>
+<div class="paragraph">
+<p>La licence MTEKM (Multi-tenant Encryption Key Management) est désormais incluse dans les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.11.1 ou une version ultérieure.</p>
+</div>
+<div class="paragraph">
+<p>La gestion externe et mutualisée des clés permet à chaque machine virtuelle de stockage (SVM) de gérer ses propres clés via un serveur KMIP grâce à NetApp Volume Encryption.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html">"Découvrez comment chiffrer les volumes à l&#8217;aide des solutions de cryptage NetApp"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="serveur-proxy">Serveur proxy</h4>
+<div class="paragraph">
+<p>BlueXP configure désormais automatiquement vos systèmes Cloud Volumes ONTAP pour utiliser le connecteur comme serveur proxy, si aucune connexion Internet sortante n&#8217;est disponible pour envoyer des messages AutoSupport.</p>
+</div>
+<div class="paragraph">
+<p>AutoSupport surveille de manière proactive l&#8217;état de santé de votre système et envoie des messages au support technique NetApp.</p>
+</div>
+<div class="paragraph">
+<p>La seule condition est de s&#8217;assurer que le groupe de sécurité du connecteur autorise les connexions <em>entrantes</em> sur le port 3128. Vous devrez ouvrir ce port après le déploiement du connecteur.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changer-la-méthode-de-charge">Changer la méthode de charge</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais modifier la méthode de facturation d&#8217;un système Cloud Volumes ONTAP utilisant des licences basées sur la capacité. Par exemple, si vous avez déployé un système Cloud Volumes ONTAP avec le pack Essentials, vous pouvez le remplacer par le pack Professional si vos besoins évoluent. Cette fonction est disponible dans le porte-monnaie numérique.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Apprenez à changer les méthodes de charge"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="amélioration-du-groupe-de-sécurité">Amélioration du groupe de sécurité</h4>
+<div class="paragraph">
+<p>Lorsque vous créez un environnement de travail Cloud Volumes ONTAP, l&#8217;interface utilisateur vous permet désormais de choisir si vous souhaitez que le groupe de sécurité prédéfini autorise le trafic dans le réseau sélectionné uniquement (recommandé) ou sur tous les réseaux.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-allow-traffic.png" alt="Capture d&#8217;écran indiquant l&#8217;option Autoriser le trafic dans disponible dans l&#8217;assistant de l&#8217;environnement de travail lors de la sélection d&#8217;un groupe de sécurité."></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-juillet-2022">18 juillet 2022</h3>
+<div class="sect3">
+<h4 id="nouveaux-packages-de-licences-dans-azure">Nouveaux packages de licences dans Azure</h4>
+<div class="paragraph">
+<p>Deux nouveaux packages de licence basés sur la capacité sont disponibles pour Cloud Volumes ONTAP dans Azure lorsque vous payez via un abonnement Azure Marketplace :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Optimisé</strong> : payez séparément la capacité provisionnée et les opérations d&#8217;E/S.</p>
+</li>
+<li>
+<p><strong>Edge cache</strong> : licences pour <a href="https://cloud.netapp.com/cloud-volumes-edge-cache" target="_blank" rel="noopener">"Cloud volumes Edge cache"</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#packages">"En savoir plus sur ces packs de licences"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-service-pour-gcp">Cloud Volumes Service pour GCP</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="9-septembre-2020">9 septembre 2020</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-de-cloud-volumes-service-pour-google-cloud">Prise en charge de Cloud Volumes Service pour Google Cloud</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais gérer Cloud Volumes Service pour Google Cloud directement depuis BlueXP :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configurer et créer un environnement de travail</p>
+</li>
+<li>
+<p>Créez et gérez des volumes NFS v3 et NFS v4.1 pour les clients Linux et UNIX</p>
+</li>
+<li>
+<p>Créez et gérez des volumes SMB 3.x pour les clients Windows</p>
+</li>
+<li>
+<p>Créez, supprimez et restaurez des snapshots de volume</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="calcul">Calcul</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="7-décembre-2020">7 décembre 2020</h3>
+<div class="sect3">
+<h4 id="navigation-entre-cloud-manager-et-spot">Navigation entre Cloud Manager et Spot</h4>
+<div class="paragraph">
+<p>La navigation entre Cloud Manager et Spot devient plus simple.</p>
+</div>
+<div class="paragraph">
+<p>Une nouvelle section <strong>Storage Operations</strong> dans Spot vous permet de naviguer directement vers Cloud Manager. Une fois terminé, vous pouvez revenir à Spot à partir de l&#8217;onglet <strong>Compute</strong> de Cloud Manager.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-octobre-2020">18 octobre 2020</h3>
+<div class="sect3">
+<h4 id="présentation-du-service-de-calcul">Présentation du service de calcul</h4>
+<div class="paragraph">
+<p>Valorisation <a href="https://spot.io/products/cloud-analyzer/" target="_blank" rel="noopener">"Spot&#8217;s Cloud Analyzer"</a>, Cloud Manager peut désormais fournir une analyse des coûts généraux de vos dépenses de calcul dans le cloud et identifier les économies potentielles. Ces informations sont disponibles dans le service <strong>Compute</strong> de Cloud Manager.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-compute/concept-compute.html">"En savoir plus sur le service de calcul"</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-compute/main/media/screenshot_compute_dashboard.gif" alt="Capture d&#8217;écran affichant la page d&#8217;analyse des coûts dans Cloud Manager"></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conseiller-digital">Conseiller digital</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="1er-novembre-2022-2">1er novembre 2022</h3>
+<div class="paragraph">
+<p>Digital Advisor (anciennement Active IQ) est désormais entièrement intégré à BlueXP et offre une meilleure expérience de connexion.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque vous accédez à Digital Advisor dans BlueXP, vous êtes maintenant invité à saisir vos identifiants du site de support NetApp, afin que vous puissiez afficher les données associées à vos systèmes. Le compte NSS avec lequel vous vous connectez est associé uniquement à votre connexion utilisateur. Elle n&#8217;est associée à aucun autre utilisateur de votre compte NetApp.</p>
+</div>
+<div class="paragraph">
+<p>Pour plus de détails sur l&#8217;intégration de Digital Advisor avec BlueXP, rendez-vous sur le <a href="https://docs.netapp.com/us-en/active-iq/index.html" target="_blank" rel="noopener">"Documentation de Digital Advisor"</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="systèmes-e-series">Systèmes E-Series</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="18-septembre-2022-4">18 septembre 2022</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-des-baies-e-series">Prise en charge des baies E-Series</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais découvrir vos systèmes de stockage E-Series directement depuis BlueXP. La découverte des systèmes E-Series vous offre une vue complète des données dans l&#8217;ensemble de votre multicloud hybride.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cache-global-de-fichiers">Cache global de fichiers</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="24-octobre-2022-version-2-1">24 octobre 2022 (version 2.1)</h3>
+<div class="paragraph">
+<p>Cette version fournit les nouvelles fonctionnalités répertoriées ci-dessous. Il corrige également les problèmes décrits dans le <a href="https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html">"Problèmes résolus"</a>. Les mises à jour de logiciels sont disponibles à l&#8217;adresse <a href="https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources">"cette page"</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="global-file-cache-est-désormais-disponible-avec-tout-nombre-de-licences">Global File cache est désormais disponible avec tout nombre de licences</h4>
+<div class="paragraph">
+<p>La précédente exigence minimale de 10 licences, ou 30 To de stockage, a été supprimée. Une licence Global File cache sera émise pour chaque 3 To de stockage.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="le-support-a-été-ajouté-pour-lutilisation-dun-serveur-de-gestion-des-licences-hors-ligne">Le support a été ajouté pour l&#8217;utilisation d&#8217;un serveur de gestion des licences hors ligne</h4>
+<div class="paragraph">
+<p>Un site hors ligne ou foncé, License Management Server (LMS) est plus utile lorsque le LMS ne dispose pas d&#8217;une connexion Internet pour la validation de licence avec des sources de licence. Une connexion Internet et une connexion à la source de licence sont requises au cours de la configuration initiale. Une fois configurée, l&#8217;instance LMS peut devenir sombre. Toutes les arêtes/cœurs doivent disposer d&#8217;une connexion avec LMS pour la validation continue des licences.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="les-instances-edge-peuvent-prendre-en-charge-des-utilisateurs-simultanés-supplémentaires">Les instances Edge peuvent prendre en charge des utilisateurs simultanés supplémentaires</h4>
+<div class="paragraph">
+<p>Une seule instance Global File cache Edge peut accueillir jusqu&#8217;à 500 utilisateurs par instance physique Edge dédiée, et jusqu&#8217;à 300 utilisateurs pour les déploiements virtuels dédiés. Le nombre maximal d&#8217;utilisateurs était de 400 et 200, respectivement.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="optimus-psm-amélioré-pour-configurer-le-système-cloud-licensing">Optimus PSM amélioré pour configurer le système Cloud Licensing</h4>
+
+</div>
+<div class="sect3">
+<h4 id="amélioration-de-la-fonctionnalité-de-synchronisation-edge-dans-linterface-utilisateur-optimus-configuration-edge-pour-afficher-tous-les-clients-connectés">Amélioration de la fonctionnalité de synchronisation Edge dans l&#8217;interface utilisateur Optimus (Configuration Edge) pour afficher tous les clients connectés</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="25-juillet-2022-version-2-0">25 juillet 2022 (version 2.0)</h3>
+<div class="paragraph">
+<p>Cette version fournit les nouvelles fonctionnalités répertoriées ci-dessous. Il corrige également les problèmes décrits dans le <a href="https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html">"Problèmes résolus"</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="nouveau-modèle-de-licence-basé-sur-la-capacité-pour-le-cache-de-fichiers-global-via-azure-marketplace">Nouveau modèle de licence basé sur la capacité pour le cache de fichiers global via Azure Marketplace</h4>
+<div class="paragraph">
+<p>La nouvelle licence Edge cache inclut les mêmes fonctionnalités que la licence Cloud volumes ONTAP Professional, mais elle prend également en charge Global File cache. Cette option est disponible lors du déploiement d&#8217;un nouveau système Cloud Volumes ONTAP dans Azure. Vous êtes autorisé à déployer un système Global File cache Edge pour chaque 3 To de capacité provisionnée sur le système Cloud Volumes ONTAP. 30 To minimum doivent être provisionnés. Le service Gestionnaire de licences Fibre Channel a été amélioré pour offrir une licence basée sur la capacité.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing">"En savoir plus sur le package de licences Edge cache."</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="le-cache-global-de-fichiers-est-désormais-intégré-à-cloud-insights">Le cache global de fichiers est désormais intégré à Cloud Insights</h4>
+<div class="paragraph">
+<p>Vous bénéficiez d&#8217;une visibilité complète sur votre infrastructure et vos applications grâce à NetApp Cloud Insights. Global File cache est désormais intégré à ci pour offrir une visibilité complète de tous les bords et cœurs, ainsi que des processus de surveillance exécutés sur les instances. Plusieurs metrics Global File cache sont envoyées à l&#8217;IC pour fournir une vue d&#8217;ensemble complète sur le tableau de bord de l&#8217;IC. Reportez-vous au chapitre 11 du <a href="https://repo.cloudsync.netapp.com/gfc/Global%20File%20Cache%202.1.0%20User%20Guide.pdf" target="_blank" rel="noopener">"Guide de l&#8217;utilisateur NetApp Global File cache"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://cloud.netapp.com/cloud-insights">"En savoir plus sur Cloud Insights."</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="le-serveur-de-gestion-des-licences-a-été-amélioré-pour-fonctionner-dans-des-environnements-très-restrictifs">Le serveur de gestion des licences a été amélioré pour fonctionner dans des environnements très restrictifs</h4>
+<div class="paragraph">
+<p>Lors de la configuration de la licence, le système LMS (License Management Server) doit avoir accès à Internet afin de collecter les informations de licence auprès de NetApp/Zuora. Une fois la configuration réussie, le système de gestion de l&#8217;apprentissage peut continuer à fonctionner en mode hors ligne et fournir des capacités de licence malgré des environnements restrictifs.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="linterface-de-synchronisation-edge-dans-optimus-a-été-améliorée-pour-afficher-la-liste-des-clients-connectés-sur-un-coordinateur-edge">L&#8217;interface de synchronisation Edge dans Optimus a été améliorée pour afficher la liste des clients connectés sur un coordinateur Edge</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="23-juin-2022-version-1-3-1">23 juin 2022 (version 1.3.1)</h3>
+<div class="paragraph">
+<p>Le logiciel Global File cache Edge pour la version 1.3.1 est disponible à l&#8217;adresse <a href="https://docs.netapp.com/us-en/cloud-manager-file-cache/download-gfc-resources.html#download-required-resources">"cette page"</a>. Cette version corrige les problèmes décrits dans le <a href="https://docs.netapp.com/us-en/cloud-manager-file-cache/fixed-issues.html">"Problèmes résolus"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kubernetes">Kubernetes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="06-novembre-2022">06 novembre 2022</h3>
+<div class="paragraph">
+<p>Quand <a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes">"définition des classes de stockage"</a>, vous pouvez maintenant activer l&#8217;économie de classe de stockage pour le stockage en mode bloc ou système de fichiers.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="18-septembre-2022-5">18 septembre 2022</h3>
+<div class="paragraph">
+<p>Vous pouvez désormais importer des clusters OpenShift autogérés dans Cloud Manager.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-openshift.html">"Conditions requises pour les clusters Kubernetes dans OpenShift"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-add-openshift.html">"Ajoutez un cluster OpenShift à Cloud Manager"</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022-5">31 juillet 2022</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Utilisation du nouveau <code>- watch</code> Verbe dans la classe de stockage, la sauvegarde et la restauration des configurations YAML, Cloud Manager peut désormais surveiller les clusters Kubernetes pour les modifications apportées au back-end du cluster et activer automatiquement la sauvegarde des nouveaux volumes persistants si la sauvegarde automatique a été configurée sur le cluster.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html">"Conditions requises pour les clusters Kubernetes dans AWS"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html">"Conditions requises pour les clusters Kubernetes dans Azure"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html">"Conditions requises pour les clusters Kubernetes dans Google Cloud"</a></p>
+</div>
+</li>
+<li>
+<p>Quand <a href="https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes">"définition des classes de stockage"</a>, vous pouvez maintenant spécifier un type de système de fichiers (fstype) pour le stockage en mode bloc.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contrôle">Contrôle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le service de surveillance a été retiré le 1er novembre 2022. Vous pouvez désormais accéder directement à Cloud Insights à partir du menu de navigation et sélectionner <strong>Insights &gt; observabilité</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="clusters-ontap-sur-site">Clusters ONTAP sur site</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="18-septembre-2022-6">18 septembre 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.22 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="nouvelle-page-de-présentation">Nouvelle page de présentation</h4>
+<div class="paragraph">
+<p>Nous avons introduit une nouvelle page de présentation qui contient des informations clés sur un cluster ONTAP sur site. Par exemple, vous pouvez désormais afficher des informations telles que l&#8217;efficacité du stockage, la distribution de la capacité et les informations système.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez également consulter des informations détaillées sur l&#8217;intégration avec d&#8217;autres services cloud NetApp permettant le Tiering des données, la réplication des données et les sauvegardes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-overview.png" alt="Capture d&#8217;écran affichant la page Présentation d&#8217;un cluster ONTAP sur site."></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="volumes-redéfinis">Volumes redéfinis</h4>
+<div class="paragraph">
+<p>Nous avons repensé la page volumes pour fournir un récapitulatif des volumes d&#8217;un cluster. Le récapitulatif présente le nombre total de volumes, la quantité de capacité provisionnée, la capacité utilisée et réservée, ainsi que la quantité de données hiérarchisées.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-volumes.png" alt="Capture d&#8217;écran présentant la page volumes d&#8217;un cluster ONTAP sur site."></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="7-juin-2022">7 juin 2022</h3>
+<div class="paragraph">
+<p>La modification suivante a été introduite avec la version 3.9.19 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="nouvelle-vue-avancée">Nouvelle vue avancée</h4>
+<div class="paragraph">
+<p>Si vous avez besoin d&#8217;effectuer une gestion avancée d&#8217;un cluster ONTAP sur site, vous pouvez utiliser ONTAP System Manager, qui est une interface de gestion fournie avec un système ONTAP. Nous avons inclus l&#8217;interface System Manager directement dans Cloud Manager, afin que vous n&#8217;ayez pas besoin de quitter Cloud Manager pour une gestion avancée.</p>
+</div>
+<div class="paragraph">
+<p>Cette vue avancée est disponible sous forme d&#8217;aperçu avec les clusters ONTAP sur site exécutant la version 9.10.0 ou ultérieure. Nous prévoyons d&#8217;affiner cette expérience et d&#8217;ajouter des améliorations dans les prochaines versions. Envoyez-nous vos commentaires à l&#8217;aide de l&#8217;outil de chat In-Product.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-administer-advanced-view.html">"En savoir plus sur la vue avancée"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="27-février-2022">27 février 2022</h3>
+<div class="sect3">
+<h4 id="un-onglet-ontap-sur-site-est-disponible-dans-le-portefeuille-numérique">Un onglet « ONTAP sur site » est disponible dans le portefeuille numérique.</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais afficher un inventaire de vos clusters ONTAP sur site ainsi que les dates d&#8217;expiration de leur matériel et de leurs contrats de service. Des informations supplémentaires sur les clusters sont également disponibles.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html#viewing-cluster-information-and-contract-details">"Découvrez comment visualiser les informations importantes concernant votre cluster sur site"</a>. Vous devez disposer d&#8217;un compte sur le site de support NetApp pour les clusters, et vous devez joindre les identifiants NSS à votre compte Cloud Manager.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="protection-contre-les-ransomwares">Protection contre les ransomwares</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="7-novembre-2022">7 novembre 2022</h3>
+<div class="sect3">
+<h4 id="nouveaux-panneaux-pour-afficher-votre-score-global-de-protection-contre-les-attaques-par-ransomware-et-les-actions-recommandées">Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées</h4>
+<div class="paragraph">
+<p>Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau Score de protection contre les attaques par ransomware affiche le score global et les zones de cybersécurité où des problèmes potentiels existent. Le panneau actions recommandées répertorie les actions que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware. Il fournit un lien pour examiner le problème et appliquer les actions si nécessaire. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions" target="_blank" rel="noopener">"En savoir plus"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-septembre-2022">6 septembre 2022</h3>
+<div class="sect3">
+<h4 id="nouveau-panneau-pour-afficher-les-incidents-de-ransomware-détectés-sur-vos-clusters">Nouveau panneau pour afficher les incidents de ransomware détectés sur vos clusters</h4>
+<div class="paragraph">
+<p>Le panneau <em>ransomware incidents</em> montre les attaques par ransomware qui se sont produites sur vos systèmes. Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l&#8217;analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-incidents-detected-on-your-systems" target="_blank" rel="noopener">"En savoir plus"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="7-août-2022">7 août 2022</h3>
+<div class="sect3">
+<h4 id="nouveau-panneau-pour-afficher-les-failles-de-sécurité-sur-vos-clusters">Nouveau panneau pour afficher les failles de sécurité sur vos clusters</h4>
+<div class="paragraph">
+<p>Le panneau « <em>Storage system VulnerVulnerfaille</em> » affiche le nombre total de vulnérabilités de sécurité élevées, moyennes et faibles que l&#8217;outil conseiller numérique Active IQ a trouvées sur chacun de vos clusters ONTAP. Il est important d&#8217;immédiatement vérifier que vos systèmes ne sont pas ouverts aux attaques. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#storage-system-vulnerabilities" target="_blank" rel="noopener">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nouveau-panneau-pour-afficher-les-fichiers-numérisés-immuables">Nouveau panneau pour afficher les fichiers numérisés immuables</h4>
+<div class="paragraph">
+<p>Le panneau <em>Critical Data immuabilité</em> affiche le nombre d&#8217;éléments de vos environnements de travail protégés contre les modifications et suppressions sur le stockage WORM grâce à la technologie ONTAP SnapLock. Vous pouvez ainsi afficher la quantité de données dont la copie est inaltérable, pour mieux comprendre vos plans de sauvegarde et de restauration par rapport aux attaques par ransomware. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#data-in-your-volumes-that-are-being-protected-using-snaplock" target="_blank" rel="noopener">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="la-réplication">La réplication</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="18-septembre-2022-7">18 septembre 2022</h3>
+<div class="sect3">
+<h4 id="fsx-pour-ontap-vers-cloud-volumes-ontap">FSX pour ONTAP vers Cloud Volumes ONTAP</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais répliquer des données d&#8217;un système de fichiers Amazon FSX pour ONTAP vers Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html">"Découvrez comment configurer la réplication des données"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="31-juillet-2022-6">31 juillet 2022</h3>
+<div class="sect3">
+<h4 id="fsx-pour-ontap-en-tant-que-source-de-données">FSX pour ONTAP en tant que source de données</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais répliquer des données d&#8217;un système de fichiers Amazon FSX pour ONTAP vers les destinations suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon FSX pour ONTAP</p>
+</li>
+<li>
+<p>Cluster ONTAP sur site</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html">"Découvrez comment configurer la réplication des données"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="2-septembre-2021">2 septembre 2021</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-damazon-fsx-pour-ontap">Prise en charge d&#8217;Amazon FSX pour ONTAP</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais répliquer des données à partir d&#8217;un système Cloud Volumes ONTAP ou d&#8217;un cluster ONTAP sur site vers un système de fichiers Amazon FSX pour ONTAP.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html">"Découvrez comment configurer la réplication des données"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="service-snapcenter">Service SnapCenter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le service SnapCenter a été supprimé le 1er novembre 2022.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storagegrid">StorageGRID</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="18-septembre-2022-8">18 septembre 2022</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-de-storagegrid">Prise en charge de StorageGRID</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais découvrir vos systèmes StorageGRID directement depuis BlueXP. La découverte de StorageGRID vous offre une vue complète sur les données dans l&#8217;ensemble de votre environnement multicloud hybride.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Conditions générales</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Paramètres de cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Envoyer un avis à propos de cette page</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/cloud-manager-relnotes/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/fr-fr/cloud-manager-relnotes/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/fr-fr/cloud-manager-relnotes/js/prism.js'></script>
+      <script type="text/javascript" src='/fr-fr/cloud-manager-relnotes/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/fr-fr/cloud-manager-relnotes/js/www-ntap.js'></script>
+    <script src='/fr-fr/cloud-manager-relnotes/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/cloud-manager-relnotes/js/sidebar.js'></script>
+  </body></html>
