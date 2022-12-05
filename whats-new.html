@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Découvrez les derniers changements apportés aux services Cloud intégrés à la plateforme BlueXP. Pour plus de détails, consultez la série complète des notes d...">
-  <meta name="keywords" content=" what"s new, features, new, release notes, enhancements, fixes, new features, cloud, cloud manager, bluexp"><!-- Icons -->
+  <meta name="keywords" content=" what"s new, features, new, release notes, enhancements, fixes, new features, cloud, cloud manager, bluexp, cloud volumes ontap, kubernetes, cloud backup, cloud tiering, data sense, ransomware, connector, amazon fsx for ontap, azure netapp files, cloud sync, e-series, global file cache"><!-- Icons -->
   <link rel="icon" href="/fr-fr/cloud-manager-relnotes/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/fr-fr/cloud-manager-relnotes/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -490,7 +490,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 07:01:26 +0000">11/17/2022</time>
+    <time datetime="2022-12-05 20:55:07 +0000">12/05/2022</time>
     
   
 
@@ -508,6 +508,7 @@
 <li><a href="#introduction-de-bluexp">Introduction de BlueXP</a></li>
 <li><a href="#fonctionnalités-administratives">Fonctionnalités administratives</a>
 <ul class="sectlevel2">
+<li><a href="#4-décembre-2022">4 décembre 2022</a></li>
 <li><a href="#6-novembre-2022">6 novembre 2022</a></li>
 <li><a href="#1er-novembre-2022">1er novembre 2022</a></li>
 <li><a href="#18-septembre-2022">18 septembre 2022</a></li>
@@ -567,10 +568,9 @@
 </li>
 <li><a href="#cloud-volumes-ontap">Cloud Volumes ONTAP</a>
 <ul class="sectlevel2">
+<li><a href="#4-décembre-2022-2">4 décembre 2022</a></li>
 <li><a href="#6-novembre-2022-3">6 novembre 2022</a></li>
 <li><a href="#18-septembre-2022-3">18 septembre 2022</a></li>
-<li><a href="#31-juillet-2022-4">31 juillet 2022</a></li>
-<li><a href="#18-juillet-2022">18 juillet 2022</a></li>
 </ul>
 </li>
 <li><a href="#cloud-volumes-service-pour-gcp">Cloud Volumes Service pour GCP</a>
@@ -605,20 +605,20 @@
 <ul class="sectlevel2">
 <li><a href="#06-novembre-2022">06 novembre 2022</a></li>
 <li><a href="#18-septembre-2022-5">18 septembre 2022</a></li>
-<li><a href="#31-juillet-2022-5">31 juillet 2022</a></li>
+<li><a href="#31-juillet-2022-4">31 juillet 2022</a></li>
 </ul>
 </li>
 <li><a href="#contrôle">Contrôle</a></li>
 <li><a href="#clusters-ontap-sur-site">Clusters ONTAP sur site</a>
 <ul class="sectlevel2">
+<li><a href="#4-décembre-2022-3">4 décembre 2022</a></li>
 <li><a href="#18-septembre-2022-6">18 septembre 2022</a></li>
 <li><a href="#7-juin-2022">7 juin 2022</a></li>
-<li><a href="#27-février-2022">27 février 2022</a></li>
 </ul>
 </li>
 <li><a href="#protection-contre-les-ransomwares">Protection contre les ransomwares</a>
 <ul class="sectlevel2">
-<li><a href="#7-novembre-2022">7 novembre 2022</a></li>
+<li><a href="#13-novembre-2022">13 novembre 2022</a></li>
 <li><a href="#6-septembre-2022">6 septembre 2022</a></li>
 <li><a href="#7-août-2022">7 août 2022</a></li>
 </ul>
@@ -626,7 +626,7 @@
 <li><a href="#la-réplication">La réplication</a>
 <ul class="sectlevel2">
 <li><a href="#18-septembre-2022-7">18 septembre 2022</a></li>
-<li><a href="#31-juillet-2022-6">31 juillet 2022</a></li>
+<li><a href="#31-juillet-2022-5">31 juillet 2022</a></li>
 <li><a href="#2-septembre-2021">2 septembre 2021</a></li>
 </ul>
 </li>
@@ -658,6 +658,35 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Cette section décrit les nouvelles fonctionnalités liées aux fonctions d&#8217;administration de BlueXP : comptes, connecteurs, informations d&#8217;identification du fournisseur cloud, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="4-décembre-2022">4 décembre 2022</h3>
+<div class="sect3">
+<h4 id="connecteur-3-9-24">Connecteur 3.9.24</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Nous avons mis à jour l&#8217;URL de la console BlueXP vers <a href="https://console.bluexp.netapp.com" class="bare">https://console.bluexp.netapp.com</a></p>
+</li>
+<li>
+<p>Le connecteur est désormais pris en charge dans la région de Google Cloud Israël.</p>
+</li>
+<li>
+<p>Cette version de Connector inclut également des améliorations apportées à Cloud Volumes ONTAP et des clusters ONTAP sur site.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#4-december-2022" target="_blank" rel="noopener">"Découvrez les améliorations apportées à Cloud Volumes ONTAP"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/whats-new.html#4-december-2022" target="_blank" rel="noopener">"Découvrez les améliorations apportées aux clusters sur site de ONTAP"</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="6-novembre-2022">6 novembre 2022</h3>
@@ -1557,6 +1586,24 @@
 <h2 id="cloud-volumes-ontap">Cloud Volumes ONTAP</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="4-décembre-2022-2">4 décembre 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="worm-sauvegarde-dans-le-cloud-désormais-disponible-lors-de-la-création-de-cloud-volumes-ontap">WORM + sauvegarde dans le cloud désormais disponible lors de la création de Cloud Volumes ONTAP</h4>
+<div class="paragraph">
+<p>La possibilité d&#8217;activer les fonctionnalités WORM (Write Once, Read Many) et Cloud Backup est désormais disponible lors du processus de création de Cloud Volumes ONTAP.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="la-région-israël-est-désormais-prise-en-charge-dans-google-cloud">La région Israël est désormais prise en charge dans Google Cloud</h4>
+<div class="paragraph">
+<p>La région Israël est désormais prise en charge dans Google Cloud pour Cloud Volumes ONTAP et le connecteur pour Cloud Volumes ONTAP 9.11.1 P3 ou version ultérieure.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="6-novembre-2022-3">6 novembre 2022</h3>
 <div class="paragraph">
 <p>Les modifications suivantes ont été introduites avec la version 3.9.23 du connecteur.</p>
@@ -1632,76 +1679,6 @@
 <h4 id="notifications-autosupport">Notifications AutoSupport</h4>
 <div class="paragraph">
 <p>BlueXP va maintenant générer une notification si un système Cloud Volumes ONTAP ne parvient pas à envoyer de messages AutoSupport. La notification comprend un lien vers des instructions qui vous aideront à résoudre les problèmes de mise en réseau.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="31-juillet-2022-4">31 juillet 2022</h3>
-<div class="paragraph">
-<p>Les modifications suivantes ont été introduites avec la version 3.9.21 du connecteur.</p>
-</div>
-<div class="sect3">
-<h4 id="licence-mtekm">Licence MTEKM</h4>
-<div class="paragraph">
-<p>La licence MTEKM (Multi-tenant Encryption Key Management) est désormais incluse dans les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.11.1 ou une version ultérieure.</p>
-</div>
-<div class="paragraph">
-<p>La gestion externe et mutualisée des clés permet à chaque machine virtuelle de stockage (SVM) de gérer ses propres clés via un serveur KMIP grâce à NetApp Volume Encryption.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html">"Découvrez comment chiffrer les volumes à l&#8217;aide des solutions de cryptage NetApp"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="serveur-proxy">Serveur proxy</h4>
-<div class="paragraph">
-<p>BlueXP configure désormais automatiquement vos systèmes Cloud Volumes ONTAP pour utiliser le connecteur comme serveur proxy, si aucune connexion Internet sortante n&#8217;est disponible pour envoyer des messages AutoSupport.</p>
-</div>
-<div class="paragraph">
-<p>AutoSupport surveille de manière proactive l&#8217;état de santé de votre système et envoie des messages au support technique NetApp.</p>
-</div>
-<div class="paragraph">
-<p>La seule condition est de s&#8217;assurer que le groupe de sécurité du connecteur autorise les connexions <em>entrantes</em> sur le port 3128. Vous devrez ouvrir ce port après le déploiement du connecteur.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="changer-la-méthode-de-charge">Changer la méthode de charge</h4>
-<div class="paragraph">
-<p>Vous pouvez désormais modifier la méthode de facturation d&#8217;un système Cloud Volumes ONTAP utilisant des licences basées sur la capacité. Par exemple, si vous avez déployé un système Cloud Volumes ONTAP avec le pack Essentials, vous pouvez le remplacer par le pack Professional si vos besoins évoluent. Cette fonction est disponible dans le porte-monnaie numérique.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Apprenez à changer les méthodes de charge"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="amélioration-du-groupe-de-sécurité">Amélioration du groupe de sécurité</h4>
-<div class="paragraph">
-<p>Lorsque vous créez un environnement de travail Cloud Volumes ONTAP, l&#8217;interface utilisateur vous permet désormais de choisir si vous souhaitez que le groupe de sécurité prédéfini autorise le trafic dans le réseau sélectionné uniquement (recommandé) ou sur tous les réseaux.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-allow-traffic.png" alt="Capture d&#8217;écran indiquant l&#8217;option Autoriser le trafic dans disponible dans l&#8217;assistant de l&#8217;environnement de travail lors de la sélection d&#8217;un groupe de sécurité."></span></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="18-juillet-2022">18 juillet 2022</h3>
-<div class="sect3">
-<h4 id="nouveaux-packages-de-licences-dans-azure">Nouveaux packages de licences dans Azure</h4>
-<div class="paragraph">
-<p>Deux nouveaux packages de licence basés sur la capacité sont disponibles pour Cloud Volumes ONTAP dans Azure lorsque vous payez via un abonnement Azure Marketplace :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Optimisé</strong> : payez séparément la capacité provisionnée et les opérations d&#8217;E/S.</p>
-</li>
-<li>
-<p><strong>Edge cache</strong> : licences pour <a href="https://cloud.netapp.com/cloud-volumes-edge-cache" target="_blank" rel="noopener">"Cloud volumes Edge cache"</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#packages">"En savoir plus sur ces packs de licences"</a>.</p>
 </div>
 </div>
 </div>
@@ -1903,7 +1880,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="31-juillet-2022-5">31 juillet 2022</h3>
+<h3 id="31-juillet-2022-4">31 juillet 2022</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1937,6 +1914,33 @@
 <div class="sect1">
 <h2 id="clusters-ontap-sur-site">Clusters ONTAP sur site</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="4-décembre-2022-3">4 décembre 2022</h3>
+<div class="paragraph">
+<p>Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.</p>
+</div>
+<div class="sect3">
+<h4 id="une-nouvelle-façon-de-découvrir-les-clusters-ontap-sur-site">Une nouvelle façon de découvrir les clusters ONTAP sur site</h4>
+<div class="paragraph">
+<p>Vous pouvez désormais découvrir directement vos clusters ONTAP sur site sans utiliser de connecteur. Cette option permet de gérer le cluster via System Manager uniquement. Vous ne pouvez pas activer de services de données BlueXP sur ce type d&#8217;environnement de travail.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html">"En savoir plus sur cette option de découverte et de gestion"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="volumes-flexgroup">Volumes FlexGroup</h4>
+<div class="paragraph">
+<p>Pour les clusters ONTAP sur site découverts via un connecteur, la vue standard de BlueXP représente désormais les volumes FlexGroup créés via System Manager ou l&#8217;interface de ligne de commande ONTAP. Vous pouvez également gérer ces volumes en les clonant, en modifiant leurs paramètres, en les supprimant, et plus encore.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-flexgroup-volumes.png" alt="Copie d&#8217;écran montrant un volume FlexGroup sur la page volumes pour un cluster ONTAP sur site."></span></p>
+</div>
+<div class="paragraph">
+<p>BlueXP ne prend pas en charge la création de volumes FlexGroup. Vous devez continuer à utiliser System Manager ou l&#8217;interface de ligne de commandes pour créer des volumes FlexGroup.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="18-septembre-2022-6">18 septembre 2022</h3>
 <div class="paragraph">
@@ -1982,29 +1986,17 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="27-février-2022">27 février 2022</h3>
-<div class="sect3">
-<h4 id="un-onglet-ontap-sur-site-est-disponible-dans-le-portefeuille-numérique">Un onglet « ONTAP sur site » est disponible dans le portefeuille numérique.</h4>
-<div class="paragraph">
-<p>Vous pouvez désormais afficher un inventaire de vos clusters ONTAP sur site ainsi que les dates d&#8217;expiration de leur matériel et de leurs contrats de service. Des informations supplémentaires sur les clusters sont également disponibles.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html#viewing-cluster-information-and-contract-details">"Découvrez comment visualiser les informations importantes concernant votre cluster sur site"</a>. Vous devez disposer d&#8217;un compte sur le site de support NetApp pour les clusters, et vous devez joindre les identifiants NSS à votre compte Cloud Manager.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="protection-contre-les-ransomwares">Protection contre les ransomwares</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="7-novembre-2022">7 novembre 2022</h3>
+<h3 id="13-novembre-2022">13 novembre 2022</h3>
 <div class="sect3">
 <h4 id="nouveaux-panneaux-pour-afficher-votre-score-global-de-protection-contre-les-attaques-par-ransomware-et-les-actions-recommandées">Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées</h4>
 <div class="paragraph">
-<p>Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau Score de protection contre les attaques par ransomware affiche le score global et les zones de cybersécurité où des problèmes potentiels existent. Le panneau actions recommandées répertorie les actions que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware. Il fournit un lien pour examiner le problème et appliquer les actions si nécessaire. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions" target="_blank" rel="noopener">"En savoir plus"</a>.</p>
+<p>Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau <em>Overransomware protection Score</em> affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau <em>Recommended actions</em> répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions" target="_blank" rel="noopener">"En savoir plus"</a>.</p>
 </div>
 </div>
 </div>
@@ -2050,7 +2042,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="31-juillet-2022-6">31 juillet 2022</h3>
+<h3 id="31-juillet-2022-5">31 juillet 2022</h3>
 <div class="sect3">
 <h4 id="fsx-pour-ontap-en-tant-que-source-de-données">FSX pour ONTAP en tant que source de données</h4>
 <div class="paragraph">
