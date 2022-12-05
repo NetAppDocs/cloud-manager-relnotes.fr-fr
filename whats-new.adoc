@@ -75,49 +75,6 @@ Cloud Manager vous invite à mettre à jour les identifiants associés à vos co
 
 
 
-=== 18 septembre 2022
-
-
-
-==== Connecteur 3.9.22
-
-* Nous avons amélioré l'assistant de déploiement de connecteur en ajoutant un _Guide produit_ qui fournit des étapes permettant de répondre aux exigences minimales pour l'installation de connecteurs : autorisations, authentification et mise en réseau.
-* Vous pouvez désormais créer un dossier de demande de support NetApp directement depuis Cloud Manager dans *support Dashboard*.
-+
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-get-help.html#netapp-support["Découvrez comment créer un dossier"].
-
-* Cette version du connecteur inclut également des améliorations Cloud Volumes ONTAP.
-+
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#18-september-2022["Découvrez les améliorations apportées à Cloud Volumes ONTAP"^]
-
-
-
-
-
-=== 31 juillet 2022
-
-
-
-==== Connecteur 3.9.21
-
-* Nous avons introduit une nouvelle façon de découvrir les ressources clouds que vous n'êtes pas encore géré dans Cloud Manager.
-+
-Sur la toile, l'onglet *Mes opportunités* fournit un emplacement centralisé pour découvrir les ressources existantes que vous pouvez ajouter à Cloud Manager afin d'assurer la cohérence des services de données et des opérations dans l'ensemble de votre environnement multicloud hybride.
-
-+
-Dans cette version initiale, My Opportunities vous permet de découvrir les systèmes de fichiers FSX pour ONTAP existants dans votre compte AWS.
-
-+
-https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-using-my-opportunities["Découvrez comment découvrir FSX pour ONTAP à l'aide de Mes opportunités"^]
-
-* Cette version du connecteur inclut également des améliorations Cloud Volumes ONTAP.
-+
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#31-july-2022["Découvrez les améliorations apportées à Cloud Volumes ONTAP"^]
-
-
-
-
-
 == Azure NetApp Files
 
 
