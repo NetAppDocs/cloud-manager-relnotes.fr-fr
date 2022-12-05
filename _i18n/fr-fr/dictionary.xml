@@ -157,7 +157,6 @@
   <block id="7b95d23b6b30b69ed07a2e15017d99e3" category="inline-link">En savoir plus sur la gestion des paramètres de sauvegarde au niveau du cluster</block>
   <block id="057c181e6c21fad200a862461add5a03" category="paragraph"><block ref="344cf4f459ea1c1e24d6bef144dcb178" category="inline-link-rx"></block>.</block>
   <block id="49b6fd5ed6bda6ec09a46ece6a679207" category="section-title">Vous pouvez désormais restaurer des fichiers de sauvegarde à l'aide de la fonction de recherche et de restauration lors de l'utilisation d'un connecteur sur site</block>
-  <block id="2bcad5b21af9172c1d623bc274dbe4c1" category="paragraph">Dans la version précédente, la prise en charge a été ajoutée pour créer des fichiers de sauvegarde dans le cloud public lorsque le connecteur est déployé sur site. Dans cette version, le service de support a continué d'être utilisé pour restaurer des sauvegardes à partir d'Amazon S3 ou d'Azure Blob lorsque le connecteur est déployé sur site. La fonction de recherche et restauration prend également en charge la restauration des sauvegardes depuis les systèmes StorageGRID vers les systèmes ONTAP sur site.</block>
   <block id="18cddedef625cde24d34d1b2bb64fb96" category="paragraph">À l'heure actuelle, le connecteur doit être déployé dans Google Cloud Platform lorsque vous utilisez les fonctions de recherche et de restauration pour restaurer des sauvegardes à partir de Google Cloud Storage.</block>
   <block id="f4f4c174196d45dbc07ae62740f92b92" category="section-title">La page surveillance des travaux a été mise à jour</block>
   <block id="213f79d27d3a76a68080f2d948105d7e" category="inline-link">Surveillance des travaux</block>
@@ -369,30 +368,6 @@
   <block id="b04af3108aa064fb53015f188d417418" category="paragraph"><block ref="740982637064d815add45193172173b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fa5f0abcdf06ead83ea7fc11be56d19a" category="section-title">Notifications AutoSupport</block>
   <block id="7a8757c8fbb4c1997c5641cf6e4a7489" category="paragraph">BlueXP va maintenant générer une notification si un système Cloud Volumes ONTAP ne parvient pas à envoyer de messages AutoSupport. La notification comprend un lien vers des instructions qui vous aideront à résoudre les problèmes de mise en réseau.</block>
-  <block id="5d95d03306d738eddc1fcb7b61b6151a" category="paragraph">Les modifications suivantes ont été introduites avec la version 3.9.21 du connecteur.</block>
-  <block id="1bbedbfdc08c3ed9498540dc734fa96a" category="section-title">Licence MTEKM</block>
-  <block id="6412f38167d8bd5882b37955a102350e" category="paragraph">La licence MTEKM (Multi-tenant Encryption Key Management) est désormais incluse dans les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.11.1 ou une version ultérieure.</block>
-  <block id="c43a4aedaaa96e7a4c838a24978b6052" category="paragraph">La gestion externe et mutualisée des clés permet à chaque machine virtuelle de stockage (SVM) de gérer ses propres clés via un serveur KMIP grâce à NetApp Volume Encryption.</block>
-  <block id="6b8afb72156ec7e5aff9808d22a9eb10" category="inline-link">Découvrez comment chiffrer les volumes à l'aide des solutions de cryptage NetApp</block>
-  <block id="58d699d73838a8f3d0660e52bb5df744" category="paragraph"><block ref="c9a99e5900c97d829a142b9eef78ba06" category="inline-link-rx"></block>.</block>
-  <block id="824f455afa0ae197e5e7156988b6dc50" category="section-title">Serveur proxy</block>
-  <block id="dd8fbb56db547f79b2c75bf3b4e493be" category="paragraph">BlueXP configure désormais automatiquement vos systèmes Cloud Volumes ONTAP pour utiliser le connecteur comme serveur proxy, si aucune connexion Internet sortante n'est disponible pour envoyer des messages AutoSupport.</block>
-  <block id="80f5caa6fde5a9410197e8753e6f4625" category="paragraph">AutoSupport surveille de manière proactive l'état de santé de votre système et envoie des messages au support technique NetApp.</block>
-  <block id="5fc25795a93f92bfee952eef3220d9e5" category="paragraph">La seule condition est de s'assurer que le groupe de sécurité du connecteur autorise les connexions _entrantes_ sur le port 3128. Vous devrez ouvrir ce port après le déploiement du connecteur.</block>
-  <block id="b69737a8aa6d54e160fd215ef53825b5" category="section-title">Changer la méthode de charge</block>
-  <block id="2ce6294ffa35428110be8d048560952f" category="paragraph">Vous pouvez désormais modifier la méthode de facturation d'un système Cloud Volumes ONTAP utilisant des licences basées sur la capacité. Par exemple, si vous avez déployé un système Cloud Volumes ONTAP avec le pack Essentials, vous pouvez le remplacer par le pack Professional si vos besoins évoluent. Cette fonction est disponible dans le porte-monnaie numérique.</block>
-  <block id="41b5565824d562a55cfa454b5b57da3d" category="section-title">Amélioration du groupe de sécurité</block>
-  <block id="68519dd54d9e3922e66ec5b7a67c39e0" category="paragraph">Lorsque vous créez un environnement de travail Cloud Volumes ONTAP, l'interface utilisateur vous permet désormais de choisir si vous souhaitez que le groupe de sécurité prédéfini autorise le trafic dans le réseau sélectionné uniquement (recommandé) ou sur tous les réseaux.</block>
-  <block id="2261cc540df38326c53234c3d2d87794" category="inline-image-macro">Capture d'écran indiquant l'option Autoriser le trafic dans disponible dans l'assistant de l'environnement de travail lors de la sélection d'un groupe de sécurité.</block>
-  <block id="4c4a915707766fae320a6c1004e2969d" category="paragraph"><block ref="4c4a915707766fae320a6c1004e2969d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cb8e43d2f95cb40206b28ff3def0b89c" category="section-title">18 juillet 2022</block>
-  <block id="98ec171ea5a9061794734313fc3bfc8a" category="section-title">Nouveaux packages de licences dans Azure</block>
-  <block id="84b9d69f0957a24ce7fbed46c5b0ab12" category="paragraph">Deux nouveaux packages de licence basés sur la capacité sont disponibles pour Cloud Volumes ONTAP dans Azure lorsque vous payez via un abonnement Azure Marketplace :</block>
-  <block id="99c581fb257fff513bc65272d605290f" category="list-text">*Optimisé* : payez séparément la capacité provisionnée et les opérations d'E/S.</block>
-  <block id="e4bdb4038975db929f91098fe2d7ec12" category="inline-link">Cloud volumes Edge cache</block>
-  <block id="acc34707a7642d8ca31b72c25ca50920" category="list-text">*Edge cache* : licences pour<block ref="1bc1fd590dd203d9bb10cdd372d8de71" category="inline-link-rx"></block></block>
-  <block id="2d66a0b2e45838b2ebcec83efd6c765c" category="inline-link">En savoir plus sur ces packs de licences</block>
-  <block id="ee76810836e6a3bb9dd07dfba26221a1" category="paragraph"><block ref="ddf7de7bfe14bcbf78a072c21440c1a8" category="inline-link-rx"></block>.</block>
   <block id="a3c559e0541e9bb860178ce6fe414224" category="section-title">Cloud Volumes Service pour GCP</block>
   <block id="a633f0835832cc75f5a83248a8aa2ba8" category="section-title">9 septembre 2020</block>
   <block id="8751230100c974b7c3ae5adae22c0f7c" category="section-title">Prise en charge de Cloud Volumes Service pour Google Cloud</block>
@@ -483,16 +458,9 @@
   <block id="99721ad2e6d601b2966a9d9e1c7de770" category="paragraph">Cette vue avancée est disponible sous forme d'aperçu avec les clusters ONTAP sur site exécutant la version 9.10.0 ou ultérieure. Nous prévoyons d'affiner cette expérience et d'ajouter des améliorations dans les prochaines versions. Envoyez-nous vos commentaires à l'aide de l'outil de chat In-Product.</block>
   <block id="f303a87fe6efba259b752f5a9e11064b" category="inline-link">En savoir plus sur la vue avancée</block>
   <block id="677a2aadb254e7c4efbc10a593c2f4db" category="paragraph"><block ref="869a420ba883bbe1b303fc03706f8b2f" category="inline-link-rx"></block>.</block>
-  <block id="ba26e4556a0f160834687982b0479336" category="section-title">27 février 2022</block>
-  <block id="f25694bb9bc00e8fcfcc1a3c65dd482b" category="section-title">Un onglet « ONTAP sur site » est disponible dans le portefeuille numérique.</block>
-  <block id="d3f07c4c7baf0c60bc64c1cdc48732af" category="paragraph">Vous pouvez désormais afficher un inventaire de vos clusters ONTAP sur site ainsi que les dates d'expiration de leur matériel et de leurs contrats de service. Des informations supplémentaires sur les clusters sont également disponibles.</block>
-  <block id="184ca21b83c54a7ba12f9b1077ccb494" category="inline-link">Découvrez comment visualiser les informations importantes concernant votre cluster sur site</block>
-  <block id="a70e816a0245e4c041fe696bc068fde8" category="paragraph"><block ref="cdf49294fa22fe97f3cd9774fbb3d925" category="inline-link-rx"></block>. Vous devez disposer d'un compte sur le site de support NetApp pour les clusters, et vous devez joindre les identifiants NSS à votre compte Cloud Manager.</block>
   <block id="950604af87c30e09716e6d097eb491db" category="section-title">Protection contre les ransomwares</block>
-  <block id="ff3a8dd75b4d3881ab0fc4ce17301af8" category="section-title">7 novembre 2022</block>
   <block id="7c16758604271d7ef3055d0e5962ec82" category="section-title">Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées</block>
   <block id="ec9614a46239aa59499c4a94e919963a" category="inline-link">En savoir plus</block>
-  <block id="2dad48bc5cb886ca6327e125bc6c853d" category="paragraph">Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau Score de protection contre les attaques par ransomware affiche le score global et les zones de cybersécurité où des problèmes potentiels existent. Le panneau actions recommandées répertorie les actions que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware. Il fournit un lien pour examiner le problème et appliquer les actions si nécessaire.<block ref="020baa7d67cad4299bb33f9b5861968a" category="inline-link-rx"></block>.</block>
   <block id="8c70b531876f0aad87de3df8d9049545" category="section-title">6 septembre 2022</block>
   <block id="4f400ad3636bf9ccb8a232e152ae3a56" category="section-title">Nouveau panneau pour afficher les incidents de ransomware détectés sur vos clusters</block>
   <block id="2cadd98d70cc36a0982305ace71488f2" category="paragraph">Le panneau _ransomware incidents_ montre les attaques par ransomware qui se sont produites sur vos systèmes. Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware.<block ref="a8b3634a0c7a594234502955588cc1db" category="inline-link-rx"></block>.</block>
@@ -525,4 +493,30 @@
   <block id="ff93781ff90bf605d8b3070c1501b28f" category="sidebar">Blog du site Web BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinaires sur le cloud</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">Toute la documentation BlueXP</block>
+  <block id="83ec139c80a3d5b2f11f1a94eed47cd2" category="section-title">4 décembre 2022</block>
+  <block id="9a37fbeb5352e14f2a53fe349c60ad58" category="section-title">Connecteur 3.9.24</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="609db1dbd04bb2ee742cb4078546018c" category="list-text">Nous avons mis à jour l'URL de la console BlueXP vers<block ref="d4d03fd3c2a1ab003ebd5cf52ee8df58" category="inline-link-rx"></block></block>
+  <block id="4a11791a9bd4070a9cb5e2e709d06351" category="list-text">Le connecteur est désormais pris en charge dans la région de Google Cloud Israël.</block>
+  <block id="1765dff10197df4bf080f41e5537f2a5" category="list-text">Cette version de Connector inclut également des améliorations apportées à Cloud Volumes ONTAP et des clusters ONTAP sur site.</block>
+  <block id="242cf97b6ce4408dde25722d6b0e37f9" category="list-text"><block ref="242cf97b6ce4408dde25722d6b0e37f9" category="inline-link-rx"></block></block>
+  <block id="6ff2a7981cc8a7efd758e8ffec4cc69e" category="inline-link">Découvrez les améliorations apportées aux clusters sur site de ONTAP</block>
+  <block id="4703fae8488338a7ad69a5cd4347caf3" category="list-text"><block ref="4703fae8488338a7ad69a5cd4347caf3" category="inline-link-rx"></block></block>
+  <block id="8f6062f059e26f94975a36f6a5efcc4b" category="paragraph">Dans la version précédente, la prise en charge a été ajoutée pour créer des fichiers de sauvegarde dans le cloud public lorsque le connecteur est déployé sur site. Dans cette version, le service de support a continué d'être utilisé pour restaurer des sauvegardes à partir d'Amazon S3 ou d'Azure Blob lorsque le connecteur est déployé sur site. La fonction de recherche et restauration prend également en charge la restauration des sauvegardes depuis les systèmes StorageGRID vers les systèmes ONTAP sur site.</block>
+  <block id="612111851a1740ab34a9d35045621084" category="paragraph">Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.</block>
+  <block id="afb589d73d8814d7f9075b4db6f76911" category="section-title">WORM + sauvegarde dans le cloud désormais disponible lors de la création de Cloud Volumes ONTAP</block>
+  <block id="4d0c93d7ce5ce6f6010669f660c38d43" category="paragraph">La possibilité d'activer les fonctionnalités WORM (Write Once, Read Many) et Cloud Backup est désormais disponible lors du processus de création de Cloud Volumes ONTAP.</block>
+  <block id="4d9d8c1f4a4820e4fe54b4e7d8733a68" category="section-title">La région Israël est désormais prise en charge dans Google Cloud</block>
+  <block id="4ff0d60c5d06bf54def05888e62a6d9e" category="paragraph">La région Israël est désormais prise en charge dans Google Cloud pour Cloud Volumes ONTAP et le connecteur pour Cloud Volumes ONTAP 9.11.1 P3 ou version ultérieure.</block>
+  <block id="bad2ca9843e053dbde9d0f5cf2f18a7b" category="section-title">Une nouvelle façon de découvrir les clusters ONTAP sur site</block>
+  <block id="d69d6ceca70ae4e3b7cf6949930f5168" category="paragraph">Vous pouvez désormais découvrir directement vos clusters ONTAP sur site sans utiliser de connecteur. Cette option permet de gérer le cluster via System Manager uniquement. Vous ne pouvez pas activer de services de données BlueXP sur ce type d'environnement de travail.</block>
+  <block id="336404297eaddf0051e1d62c3d3bb48e" category="inline-link">En savoir plus sur cette option de découverte et de gestion</block>
+  <block id="7b755afb39a1416600c762f9fe472d98" category="paragraph"><block ref="72c8a0f1bc00bb52f3d78997feb64e77" category="inline-link-rx"></block>.</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="section-title">Volumes FlexGroup</block>
+  <block id="3fb631a563e0a478dc6771d75c7f7094" category="paragraph">Pour les clusters ONTAP sur site découverts via un connecteur, la vue standard de BlueXP représente désormais les volumes FlexGroup créés via System Manager ou l'interface de ligne de commande ONTAP. Vous pouvez également gérer ces volumes en les clonant, en modifiant leurs paramètres, en les supprimant, et plus encore.</block>
+  <block id="2907843476579cb2696e8e0e783a2a07" category="inline-image-macro">Copie d'écran montrant un volume FlexGroup sur la page volumes pour un cluster ONTAP sur site.</block>
+  <block id="aa60f08e9c5a748d9b57c0e7689a43f5" category="paragraph"><block ref="aa60f08e9c5a748d9b57c0e7689a43f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c081854506aed2f757f753e779bc45f" category="paragraph">BlueXP ne prend pas en charge la création de volumes FlexGroup. Vous devez continuer à utiliser System Manager ou l'interface de ligne de commandes pour créer des volumes FlexGroup.</block>
+  <block id="8c40ca85ff5a42317cb1f23a7d716ecc" category="section-title">13 novembre 2022</block>
+  <block id="1ec4de7af8ab7de00ed7d13a3182054f" category="paragraph">Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire.<block ref="020baa7d67cad4299bb33f9b5861968a" category="inline-link-rx"></block>.</block>
 </blocks>
