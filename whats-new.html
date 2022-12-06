@@ -490,7 +490,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-05 21:01:29 +0000">12/05/2022</time>
+    <time datetime="2022-12-06 17:36:06 +0000">12/06/2022</time>
     
   
 
@@ -536,10 +536,10 @@
 </li>
 <li><a href="#la-sauvegarde-dans-le-cloud">La sauvegarde dans le cloud</a>
 <ul class="sectlevel2">
+<li><a href="#6-décembre-2022">6 décembre 2022</a></li>
 <li><a href="#2-novembre-2022">2 novembre 2022</a></li>
 <li><a href="#28-septembre-2022">28 septembre 2022</a></li>
 <li><a href="#19-septembre-2022">19 septembre 2022</a></li>
-<li><a href="#18-août-2022">18 août 2022</a></li>
 </ul>
 </li>
 <li><a href="#sens-des-données-cloud">Sens des données cloud</a>
@@ -877,6 +877,33 @@
 <h2 id="la-sauvegarde-dans-le-cloud">La sauvegarde dans le cloud</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="6-décembre-2022">6 décembre 2022</h3>
+<div class="sect3">
+<h4 id="prise-en-charge-de-la-classe-de-stockage-darchivage-google">Prise en charge de la classe de stockage d&#8217;archivage Google</h4>
+<div class="paragraph">
+<p>Les fichiers de sauvegarde sont initialement créés dans la classe de stockage Google Standard. Vous pouvez désormais choisir de transférer les anciennes sauvegardes vers le système de stockage Google Archive après un certain nombre de jours pour optimiser les coûts.</p>
+</div>
+<div class="paragraph">
+<p>Cette fonctionnalité est actuellement prise en charge par les clusters ONTAP sur site avec ONTAP 9.12.1 (ou version ultérieure). Elle n&#8217;est pas actuellement disponible pour les systèmes Cloud Volumes ONTAP.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-des-volumes-flexgroup">Prise en charge des volumes FlexGroup</h4>
+<div class="paragraph">
+<p>Cloud Backup prend désormais en charge les volumes FlexGroup. Avec ONTAP 9.12.1 ou version supérieure, vous pouvez sauvegarder des volumes FlexGroup sur un stockage de cloud public et privé. Si vous disposez d&#8217;environnements de travail intégrant des FlexVol et des volumes FlexGroup, vous pouvez sauvegarder tous les volumes FlexGroup sur ces systèmes une fois la mise à jour du logiciel ONTAP effectuée.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#supported-volumes">"Consultez la liste complète des types de volumes pris en charge"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possibilité-de-restaurer-les-données-à-partir-de-sauvegardes-vers-un-agrégat-spécifique-sur-les-systèmes-cloud-volumes-ontap">Possibilité de restaurer les données à partir de sauvegardes vers un agrégat spécifique sur les systèmes Cloud Volumes ONTAP</h4>
+<div class="paragraph">
+<p>Dans les versions précédentes, vous pouviez sélectionner l&#8217;agrégat uniquement lors de la restauration des données sur des systèmes ONTAP sur site. Cette fonctionnalité fonctionne désormais lors de la restauration des données sur des systèmes Cloud Volumes ONTAP.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="2-novembre-2022">2 novembre 2022</h3>
 <div class="sect3">
 <h4 id="possibilité-dexporter-danciennes-copies-snapshot-dans-vos-fichiers-de-sauvegarde-de-base">Possibilité d&#8217;exporter d&#8217;anciennes copies Snapshot dans vos fichiers de sauvegarde de base</h4>
@@ -896,7 +923,7 @@
 <div class="sect3">
 <h4 id="le-service-de-support-a-été-ajouté-pour-recevoir-les-alertes-cloud-backup-par-e-mail-et-dans-le-centre-de-notification">Le service de support a été ajouté pour recevoir les alertes Cloud Backup par e-mail et dans le centre de notification</h4>
 <div class="paragraph">
-<p>Cloud Backup a été intégré au service BlueXP notification. Vous pouvez afficher les notifications Cloud Backup en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour qu&#8217;il envoie des notifications par e-mail en tant qu&#8217;alertes de sorte que vous puissiez être informé de l&#8217;activité système importante, même lorsque vous n&#8217;êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent connaître les activités de sauvegarde et de restauration. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#use-the-job-monitor-to-view-backup-and-restore-job-status">"Découvrez comment"</a>.</p>
+<p>Cloud Backup a été intégré au service BlueXP notification. Vous pouvez afficher les notifications Cloud Backup en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour envoyer des notifications par e-mail en tant qu&#8217;alertes afin de vous informer de l&#8217;activité système importante, même lorsque vous n&#8217;êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent connaître les activités de sauvegarde et de restauration. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#use-the-job-monitor-to-view-backup-and-restore-job-status">"Découvrez comment"</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1051,54 +1078,6 @@
 <h4 id="effectuez-un-glisser-déposer-pour-activer-la-sauvegarde-dans-le-cloud-sur-les-systèmes-storagegrid">Effectuez un glisser-déposer pour activer la sauvegarde dans le cloud sur les systèmes StorageGRID</h4>
 <div class="paragraph">
 <p>Si le <a href="https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html" target="_blank" rel="noopener">"StorageGRID"</a> Destination de vos sauvegardes existe en tant qu&#8217;environnement de travail sur la toile. Vous pouvez faire glisser votre environnement de travail ONTAP sur site vers la destination pour lancer l&#8217;assistant de configuration de Cloud Backup.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="18-août-2022">18 août 2022</h3>
-<div class="sect3">
-<h4 id="des-fonctionnalités-de-prise-en-charge-ont-été-ajoutées-pour-protéger-les-données-dapplications-cloud-natives">Des fonctionnalités de prise en charge ont été ajoutées pour protéger les données d&#8217;applications cloud natives</h4>
-<div class="paragraph">
-<p>Cloud Backup pour applications est un service SaaS qui fournit des fonctionnalités de protection des données pour les applications exécutées sur NetApp Cloud Storage. Cloud Backup pour les applications activées dans BlueXP offre des sauvegardes et des restaurations efficaces et cohérentes avec les applications, basées sur des règles, de bases de données Oracle résidant sur Amazon FSX pour NetApp ONTAP.https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-protect-cloud-app-data-to-cloud.html["En savoir plus &gt;&gt;"^].</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="la-fonction-de-recherche-et-de-restauration-est-désormais-prise-en-charge-avec-les-fichiers-de-sauvegarde-dans-azure-blob">La fonction de recherche et de restauration est désormais prise en charge avec les fichiers de sauvegarde dans Azure Blob</h4>
-<div class="paragraph">
-<p>La méthode de recherche et de restauration des volumes et des fichiers est désormais disponible pour les utilisateurs qui stockent leurs fichiers de sauvegarde dans le stockage Azure Blob. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-restore-backups-ontap.html#prerequisites-2" target="_blank" rel="noopener">"Découvrez comment restaurer vos volumes et fichiers à l&#8217;aide de Search  Restore"</a>.</p>
-</div>
-<div class="paragraph">
-<p>Notez que des autorisations supplémentaires sont nécessaires dans le rôle connecteur pour utiliser cette fonctionnalité. Un connecteur déployé avec la version 3.9.21 du logiciel (août 2022) inclut ces autorisations. Vous devrez ajouter manuellement les autorisations si vous avez déployé le connecteur à l&#8217;aide d&#8217;une version antérieure. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-azure.html#verify-or-add-permissions-to-the-connector" target="_blank" rel="noopener">"Voir comment ajouter ces autorisations, si nécessaire"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nous-avons-ajouté-la-possibilité-de-protéger-vos-fichiers-de-sauvegarde-contre-les-suppressions-et-les-attaques-par-ransomware">Nous avons ajouté la possibilité de protéger vos fichiers de sauvegarde contre les suppressions et les attaques par ransomware</h4>
-<div class="paragraph">
-<p>Cloud Backup dispose désormais de la prise en charge du verrouillage des objets pour les sauvegardes sécurisées par ransomware. Si votre cluster utilise ONTAP 9.11.1 ou version ultérieure et que votre destination de sauvegarde est Amazon S3, une nouvelle option de stratégie de sauvegarde appelée <em>DataLock et protection contre les attaques par ransomware</em> est maintenant disponible. DataLock protège vos fichiers de sauvegarde contre la modification ou la suppression, et la protection contre les ransomwares analyse vos fichiers de sauvegarde pour rechercher des signes d&#8217;attaque par ransomware sur vos fichiers de sauvegarde. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection" target="_blank" rel="noopener">"Découvrez comment protéger vos sauvegardes avec DataLock et des attaques par ransomware"</a>.</p>
-</div>
-<div class="paragraph">
-<p>Notez que des autorisations supplémentaires sont nécessaires dans le rôle connecteur pour utiliser cette fonctionnalité. Un connecteur déployé à l&#8217;aide du logiciel version 3.9.21 inclut ces autorisations. Vous devrez ajouter manuellement les autorisations si vous avez déployé le connecteur à l&#8217;aide d&#8217;une version antérieure. <a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-aws.html#set-up-s3-permissions" target="_blank" rel="noopener">"Voir comment ajouter ces autorisations, si nécessaire"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cloud-backup-prend-désormais-en-charge-les-règles-créées-à-laide-détiquettes-snapmirror-personnalisées">Cloud Backup prend désormais en charge les règles créées à l&#8217;aide d&#8217;étiquettes SnapMirror personnalisées</h4>
-<div class="paragraph">
-<p>Auparavant, Cloud Backup prenait uniquement en charge les étiquettes SnapMirror prédéfinies : toutes les heures, tous les jours, toutes les semaines, toutes les heures et tous les ans. Désormais, Cloud Backup peut détecter les règles SnapMirror qui comportent des étiquettes SnapMirror personnalisées que vous avez créées à l&#8217;aide de System Manager ou de l&#8217;interface de ligne de commande. Ces nouvelles étiquettes sont accessibles dans l&#8217;interface utilisateur de Cloud Backup, ce qui vous permet de sauvegarder des volumes avec le label SnapMirror de votre choix dans le cloud.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="autres-améliorations-de-la-politique-de-sauvegarde-pour-les-systèmes-ontap">Autres améliorations de la politique de sauvegarde pour les systèmes ONTAP</h4>
-<div class="paragraph">
-<p>Certaines pages de stratégie de sauvegarde ont été redessinées afin de faciliter l&#8217;affichage de toutes les règles de sauvegarde disponibles pour les volumes de chaque cluster ONTAP. Vous pouvez ainsi consulter les détails des règles disponibles de façon à appliquer les meilleures règles à vos volumes.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="effectuez-un-glisser-déposer-pour-activer-cloud-backup-sur-azure-blob-et-google-cloud-storage">Effectuez un glisser-déposer pour activer Cloud Backup sur Azure Blob et Google Cloud Storage</h4>
-<div class="paragraph">
-<p>Si le <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-azure-blob.html" target="_blank" rel="noopener">"Blob d&#8217;Azure"</a> ou <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-viewing-gcp-storage.html" target="_blank" rel="noopener">"Google Cloud Storage"</a> La destination de vos sauvegardes existe en tant qu&#8217;environnement de travail sur la toile. Vous pouvez faire glisser votre environnement de travail ONTAP ou Cloud Volumes ONTAP sur site (installé dans Azure ou GCP) vers la destination pour lancer l&#8217;assistant de configuration de la sauvegarde.</p>
-</div>
-<div class="paragraph">
-<p>Cette fonctionnalité existe déjà pour les compartiments Amazon S3.</p>
 </div>
 </div>
 </div>
