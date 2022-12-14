@@ -187,6 +187,36 @@ https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["E
 
 
 
+=== 9 janvier 2023
+
+
+
+==== La possibilité de déplacer d'anciens fichiers de sauvegarde vers le stockage d'archivage AWS S3 à partir des systèmes StorageGRID
+
+Vous pouvez désormais transférer d'anciens fichiers de sauvegarde des systèmes StorageGRID vers le stockage d'archivage dans AWS S3. Cela vous permet de libérer de l'espace sur vos systèmes StorageGRID et de réaliser des économies en utilisant une solution de stockage bon marché pour les anciens fichiers de sauvegarde. Vous pouvez choisir de transférer les sauvegardes vers un stockage AWS S3 Glacier ou S3 Glacier Deep Archive.
+
+Cette fonctionnalité est disponible si votre cluster utilise ONTAP 9.12.1 ou version ultérieure et si votre système StorageGRID utilise 11.3 ou version ultérieure. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-private-cloud.html#preparing-to-archive-older-backup-files-to-public-cloud-storage["En savoir plus"].
+
+
+
+==== Possibilité de sélectionner vos propres clés gérées par le client pour le chiffrement des données sur Google Cloud
+
+Lorsque vous sauvegardez les données de vos systèmes ONTAP dans Google Cloud Storage, vous pouvez maintenant sélectionner vos propres clés gérées par le client pour le chiffrement des données dans l'assistant d'activation au lieu d'utiliser les clés de chiffrement gérées par Google par défaut. Il vous suffit de configurer d'abord vos clés de chiffrement gérées par le client, puis de saisir les informations lors de l'activation de Cloud Backup.
+
+
+
+==== Le rôle d'administrateur du stockage n'est plus nécessaire pour créer des sauvegardes dans Google Cloud Storage
+
+Dans les versions antérieures, le rôle d'administrateur du stockage était requis pour le compte de service permettant à Cloud Backup d'accéder aux compartiments Google Cloud Storage. Vous pouvez désormais créer un rôle personnalisé avec un ensemble réduit d'autorisations à attribuer au compte de service. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-backup-onprem-to-gcp.html#preparing-google-cloud-storage-for-backups["Découvrez comment préparer votre Google Cloud Storage pour les sauvegardes"].
+
+
+
+==== Possibilité de télécharger la page des résultats de la surveillance des travaux sous forme de rapport .csv
+
+Après avoir filtré la page surveillance des travaux pour afficher les travaux et les actions qui vous intéressent, vous pouvez maintenant générer et télécharger un fichier .csv de ces données. Vous pouvez ensuite analyser les informations ou envoyer le rapport à d'autres personnes de votre organisation. https://docs.netapp.com/us-en/cloud-manager-backup-restore/task-monitor-backup-jobs.html#download-job-monitoring-results-as-a-report["Découvrez comment générer un rapport de surveillance des travaux"].
+
+
+
 === 19 décembre 2022
 
 
@@ -214,7 +244,7 @@ https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["E
 
 
 
-==== Améliorations apportées à Cloud Backup
+==== Améliorations de Cloud Backup pour les machines virtuelles
 
 * Ordinateurs virtuels
 +
@@ -328,7 +358,7 @@ Les mises à jour suivantes ont été effectuées sur le https://docs.netapp.com
 * Une colonne pour « charge de travail » est disponible. Vous pouvez donc filtrer la page pour afficher les travaux des services de sauvegarde suivants : volumes, applications, machines virtuelles et Kubernetes.
 * Vous pouvez ajouter de nouvelles colonnes pour « Nom d'utilisateur » et « Type de travail » si vous souhaitez afficher ces détails pour une tâche de sauvegarde spécifique.
 * La page Détails du travail affiche tous les sous-travaux en cours d'exécution pour terminer le travail principal.
-* La page est automatiquement réactualisée toutes les 15 minutes pour que vous puissiez toujours voir les derniers résultats d'état des travaux. Et vous pouvez cliquer sur le bouton *Actualiser* pour mettre la page à jour immédiatement.
+* La page est automatiquement actualisée toutes les 15 minutes pour que vous puissiez toujours voir les résultats de l'état des travaux les plus récents. Et vous pouvez cliquer sur le bouton *Actualiser* pour mettre la page à jour immédiatement.
 
 
 
@@ -365,43 +395,24 @@ Si vous souhaitez utiliser un autre compte AWS pour vos sauvegardes Cloud Volume
 
 
 
-=== 19 septembre 2022
-
-
-
-==== Vous pouvez configurer le verrouillage des données et les attaques par ransomware pour les fichiers de sauvegarde dans les systèmes StorageGRID
-
-La dernière version a introduit _DataLock et ransomware protection_ pour les sauvegardes stockées dans des compartiments Amazon S3. Cette version étend la prise en charge des fichiers de sauvegarde stockés dans les systèmes StorageGRID. Si votre cluster utilise ONTAP 9.11.1 ou version ultérieure et que votre système StorageGRID exécute la version 11.6.0.3 ou ultérieure, cette nouvelle option de règles de sauvegarde est disponible. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-cloud-backup-policies.html#datalock-and-ransomware-protection["Découvrez comment protéger vos sauvegardes avec DataLock et des attaques par ransomware"^].
-
-Notez que vous devrez exécuter un connecteur avec la version 3.9.22 ou une version ultérieure du logiciel. Le connecteur doit être installé dans vos locaux et peut être installé sur un site avec ou sans accès à Internet.
-
-
-
-==== La restauration au niveau des dossiers est désormais disponible à partir de vos fichiers de sauvegarde
-
-Vous pouvez maintenant restaurer un dossier à partir d'un fichier de sauvegarde si vous avez besoin d'accéder à tous les fichiers de ce dossier (répertoire ou partage). La restauration d'un dossier est bien plus efficace que la restauration d'un volume entier. Cette fonctionnalité est disponible pour les opérations de restauration à l'aide de la méthode Parcourir et restaurer et de la méthode Rechercher et restaurer lors de l'utilisation de ONTAP 9.11.1 ou version ultérieure. Pour le moment, vous ne pouvez sélectionner et restaurer qu'un seul dossier, et seuls les fichiers de ce dossier sont restaurés - aucun sous-dossier, ni fichier dans des sous-dossiers, n'est restauré.
-
-
-
-==== La restauration au niveau des fichiers est désormais disponible à partir des sauvegardes qui ont été transférées vers le stockage d'archivage
-
-Auparavant, il était possible de restaurer uniquement les volumes à partir des fichiers de sauvegarde déplacés vers un stockage d'archivage (AWS et Azure uniquement). Vous pouvez désormais restaurer des fichiers individuels à partir de ces fichiers de sauvegarde archivés. Cette fonctionnalité est disponible pour les opérations de restauration à l'aide de la méthode Parcourir et restaurer et de la méthode Rechercher et restaurer lors de l'utilisation de ONTAP 9.11.1 ou version ultérieure.
-
-
-
-==== La restauration au niveau des fichiers offre désormais la possibilité d'écraser le fichier source d'origine
-
-Par le passé, un fichier restauré sur le volume d'origine a toujours été restauré en tant que nouveau fichier avec le préfixe « Restore_<nom_fichier> ». Vous pouvez maintenant choisir d'écraser le fichier source d'origine lors de la restauration du fichier à l'emplacement d'origine du volume. Cette fonctionnalité est disponible pour les opérations de restauration à l'aide de la méthode Browse & Restore et de la méthode Search & Restore.
-
-
-
-==== Effectuez un glisser-déposer pour activer la sauvegarde dans le cloud sur les systèmes StorageGRID
-
-Si le https://docs.netapp.com/us-en/cloud-manager-storagegrid/task-discover-storagegrid.html["StorageGRID"^] Destination de vos sauvegardes existe en tant qu'environnement de travail sur la toile. Vous pouvez faire glisser votre environnement de travail ONTAP sur site vers la destination pour lancer l'assistant de configuration de Cloud Backup.
-
-
-
 == Sens des données cloud
+
+
+
+=== 9 janvier 2023 (version 1.19)
+
+
+
+==== Trois nouveaux filtres sont disponibles dans la page Data Investigation
+
+De nouveaux filtres sont disponibles pour affiner les résultats affichés dans la page recherche de données :
+
+* Le filtre « nombre d'utilisateurs avec accès » indique quels fichiers et dossiers sont ouverts à un certain nombre d'utilisateurs. Vous pouvez choisir une plage de nombres pour affiner les résultats, par exemple pour voir quels fichiers sont accessibles par 51-100 utilisateurs.
+* Les filtres « heure créée », « heure découverte », « dernière modification » et « dernier accès » vous permettent désormais de créer une plage de dates personnalisée au lieu de sélectionner une plage de jours prédéfinie. Par exemple, vous pouvez rechercher des fichiers avec une "heure de création" "plus de 6 mois", ou avec une "date de dernière modification" dans les "10 derniers jours".
+* Le filtre "chemin du fichier" vous permet maintenant de spécifier les chemins que vous souhaitez exclure des résultats de la requête filtrée. Si vous entrez des chemins pour inclure et exclure certaines données, Data Sense recherche d'abord tous les fichiers des chemins inclus, puis supprime les fichiers des chemins exclus, puis affiche les résultats.
+
+
+https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page["Voir la liste de tous les filtres que vous pouvez utiliser pour examiner vos données"].
 
 
 
@@ -454,38 +465,6 @@ Si nécessaire, les nœuds du scanner peuvent être installés sur des systèmes
 ==== Les installateurs sur site effectuent désormais une pré-vérification avant de commencer l'installation
 
 Lors de l'installation de Data Sense sur un système Linux, le programme d'installation vérifie si le système répond à toutes les exigences nécessaires (CPU, RAM, capacité, réseau, etc.) avant de démarrer l'installation. Cela permet de détecter les problèmes *avant*, vous passez du temps sur l'installation.
-
-
-
-=== 6 septembre 2022 (version 1.16)
-
-
-
-==== Possibilité de réanalyser immédiatement un référentiel pour refléter les modifications apportées aux fichiers
-
-Si vous devez relancer une nouvelle analyse d'un référentiel particulier immédiatement afin que les modifications soient répercutées dans le système, vous pouvez sélectionner le référentiel et le relancer. Cela vous permet de hiérarchiser la réanalyse de certaines données avant d'autres données. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#rescanning-data-for-an-existing-repository["Voir la procédure de nouvelle analyse d'un répertoire"^].
-
-
-
-==== Nouveau filtre pour l'état de l'acquisition de détection de données dans la page recherche de données
-
-Le filtre "Etat de l'analyse" vous permet de répertorier les fichiers qui se trouvent dans une étape spécifique de l'analyse de détection de données. Vous pouvez sélectionner une option pour afficher la liste des fichiers qui sont *en attente première numérisation*, *terminé* en cours de numérisation, *en attente de numérisation* ou dont *échoué* doit être scanné.
-
-https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#filtering-data-in-the-data-investigation-page["Voir la liste de tous les filtres que vous pouvez utiliser pour examiner vos données"^].
-
-
-
-==== Les sujets de données sont désormais considérés comme faisant partie des « données personnelles » trouvées dans les acquisitions
-
-Data Sense reconnaît maintenant les sujets de données dans le cadre des résultats personnels qui apparaissent dans le tableau de bord de conformité. En outre, lorsque vous effectuez une recherche dans la page Investigation, vous pouvez sélectionner « sujets de données » sous « données personnelles » pour afficher uniquement les fichiers contenant des données.
-
-
-
-==== Les fichiers de navigation de détection de données sont désormais considérés comme faisant partie des « catégories » trouvées dans les scans
-
-Data Sense reconnaît maintenant des fichiers de navigation dans les catégories qui apparaissent dans le Tableau de bord de conformité. Il s'agit de fichiers que Data Sense crée lors du déplacement des fichiers de l'emplacement source vers un partage NFS. https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Découvrez comment créer des fichiers de navigation"^].
-
-De plus, lorsque vous effectuez une recherche dans la page Investigation, vous pouvez sélectionner « fil d'Ariane de détection des données » sous « Catégorie » pour afficher uniquement les fichiers de navigation de détection des données.
 
 
 
@@ -1091,6 +1070,16 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/ma
 
 
 
+=== 9 janvier 2023
+
+
+
+==== La prise en charge a été ajoutée pour recevoir les alertes de protection contre les ransomwares par e-mail et dans le Centre de notification
+
+La protection contre les ransomwares a été intégrée au service de notification BlueXP. Vous pouvez afficher les notifications de protection contre les attaques par ransomware en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour envoyer des notifications par e-mail en tant qu'alertes afin de vous informer de l'activité système importante, même lorsque vous n'êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent avoir connaissance d'alertes par ransomware. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-monitor-ransomware-alerts.html["Découvrez comment"].
+
+
+
 === 11 décembre 2022
 
 
@@ -1114,16 +1103,6 @@ Vous pouvez sélectionner ces actions dans l'interface utilisateur, puis suivre 
 ==== Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées
 
 Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
-
-
-
-=== 6 septembre 2022
-
-
-
-==== Nouveau panneau pour afficher les incidents de ransomware détectés sur vos clusters
-
-Le panneau _ransomware incidents_ montre les attaques par ransomware qui se sont produites sur vos systèmes. Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-incidents-detected-on-your-systems["En savoir plus"^].
 
 
 
