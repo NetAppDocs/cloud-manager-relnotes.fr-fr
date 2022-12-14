@@ -204,29 +204,6 @@
   <block id="d6933caaf62074fc0c3e63f604181712" category="inline-link">Découvrez comment créer des fichiers de navigation</block>
   <block id="368538217a4a98d2d78bf94a224b8eb6" category="paragraph">Data Sense reconnaît maintenant des fichiers de navigation dans les catégories qui apparaissent dans le Tableau de bord de conformité. Il s'agit de fichiers que Data Sense crée lors du déplacement des fichiers de l'emplacement source vers un partage NFS.<block ref="fd6931884959497f6c1600e29f97b838" category="inline-link-rx"></block>.</block>
   <block id="636d406982c471ea6a3e9f3a5d5f7f1f" category="paragraph">De plus, lorsque vous effectuez une recherche dans la page Investigation, vous pouvez sélectionner « fil d'Ariane de détection des données » sous « Catégorie » pour afficher uniquement les fichiers de navigation de détection des données.</block>
-  <block id="6006377785b7aa3dfed8795e05fbc569" category="section-title">7 août 2022 (version 1.15)</block>
-  <block id="afae08b9f3014d73a3bf7e0c201b2b36" category="section-title">Cinq nouveaux types de données personnelles de la Nouvelle-Zélande sont identifiés par Data Sense</block>
-  <block id="3b4b0faa54186ef002c6026e97e51a10" category="paragraph">Data Sense peut identifier et catégoriser les fichiers contenant les types de données suivants :</block>
-  <block id="c189819be34e41f0ac712261c4bb10b0" category="list-text">Numéro de compte bancaire de la Nouvelle-Zélande</block>
-  <block id="57d4e061073cf52ee992a5523c0e31cb" category="list-text">Numéro de permis de conduire de la Nouvelle-Zélande</block>
-  <block id="2be885677b02540592a1f44b87ee5fb9" category="list-text">Numéro IRD de Nouvelle-Zélande (ID taxe)</block>
-  <block id="52c2b4f82109d0afee40fe69db9a8cbe" category="list-text">Numéro NHI (National Health Index) de la Nouvelle-Zélande </block>
-  <block id="3c266b4db1bf588305e19eddcef36116" category="list-text">Numéro de passeport de la Nouvelle-Zélande</block>
-  <block id="8900e436e6a12ce71aa703bf1c8be02c" category="inline-link-macro">Consultez tous les types de données personnelles que Data Sense peut identifier dans vos données</block>
-  <block id="c8c8337bd5f0527c7ba4b08117f3d96f" category="paragraph"><block ref="44b442fb31109b9e2fdef6fe3589adf6" category="inline-link-macro-rx"></block>.</block>
-  <block id="8d3dd83a131924f6dd08fdea2d8e7828" category="section-title">Possibilité d'ajouter un fichier de navigation pour indiquer pourquoi un fichier a été déplacé</block>
-  <block id="e92169a6172fd2cba6d57bfe01aea45a" category="paragraph">Lorsque vous utilisez la fonction détection de données pour déplacer les fichiers source vers un partage NFS, vous pouvez maintenant laisser un fichier de navigation à l'emplacement du fichier déplacé. Un fichier de navigation permet à vos utilisateurs de comprendre pourquoi un fichier a été déplacé de son emplacement d'origine. Pour chaque fichier déplacé, le système crée un fichier de navigation à l'emplacement source nommé<block ref="e5b81a76aedb2ddb1da7aba12de3e20b" prefix=" " category="inline-code"></block> pour afficher l'emplacement où le fichier a été déplacé et l'utilisateur qui a déplacé le fichier.<block ref="c1eac1298d336c56373b10262d37ad96" category="inline-link-rx"></block>.</block>
-  <block id="13cd21aa095db4c5e2c5cd12303ecc97" category="section-title">Les données personnelles et les données personnelles sensibles contenues dans vos répertoires sont affichées dans les résultats de l'enquête</block>
-  <block id="6b473faf5fc253b69b173e6b8b87f726" category="inline-link">Voir un exemple ici</block>
-  <block id="e8886543955f7a165a88e44f53559443" category="paragraph">La page Data Investigation affiche maintenant les résultats des données personnelles et des données personnelles sensibles trouvées dans vos répertoires (dossiers et partages).<block ref="37ae8b694ca9dace0885ec3ddd4e8904" category="inline-link-rx"></block>.</block>
-  <block id="76013a8e1044d1903752927bac2c2799" category="section-title">Afficher l'état du nombre de volumes, de compartiments, etc. Classés</block>
-  <block id="046e94b126bcddc4303664d7f72819a5" category="inline-link">Voir comment afficher ces informations</block>
-  <block id="7e79533726de53720d91f0e491df7b7f" category="paragraph">Lorsque vous visualisez les différents référentiels, Data Sense est analyse (volumes, compartiments, etc.), vous pouvez maintenant voir combien d'entre eux ont été « mappés » et combien d'entre eux ont été « classés ». Le classement est plus long lorsque l'identification complète de l'IA est effectuée sur toutes les données.<block ref="0871135af547cfbd7267d7772f52c15b" category="inline-link-rx"></block>.</block>
-  <block id="8b4506c76e97dc4cbdfa92467d581a0a" category="section-title">Vous pouvez maintenant ajouter des modèles personnalisés que Data Sense identifie dans vos données</block>
-  <block id="095466eeefcbabc811ab5e2a672ee877" category="paragraph">Il existe deux façons d'ajouter des « données personnelles » personnalisées que Data Sense identifiera dans les analyses futures. Vous disposez ainsi d'une vision globale de l'emplacement des données potentiellement sensibles dans les fichiers de votre entreprise.</block>
-  <block id="db40121770270b95c73895598e6343b2" category="list-text">Vous pouvez ajouter des mots-clés personnalisés à partir d'un fichier texte.</block>
-  <block id="3fb1605dea41a1022e020f895acc727f" category="list-text">Vous pouvez ajouter un motif personnel à l'aide d'une expression régulière (regex).</block>
-  <block id="a7110ffc746d511f3031ce3693e9c099" category="paragraph">Ces mots-clés et modèles sont ajoutés aux modèles prédéfinis existants que Data Sense utilise déjà et les résultats seront visibles sous la section modèles personnels.<block ref="ba4b576d22723dd9b7b37b67a884a8d7" category="inline-link-rx"></block>.</block>
   <block id="f3630c1c94e3e51aaea5bdd037dc03c9" category="section-title">30 octobre 2022</block>
   <block id="5c7d084f950ad8af7d03c171b38bbaba" category="section-title">Synchronisation continue de Microsoft Azure</block>
   <block id="e4c664e7de05c9b6f33c4dc4c5e8c120" category="paragraph">Le paramètre Continuous Sync est désormais pris en charge depuis un compartiment de stockage Azure source vers un stockage cloud via un courtier de données Azure.</block>
@@ -306,34 +283,7 @@
   <block id="afacb33ad65bcd63eb15aeba04b4aed0" category="inline-link">Découvrez comment licences et configurer ces types de clusters.</block>
   <block id="141c7c6c3afeeb8d968939161f64f8d2" category="paragraph">Les licences Cloud Tiering peuvent désormais être partagées avec vos clusters dans les configurations MetroCluster. Vous n'avez plus besoin d'utiliser les licences FabricPool obsolètes dans ces scénarios. Les licences Cloud Tiering sont ainsi plus faciles à utiliser sur un plus grand nombre de clusters.<block ref="4e8c6c7f1b8cf8bbca1bc62528b46ae2" category="inline-link-rx"></block></block>
   <block id="2325f561a20765def93d682f14cae306" category="paragraph">Les modifications suivantes ont été introduites avec la version 3.9.23 du connecteur.</block>
-  <block id="6d5ba1b41fa03c2fdf0d747769a6b053" category="section-title">Déplacement de groupes de ressources dans Azure</block>
-  <block id="ea55da5ec5028d99103c938ded49761c" category="paragraph">Vous pouvez maintenant déplacer un environnement de travail d'un groupe de ressources vers un autre groupe de ressources dans Azure dans le même abonnement Azure.</block>
-  <block id="6c2dc09b272a4aed6d56a3438a190129" category="inline-link-macro">Déplacement de groupes de ressources</block>
-  <block id="d015054d89d4ecbe893f21f5ab9700c0" category="paragraph">Pour plus d'informations, voir <block ref="8d94a006f1853b408e5763a514426526" category="inline-link-macro-rx"></block>.</block>
-  <block id="b6a2ac7b66db8e93b936023f17401626" category="section-title">Certification NDMP-copie</block>
-  <block id="c348c640ca478b45f3a3d9e14bb0695b" category="paragraph">NDMP-copy est désormais certifié pour Cloud Volume ONTAP.</block>
-  <block id="ab5a83d8e39547c5fb30a1fda984aebb" category="inline-link">Présentation de la configuration NDMP</block>
-  <block id="e4b4f60ab9fe08116659a5e12d6db4a8" category="paragraph">Pour plus d'informations sur la configuration et l'utilisation de NDMP, reportez-vous à la section<block ref="9c57f7cf04e123991a3c88e286feb189" category="inline-link-rx"></block>.</block>
-  <block id="5e7de773a189ac8974753f9ce70a3dc5" category="section-title">Prise en charge du chiffrement de disque géré pour Azure</block>
-  <block id="a09181ba1488df77bf9950cb483e97e8" category="paragraph">Une nouvelle autorisation Azure a été ajoutée qui vous permet maintenant de chiffrer tous les disques gérés lors de leur création.</block>
-  <block id="e76c0365dfa8d6b43992d790f582e6c4" category="inline-link">Configuration de Cloud Volumes ONTAP pour utiliser une clé gérée par le client dans Azure</block>
-  <block id="7343d251ecc72fc362a0ce85cf11a9fe" category="paragraph">Pour plus d'informations sur cette nouvelle fonctionnalité, voir<block ref="91da0725d8642ccf887bde4d4604033e" category="inline-link-rx"></block>.</block>
   <block id="440be74a67502f9c3d55890782329328" category="paragraph">Les modifications suivantes ont été introduites avec la version 3.9.22 du connecteur.</block>
-  <block id="83bad7a989a8ab61893e9cfb7497cefd" category="section-title">Améliorations du portefeuille numérique</block>
-  <block id="e1de90a0937196074c7abb9f8b5e5edf" category="list-text">Le porte-monnaie numérique présente maintenant un résumé du package de licences d'E/S optimisées et de la capacité WORM provisionnée pour les systèmes Cloud Volumes ONTAP de votre compte.</block>
-  <block id="c3304f9cf1f523f219fc4a936bde8242" category="paragraph">Ces informations vous permettront de mieux comprendre la facturation et l'achat de capacité supplémentaire.</block>
-  <block id="207aaa44f72ba634c18fcc9bae44d655" category="inline-link">Découvrez comment afficher la capacité consommée dans votre compte</block>
-  <block id="41ed2f596edd466ead9a03a4cdcb3b22" category="paragraph"><block ref="5faaec1089d682f6bad43c9cd2141819" category="inline-link-rx"></block>.</block>
-  <block id="d856c8d1b60bfdfc68a63422c7fcb64b" category="list-text">Vous pouvez désormais passer d'une méthode de charge à la méthode de charge optimisée.</block>
-  <block id="63b54c0d3b4fb8e35270bfdf7b2bdcbb" category="inline-link">Apprenez à changer les méthodes de charge</block>
-  <block id="41bfdfd8eb98d1c3acb217f5420b6818" category="paragraph"><block ref="895cb871a858d35efad6129a7ae888ab" category="inline-link-rx"></block>.</block>
-  <block id="e0d7db06679f0c176c93ed71de107638" category="section-title">Optimisation des coûts et des performances</block>
-  <block id="fa1ea7bc2d84f11eddfeed9a160282bb" category="paragraph">Vous pouvez désormais optimiser les coûts et les performances d'un système Cloud Volumes ONTAP directement à partir de la fenêtre Canvas.</block>
-  <block id="cab7023844edf677ae51645d16f02f4c" category="paragraph">Après avoir sélectionné un environnement de travail, vous pouvez choisir l'option *optimiser les coûts et les performances* pour changer le type d'instance de Cloud Volumes ONTAP. La sélection d'une instance de plus petite taille peut vous aider à réduire les coûts, tandis que le passage à une instance de plus grande taille peut vous aider à optimiser les performances.</block>
-  <block id="f929bd53055100ea5034e258d5828a45" category="inline-image-macro">Capture d'écran de l'option optimiser le coût et les performances disponible sur la toile après avoir sélectionné un environnement de travail.</block>
-  <block id="b04af3108aa064fb53015f188d417418" category="paragraph"><block ref="740982637064d815add45193172173b0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fa5f0abcdf06ead83ea7fc11be56d19a" category="section-title">Notifications AutoSupport</block>
-  <block id="7a8757c8fbb4c1997c5641cf6e4a7489" category="paragraph">BlueXP va maintenant générer une notification si un système Cloud Volumes ONTAP ne parvient pas à envoyer de messages AutoSupport. La notification comprend un lien vers des instructions qui vous aideront à résoudre les problèmes de mise en réseau.</block>
   <block id="a3c559e0541e9bb860178ce6fe414224" category="section-title">Cloud Volumes Service pour GCP</block>
   <block id="a633f0835832cc75f5a83248a8aa2ba8" category="section-title">9 septembre 2020</block>
   <block id="8751230100c974b7c3ae5adae22c0f7c" category="section-title">Prise en charge de Cloud Volumes Service pour Google Cloud</block>
@@ -430,11 +380,6 @@
   <block id="8c70b531876f0aad87de3df8d9049545" category="section-title">6 septembre 2022</block>
   <block id="4f400ad3636bf9ccb8a232e152ae3a56" category="section-title">Nouveau panneau pour afficher les incidents de ransomware détectés sur vos clusters</block>
   <block id="2cadd98d70cc36a0982305ace71488f2" category="paragraph">Le panneau _ransomware incidents_ montre les attaques par ransomware qui se sont produites sur vos systèmes. Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware.<block ref="a8b3634a0c7a594234502955588cc1db" category="inline-link-rx"></block>.</block>
-  <block id="5aa38ee0e17acbfece3b3bc0fdb18bab" category="section-title">7 août 2022</block>
-  <block id="1e945f34aa7e283df49e7bc1f6e519fc" category="section-title">Nouveau panneau pour afficher les failles de sécurité sur vos clusters</block>
-  <block id="cad6252563f98c3f1a50da37df91528f" category="paragraph">Le panneau « _Storage system VulnerVulnerfaille_ » affiche le nombre total de vulnérabilités de sécurité élevées, moyennes et faibles que l'outil conseiller numérique Active IQ a trouvées sur chacun de vos clusters ONTAP. Il est important d'immédiatement vérifier que vos systèmes ne sont pas ouverts aux attaques.<block ref="6385dc99da0ff6c045e59c001938f4ed" category="inline-link-rx"></block>.</block>
-  <block id="681c888dc1b5514c36d2da9636ab4d27" category="section-title">Nouveau panneau pour afficher les fichiers numérisés immuables</block>
-  <block id="95055437ddc6fef4303145322941a60e" category="paragraph">Le panneau _Critical Data immuabilité_ affiche le nombre d'éléments de vos environnements de travail protégés contre les modifications et suppressions sur le stockage WORM grâce à la technologie ONTAP SnapLock. Vous pouvez ainsi afficher la quantité de données dont la copie est inaltérable, pour mieux comprendre vos plans de sauvegarde et de restauration par rapport aux attaques par ransomware.<block ref="2a21419eb985c05c07ba644754fc60a5" category="inline-link-rx"></block>.</block>
   <block id="638be56d4cf930b576e6dc1300c7c33b" category="section-title">18 septembre 2022</block>
   <block id="168c5915eb40be2beb0ac04f286489ba" category="section-title">FSX pour ONTAP vers Cloud Volumes ONTAP</block>
   <block id="6aa89747141f6b258796889b4e964d01" category="paragraph">Vous pouvez désormais répliquer des données d'un système de fichiers Amazon FSX pour ONTAP vers Cloud Volumes ONTAP.</block>
@@ -496,4 +441,41 @@
   <block id="d1c49eec91984b5c0c7c8ff6998bb65d" category="section-title">Possibilité de restaurer les données à partir de sauvegardes vers un agrégat spécifique sur les systèmes Cloud Volumes ONTAP</block>
   <block id="e674451efff1f119cf056a3e852d4483" category="paragraph">Dans les versions précédentes, vous pouviez sélectionner l'agrégat uniquement lors de la restauration des données sur des systèmes ONTAP sur site. Cette fonctionnalité fonctionne désormais lors de la restauration des données sur des systèmes Cloud Volumes ONTAP.</block>
   <block id="8a52e1de39b1a61e3a2c04e39442b0e8" category="paragraph">Cloud Backup a été intégré au service BlueXP notification. Vous pouvez afficher les notifications Cloud Backup en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour envoyer des notifications par e-mail en tant qu'alertes afin de vous informer de l'activité système importante, même lorsque vous n'êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent connaître les activités de sauvegarde et de restauration.<block ref="74389894cb83c627291d11e2dde62faa" category="inline-link-rx"></block>.</block>
+  <block id="c3828ad11edf9a8e2a0d7bd8910b2ad3" category="section-title">11 décembre 2022 (version 1.18)</block>
+  <block id="329171a5c817ab7ae03a1497aa6d59fa" category="section-title">Améliorations apportées à l'installation sur site</block>
+  <block id="500b30285e1a741b658bc533a0a125a1" category="paragraph">Plusieurs améliorations ont été ajoutées à l'installation de Data Sense sur site :</block>
+  <block id="bacf3e82e48abd0e39c6a162b4aa7191" category="list-text">Certaines conditions préalables supplémentaires sont maintenant vérifiées avant que l'installation ne démarre sur un hôte sur site. Ainsi, vous vous assurez que votre système hôte est 100 % prêt à installer le logiciel Data Sense :</block>
+  <block id="ac340636071cd9dc2033767452420aab" category="list-text">vérifiez que l'espace est suffisant dans /var/lib/docker, /tmp et /opt</block>
+  <block id="8e3833fdafa0cd3a63d1fae40cbd74e9" category="list-text">testez les autorisations pertinentes sur tous les dossiers requis</block>
+  <block id="36cbb51c271d3c68a01a8599c0fbd2b8" category="list-text">Dans la page Configuration, la section environnements de travail affiche maintenant le _ID de l'environnement de travail_ et le _scanner Group_ name. Vous devrez connaître l'ID de l'environnement de travail si vous prévoyez d'utiliser plusieurs hôtes Data Sense pour fournir une puissance de traitement supplémentaire pour analyser vos sources de données.</block>
+  <block id="81dbf04e421aa5fa2a4acce5215da760" category="list-text">Dans la page Configuration, une nouvelle section affiche les groupes de scanner que vous avez configurés et les nœuds de scanner qui se trouvent dans chaque groupe.</block>
+  <block id="73e22396c6474ab27832098f1351b823" category="inline-link">En savoir plus sur l'installation de Data Sense sur un serveur hôte unique et sur plusieurs hôtes</block>
+  <block id="7d11de825f5fb48a0194c3826f7e2322" category="paragraph"><block ref="6aec5abc0a91e6bbae2064cb8f81d2dd" category="inline-link-rx"></block>.</block>
+  <block id="5912630061434e78e733b8d5e5e3dc88" category="section-title">11 décembre 2022</block>
+  <block id="9709c6ba9ff4b10cb5ec3f4f956d3226" category="section-title">Filtrez les répertoires par nom</block>
+  <block id="43b44f78e255d05aac846a6181095cd6" category="paragraph">Un nouveau paramètre *exclure les noms de répertoire* est maintenant disponible pour les relations de synchronisation. Les utilisateurs peuvent filtrer un maximum de 15 noms de répertoire depuis leur synchronisation. Les répertoires .copy-Offload, .snapshot, ~snapshot sont exclus par défaut.</block>
+  <block id="84a8ea117dd9c6b8ddbbe8f47665f923" category="inline-link">En savoir plus sur le paramètre exclure les noms de répertoire</block>
+  <block id="8391e3aac2d2f8dd1b8e38350d072463" category="paragraph"><block ref="018123db357961d73398ef3066f74a1b" category="inline-link-rx"></block>.</block>
+  <block id="211e17aac7e6f53a17024d84713e8c34" category="section-title">Prise en charge supplémentaire d'Amazon S3 et de ONTAP S3 Storage</block>
+  <block id="9c0b9eb5c4fc9353fd2021e992f68e22" category="paragraph">Cloud Sync prend désormais en charge des relations de synchronisation supplémentaires pour AWS S3 et ONTAP S3 Storage :</block>
+  <block id="9952f86a1aa7c6f33a76413df4560b41" category="list-text">AWS S3 vers le stockage ONTAP S3</block>
+  <block id="dfe6b806f7dd136ec5c5baaaae335c21" category="list-text">Stockage ONTAP S3 vers AWS S3</block>
+  <block id="c7360b05ac6a5646b2770ea0c162d4fb" category="inline-link">En savoir plus sur les relations de synchronisation prises en charge</block>
+  <block id="623dda645e4d20988b8c1d61423da14e" category="paragraph"><block ref="f9c4f71cab183e7ba62e68df19c3dfe9" category="inline-link-rx"></block>.</block>
+  <block id="708ffc372ba6f36174a7930961b956ab" category="section-title">8 décembre 2022</block>
+  <block id="dba89da91170934734e847dcfe4ad5d0" category="section-title">Cloud Volumes ONTAP 9.12.1</block>
+  <block id="9f97c3125a701942b4e6e648146819fc" category="inline-link">Découvrez les nouvelles fonctionnalités de cette version d'Cloud Volumes ONTAP</block>
+  <block id="6cfcf66978702040453f6b0622a89aaa" category="paragraph">BlueXP peut désormais déployer et gérer Cloud Volumes ONTAP 9.12.1, qui inclut également la prise en charge de nouvelles fonctionnalités et de régions de fournisseurs de cloud supplémentaires.<block ref="0d69949c9de36f8752d49be7f0ec9aed" category="inline-link-rx"></block></block>
+  <block id="2dd09f45720a8f94b29c4d048b61ff4e" category="section-title">15 novembre 2022</block>
+  <block id="cca494b1b1d22bc8b5c8a8ecd5367bf8" category="section-title">Licence ONTAP S3 dans GCP</block>
+  <block id="44f72ae2127b89a470e082ae9f772acf" category="paragraph">Une licence ONTAP S3 est désormais incluse sur les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.12.1 ou une version ultérieure dans Google Cloud Platform.</block>
+  <block id="6958464059ef304c59d06fcb948ccafd" category="inline-link">Découvrez comment configurer et gérer les services de stockage objet S3 dans ONTAP</block>
+  <block id="3fe75f10a35597997861eca633c30fa7" category="paragraph"><block ref="3fe75f10a35597997861eca633c30fa7" category="inline-link-rx"></block></block>
+  <block id="fe9c9f72fd091b4ebc4d0686a2dccdc6" category="section-title">11 décembre 2022</block>
+  <block id="ff1a552e36acc064f2353128cc8cae7e" category="section-title">De nouvelles actions recommandées ont été ajoutées au panneau Score de protection contre les attaques par ransomware</block>
+  <block id="3a3306a02dc91a314c088887bca99ae6" category="paragraph">Deux nouvelles actions recommandées sont maintenant affichées pour les problèmes de protection par ransomware suivants rencontrés sur vos systèmes de stockage :</block>
+  <block id="ac70ac84684b450ac1ec25740da08f6f" category="list-text">_Réduire les autorisations pour les éléments X sensibles avec des autorisations larges_ - les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données</block>
+  <block id="e536c956b5336f840fdf1f34295e7626" category="list-text">_Patch X Open CDE à travers les sources de données y_ - des CVC non corrigés ont été trouvés sur vos systèmes ONTAP</block>
+  <block id="dced9da708bc7f04e84ad156297f2b2a" category="inline-link">Voir la liste de toutes les actions recommandées</block>
+  <block id="2887af3281ffddb6374ef4f66b57c7d5" category="paragraph">Vous pouvez sélectionner ces actions dans l'interface utilisateur, puis suivre le workflow pour résoudre les problèmes sous-jacents.<block ref="ed823e4f932da1d207b551c7d7ca0450" category="inline-link-rx"></block>.</block>
 </blocks>
