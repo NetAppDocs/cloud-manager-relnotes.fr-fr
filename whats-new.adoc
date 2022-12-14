@@ -33,6 +33,18 @@ Cette section décrit les nouvelles fonctionnalités liées aux fonctions d'admi
 
 
 
+=== 1er janvier 2023
+
+
+
+==== Connecteur 3.9.25
+
+Cette version de Connector inclut des améliorations de Cloud Volumes ONTAP et des correctifs.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html#1-january-2023["Découvrez les améliorations apportées à Cloud Volumes ONTAP"^]
+
+
+
 === 4 décembre 2022
 
 
@@ -129,39 +141,6 @@ La possibilité de créer et de gérer Azure NetApp Files directement à partir 
 
 
 
-=== 18 septembre 2022
-
-C'est possible maintenant link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS["Modifiez la capacité de stockage et les IOPS"] À tout moment après avoir créé l'environnement de travail FSX pour ONTAP.
-
-
-
-=== 31 juillet 2022
-
-* Si vous avez fourni vos identifiants AWS à Cloud Manager, la nouvelle fonctionnalité *Mes opportunités* peut détecter et suggérer FSX pour les systèmes de fichiers ONTAP à ajouter et à gérer via Cloud Manager. Vous pouvez également consulter les services de données disponibles via l'onglet *Mes opportunités*.
-+
-link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system["Découvrez FSX pour ONTAP à l'aide de Mes opportunités"]
-
-* C'est possible maintenant link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity["modification de la capacité de débit"] À tout moment après avoir créé l'environnement de travail FSX pour ONTAP.
-* C'est possible maintenant link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#replicate-and-sync-data["réplication et synchronisation des données"] Vers les systèmes sur site et autres systèmes FSX pour ONTAP utilisant FSX pour ONTAP comme source.
-* C'est possible maintenant link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["Créer des volumes iSCSI dans FSX pour ONTAP à l'aide de Cloud Manager"].
-
-
-
-
-=== 3 juillet 2022
-
-* Vous pouvez désormais sélectionner un modèle de déploiement HA à une ou plusieurs zones de disponibilité.
-+
-link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["Créer un environnement de travail FSX pour ONTAP"]
-
-* L'authentification de compte AWS GovCloud est désormais prise en charge dans Cloud Manager.
-+
-link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role["Configurer le rôle IAM"]
-
-
-
-
-
 == Modèle d'application
 
 
@@ -208,13 +187,72 @@ https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["E
 
 
 
+=== 19 décembre 2022
+
+
+
+==== Améliorations de Cloud Backup pour les applications
+
+* Les bases de données SAP HANA
++
+** Prise en charge de la sauvegarde et de la restauration basées sur des règles des bases de données SAP HANA résidant sur Azure NetApp Files (ANF)
+** Prend en charge les règles personnalisées
+
+
+* Les bases de données Oracle
++
+** Ajoutez des hôtes et déployez automatiquement le plug-in
+** Prend en charge les règles personnalisées
+** Prise en charge de la sauvegarde, de la restauration et du clonage des bases de données Oracle résidant sur Cloud Volumes ONTAP basés sur des règles
+** Prend en charge la sauvegarde et la restauration basées sur des règles des bases de données Oracle résidant sur Amazon FSX pour NetApp ONTAP
+** Prend en charge la restauration des bases de données Oracle à l'aide de la méthode de connexion et de copie
+** Prend en charge Oracle 21c
+** Prend en charge le clonage de bases de données Oracle cloud natives
+
+
+
+
+
+
+==== Améliorations apportées à Cloud Backup
+
+* Ordinateurs virtuels
++
+** Sauvegarder des machines virtuelles à partir d'un stockage secondaire sur site
+** Prend en charge les règles personnalisées
+** Prise en charge de Google Cloud Platform (GCP) pour sauvegarder un ou plusieurs datastores
+** Prise en charge d'un stockage cloud à faible coût comme Glacier, Deep Glacier et Azure Archive
+
+
+
+
+
+
 === 6 décembre 2022
 
 
 
-==== Prise en charge de la classe de stockage d'archivage Google
+==== Modifications du point de terminaison d'accès Internet sortant du connecteur requises
 
-Les fichiers de sauvegarde sont initialement créés dans la classe de stockage Google Standard. Vous pouvez désormais choisir de transférer les anciennes sauvegardes vers le système de stockage Google Archive après un certain nombre de jours pour optimiser les coûts.
+Du fait d'un changement dans Cloud Backup, vous devez modifier les terminaux de connecteur suivants pour assurer la réussite des opérations de sauvegarde dans le cloud :
+
+[cols="50,50"]
+|===
+| Ancien terminal | Nouveau terminal 
+
+
+| \https://cloudmanager.cloud.netapp.com | \https://api.bluexp.netapp.com 
+
+
+| \https://*.cloudmanager.cloud.netapp.com | \https://*.api.bluexp.netapp.com 
+|===
+Consultez la liste complète des terminaux de votre https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html#outbound-internet-access["AWS"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#outbound-internet-access["Google Cloud"^], ou https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#outbound-internet-access["Azure"^] de cloud hybride.
+
+
+
+==== Prise en charge de la sélection de la classe de stockage d'archivage Google dans l'interface utilisateur
+
+Les fichiers de sauvegarde sont initialement créés dans la classe de stockage Google Standard. Vous pouvez désormais utiliser l'interface utilisateur de Cloud Backup pour transférer les anciennes sauvegardes vers le stockage Google Archive après un certain nombre de jours afin d'optimiser les coûts.
 
 Cette fonctionnalité est actuellement prise en charge par les clusters ONTAP sur site avec ONTAP 9.12.1 (ou version ultérieure). Elle n'est pas actuellement disponible pour les systèmes Cloud Volumes ONTAP.
 
@@ -222,7 +260,7 @@ Cette fonctionnalité est actuellement prise en charge par les clusters ONTAP su
 
 ==== Prise en charge des volumes FlexGroup
 
-Cloud Backup prend désormais en charge les volumes FlexGroup. Avec ONTAP 9.12.1 ou version supérieure, vous pouvez sauvegarder des volumes FlexGroup sur un stockage de cloud public et privé. Si vous disposez d'environnements de travail intégrant des FlexVol et des volumes FlexGroup, vous pouvez sauvegarder tous les volumes FlexGroup sur ces systèmes une fois la mise à jour du logiciel ONTAP effectuée.
+Cloud Backup prend désormais en charge la sauvegarde et la restauration des volumes FlexGroup. Avec ONTAP 9.12.1 ou version supérieure, vous pouvez sauvegarder des volumes FlexGroup sur un stockage de cloud public et privé. Si vous disposez d'environnements de travail intégrant des FlexVol et des volumes FlexGroup, vous pouvez sauvegarder tous les volumes FlexGroup sur ces systèmes une fois la mise à jour du logiciel ONTAP effectuée.
 
 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#supported-volumes["Consultez la liste complète des types de volumes pris en charge"].
 
@@ -377,12 +415,12 @@ Plusieurs améliorations ont été ajoutées à l'installation de Data Sense sur
 
 * Certaines conditions préalables supplémentaires sont maintenant vérifiées avant que l'installation ne démarre sur un hôte sur site. Ainsi, vous vous assurez que votre système hôte est 100 % prêt à installer le logiciel Data Sense :
 +
-** vérifiez que l'espace est suffisant dans /var/lib/docker, /tmp et /opt
+** vérifiez que l'espace disponible est suffisant `/var/lib/docker`, `/tmp`, et `/opt`
 ** testez les autorisations pertinentes sur tous les dossiers requis
 
 
 * Dans la page Configuration, la section environnements de travail affiche maintenant le _ID de l'environnement de travail_ et le _scanner Group_ name. Vous devrez connaître l'ID de l'environnement de travail si vous prévoyez d'utiliser plusieurs hôtes Data Sense pour fournir une puissance de traitement supplémentaire pour analyser vos sources de données.
-* Dans la page Configuration, une nouvelle section affiche les groupes de scanner que vous avez configurés et les nœuds de scanner qui se trouvent dans chaque groupe.
+* La page Configuration affiche également les groupes de scanners que vous avez configurés et les nœuds de scanner de chaque groupe.
 
 
 https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html["En savoir plus sur l'installation de Data Sense sur un serveur hôte unique et sur plusieurs hôtes"].
@@ -452,6 +490,28 @@ De plus, lorsque vous effectuez une recherche dans la page Investigation, vous p
 
 
 == Cloud Sync
+
+
+
+=== 3 janvier 2023
+
+
+
+==== Affiche la configuration locale du courtier de données dans l'interface utilisateur
+
+Il existe maintenant une option *Afficher la configuration* qui permet aux utilisateurs d'afficher la configuration locale de chaque courtier de données dans l'interface utilisateur.
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task-managing-data-brokers.html["En savoir plus sur la gestion des groupes de courtiers de données"].
+
+
+
+==== Effectuer la mise à niveau vers Azure et le système d'exploitation des courtiers de données Google Cloud
+
+Le système d'exploitation des courtiers de données d'Azure et de Google Cloud a été mis à niveau vers Rocky Linux 9.0.
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task-installing-azure.html#details-about-the-data-broker-vm["En savoir plus sur l'instance de courtier de données dans Azure"].
+
+https://docs.netapp.com/us-en/cloud-manager-sync/task-installing-gcp.html#details-about-the-data-broker-vm-instance["En savoir plus sur l'instance de courtier en données dans Google Cloud"].
 
 
 
@@ -662,6 +722,28 @@ Le type de machine par défaut pour le courtier en données dans Google Cloud es
 
 
 
+=== 6 décembre 2022
+
+
+
+==== Modifications du point de terminaison d'accès Internet sortant du connecteur requises
+
+Du fait d'un changement dans le Tiering cloud, il est nécessaire de modifier les terminaux de connecteur suivants pour assurer la réussite des opérations de Tiering dans le cloud :
+
+[cols="50,50"]
+|===
+| Ancien terminal | Nouveau terminal 
+
+
+| \https://cloudmanager.cloud.netapp.com | \https://api.bluexp.netapp.com 
+
+
+| \https://*.cloudmanager.cloud.netapp.com | \https://*.api.bluexp.netapp.com 
+|===
+Consultez la liste complète des terminaux de votre https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html#outbound-internet-access["AWS"^], https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#outbound-internet-access["Google Cloud"^], ou https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#outbound-internet-access["Azure"^] de cloud hybride.
+
+
+
 === 6 novembre 2022
 
 
@@ -696,23 +778,41 @@ Lorsque vous supprimez le magasin d’objets miroir d’une configuration MetroC
 
 
 
-=== 3 août 2022
-
-
-
-==== Capacité à configurer d'autres magasins d'objets pour d'autres agrégats de votre cluster
-
-L'interface de NetApp Cloud Tiering a ajouté un nouveau jeu de pages pour la configuration du stockage objet. Vous pouvez ajouter de nouveaux magasins d'objets, connecter plusieurs magasins d'objets à un agrégat pour la mise en miroir FabricPool, échanger les magasins d'objets principal et miroir, supprimer les connexions au magasin d'objets avec des agrégats, et plus encore. https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html["En savoir plus sur la nouvelle fonctionnalité de stockage objet."]
-
-
-
-==== Prise en charge des licences Cloud Tiering dans les configurations MetroCluster
-
-Les licences Cloud Tiering peuvent désormais être partagées avec vos clusters dans les configurations MetroCluster. Vous n'avez plus besoin d'utiliser les licences FabricPool obsolètes dans ces scénarios. Les licences Cloud Tiering sont ainsi plus faciles à utiliser sur un plus grand nombre de clusters. https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["Découvrez comment licences et configurer ces types de clusters."]
-
-
-
 == Cloud Volumes ONTAP
+
+
+
+=== 1er janvier 2023
+
+Les modifications suivantes ont été introduites avec la version 3.9.25 du connecteur.
+
+
+
+==== Packages de licences disponibles dans Google Cloud
+
+Des packages de licence optimisés et Edge cache basés sur la capacité sont disponibles pour Cloud Volumes ONTAP dans Google Cloud Marketplace, à la demande ou en tant que contrat annuel.
+
+Voir link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html#packages["Licences Cloud Volumes ONTAP"^].
+
+
+
+==== Configuration par défaut pour Cloud Volumes ONTAP
+
+La licence MTEKM (Multi-tenant Encryption Key Management) n'est plus incluse dans les nouveaux déploiements Cloud Volumes ONTAP.
+
+Pour plus d'informations sur les licences de fonction ONTAP installées automatiquement avec Cloud Volumes ONTAP, reportez-vous à la section link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-default-configs.html["Configuration par défaut pour Cloud Volumes ONTAP"^].
+
+
+
+=== 15 décembre 2022
+
+
+
+==== Cloud Volumes ONTAP 9.12.0
+
+BlueXP peut désormais déployer et gérer Cloud Volumes ONTAP 9.12.0 dans AWS et Google Cloud.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes["Découvrez les nouvelles fonctionnalités de cette version d'Cloud Volumes ONTAP"^].
 
 
 
@@ -722,39 +822,9 @@ Les licences Cloud Tiering peuvent désormais être partagées avec vos clusters
 
 ==== Cloud Volumes ONTAP 9.12.1
 
-BlueXP peut désormais déployer et gérer Cloud Volumes ONTAP 9.12.1, qui inclut également la prise en charge de nouvelles fonctionnalités et de régions de fournisseurs de cloud supplémentaires.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Découvrez les nouvelles fonctionnalités de cette version d'Cloud Volumes ONTAP"^]
+BlueXP peut désormais déployer et gérer Cloud Volumes ONTAP 9.12.1, qui inclut également la prise en charge de nouvelles fonctionnalités et de régions de fournisseurs de cloud supplémentaires.
 
-
-
-=== 4 décembre 2022
-
-Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.
-
-
-
-==== WORM + sauvegarde dans le cloud désormais disponible lors de la création de Cloud Volumes ONTAP
-
-La possibilité d'activer les fonctionnalités WORM (Write Once, Read Many) et Cloud Backup est désormais disponible lors du processus de création de Cloud Volumes ONTAP.
-
-
-
-==== La région Israël est désormais prise en charge dans Google Cloud
-
-La région Israël est désormais prise en charge dans Google Cloud pour Cloud Volumes ONTAP et le connecteur pour Cloud Volumes ONTAP 9.11.1 P3 ou version ultérieure.
-
-
-
-=== 15 novembre 2022
-
-Les modifications suivantes ont été introduites avec la version 3.9.23 du connecteur.
-
-
-
-==== Licence ONTAP S3 dans GCP
-
-Une licence ONTAP S3 est désormais incluse sur les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.12.1 ou une version ultérieure dans Google Cloud Platform.
-
-https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["Découvrez comment configurer et gérer les services de stockage objet S3 dans ONTAP"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Découvrez les nouvelles fonctionnalités de cette version d'Cloud Volumes ONTAP"^]
 
 
 
@@ -957,6 +1027,18 @@ Le service de surveillance a été retiré le 1er novembre 2022. Vous pouvez dé
 
 
 
+=== 1er janvier 2023
+
+
+
+==== Enregistrer les informations d'identification ONTAP
+
+Lorsque vous ouvrez un environnement de travail ONTAP sur site qui a été découvert directement sans utiliser de connecteur, il est désormais possible d'enregistrer les identifiants du cluster ONTAP. Il n'est donc pas nécessaire de les saisir à chaque ouverture de l'environnement de travail.
+
+https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-direct.html["En savoir plus sur cette option."]
+
+
+
 === 4 décembre 2022
 
 Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.
@@ -1005,22 +1087,6 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/ma
 
 
 
-=== 7 juin 2022
-
-La modification suivante a été introduite avec la version 3.9.19 du connecteur.
-
-
-
-==== Nouvelle vue avancée
-
-Si vous avez besoin d'effectuer une gestion avancée d'un cluster ONTAP sur site, vous pouvez utiliser ONTAP System Manager, qui est une interface de gestion fournie avec un système ONTAP. Nous avons inclus l'interface System Manager directement dans Cloud Manager, afin que vous n'ayez pas besoin de quitter Cloud Manager pour une gestion avancée.
-
-Cette vue avancée est disponible sous forme d'aperçu avec les clusters ONTAP sur site exécutant la version 9.10.0 ou ultérieure. Nous prévoyons d'affiner cette expérience et d'ajouter des améliorations dans les prochaines versions. Envoyez-nous vos commentaires à l'aide de l'outil de chat In-Product.
-
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-administer-advanced-view.html["En savoir plus sur la vue avancée"].
-
-
-
 == Protection contre les ransomwares
 
 
@@ -1047,7 +1113,7 @@ Vous pouvez sélectionner ces actions dans l'interface utilisateur, puis suivre 
 
 ==== Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées
 
-Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
+Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
 
 
 
