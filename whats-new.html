@@ -490,7 +490,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-06 17:36:06 +0000">12/06/2022</time>
+    <time datetime="2022-12-14 18:25:38 +0000">12/14/2022</time>
     
   
 
@@ -544,13 +544,14 @@
 </li>
 <li><a href="#sens-des-données-cloud">Sens des données cloud</a>
 <ul class="sectlevel2">
+<li><a href="#11-décembre-2022-version-1-18">11 décembre 2022 (version 1.18)</a></li>
 <li><a href="#13-novembre-2022-version-1-17">13 novembre 2022 (version 1.17)</a></li>
 <li><a href="#6-septembre-2022-version-1-16">6 septembre 2022 (version 1.16)</a></li>
-<li><a href="#7-août-2022-version-1-15">7 août 2022 (version 1.15)</a></li>
 </ul>
 </li>
 <li><a href="#cloud-sync">Cloud Sync</a>
 <ul class="sectlevel2">
+<li><a href="#11-décembre-2022">11 décembre 2022</a></li>
 <li><a href="#30-octobre-2022">30 octobre 2022</a></li>
 <li><a href="#4-septembre-2022">4 septembre 2022</a></li>
 <li><a href="#31-juillet-2022-2">31 juillet 2022</a></li>
@@ -566,9 +567,9 @@
 </li>
 <li><a href="#cloud-volumes-ontap">Cloud Volumes ONTAP</a>
 <ul class="sectlevel2">
+<li><a href="#8-décembre-2022">8 décembre 2022</a></li>
 <li><a href="#4-décembre-2022-2">4 décembre 2022</a></li>
-<li><a href="#6-novembre-2022-3">6 novembre 2022</a></li>
-<li><a href="#18-septembre-2022-2">18 septembre 2022</a></li>
+<li><a href="#15-novembre-2022">15 novembre 2022</a></li>
 </ul>
 </li>
 <li><a href="#cloud-volumes-service-pour-gcp">Cloud Volumes Service pour GCP</a>
@@ -589,7 +590,7 @@
 </li>
 <li><a href="#systèmes-e-series">Systèmes E-Series</a>
 <ul class="sectlevel2">
-<li><a href="#18-septembre-2022-3">18 septembre 2022</a></li>
+<li><a href="#18-septembre-2022-2">18 septembre 2022</a></li>
 </ul>
 </li>
 <li><a href="#cache-global-de-fichiers">Cache global de fichiers</a>
@@ -602,7 +603,7 @@
 <li><a href="#kubernetes">Kubernetes</a>
 <ul class="sectlevel2">
 <li><a href="#06-novembre-2022">06 novembre 2022</a></li>
-<li><a href="#18-septembre-2022-4">18 septembre 2022</a></li>
+<li><a href="#18-septembre-2022-3">18 septembre 2022</a></li>
 <li><a href="#31-juillet-2022-3">31 juillet 2022</a></li>
 </ul>
 </li>
@@ -610,20 +611,20 @@
 <li><a href="#clusters-ontap-sur-site">Clusters ONTAP sur site</a>
 <ul class="sectlevel2">
 <li><a href="#4-décembre-2022-3">4 décembre 2022</a></li>
-<li><a href="#18-septembre-2022-5">18 septembre 2022</a></li>
+<li><a href="#18-septembre-2022-4">18 septembre 2022</a></li>
 <li><a href="#7-juin-2022">7 juin 2022</a></li>
 </ul>
 </li>
 <li><a href="#protection-contre-les-ransomwares">Protection contre les ransomwares</a>
 <ul class="sectlevel2">
+<li><a href="#11-décembre-2022-2">11 décembre 2022</a></li>
 <li><a href="#13-novembre-2022">13 novembre 2022</a></li>
 <li><a href="#6-septembre-2022">6 septembre 2022</a></li>
-<li><a href="#7-août-2022">7 août 2022</a></li>
 </ul>
 </li>
 <li><a href="#la-réplication">La réplication</a>
 <ul class="sectlevel2">
-<li><a href="#18-septembre-2022-6">18 septembre 2022</a></li>
+<li><a href="#18-septembre-2022-5">18 septembre 2022</a></li>
 <li><a href="#31-juillet-2022-4">31 juillet 2022</a></li>
 <li><a href="#2-septembre-2021">2 septembre 2021</a></li>
 </ul>
@@ -631,7 +632,7 @@
 <li><a href="#service-snapcenter">Service SnapCenter</a></li>
 <li><a href="#storagegrid">StorageGRID</a>
 <ul class="sectlevel2">
-<li><a href="#18-septembre-2022-7">18 septembre 2022</a></li>
+<li><a href="#18-septembre-2022-6">18 septembre 2022</a></li>
 </ul>
 </li>
 </ul>
@@ -1087,6 +1088,41 @@
 <h2 id="sens-des-données-cloud">Sens des données cloud</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="11-décembre-2022-version-1-18">11 décembre 2022 (version 1.18)</h3>
+<div class="sect3">
+<h4 id="améliorations-apportées-à-linstallation-sur-site">Améliorations apportées à l&#8217;installation sur site</h4>
+<div class="paragraph">
+<p>Plusieurs améliorations ont été ajoutées à l&#8217;installation de Data Sense sur site :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Certaines conditions préalables supplémentaires sont maintenant vérifiées avant que l&#8217;installation ne démarre sur un hôte sur site. Ainsi, vous vous assurez que votre système hôte est 100 % prêt à installer le logiciel Data Sense :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>vérifiez que l&#8217;espace est suffisant dans /var/lib/docker, /tmp et /opt</p>
+</li>
+<li>
+<p>testez les autorisations pertinentes sur tous les dossiers requis</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Dans la page Configuration, la section environnements de travail affiche maintenant le <em>ID de l&#8217;environnement de travail</em> et le <em>scanner Group</em> name. Vous devrez connaître l&#8217;ID de l&#8217;environnement de travail si vous prévoyez d&#8217;utiliser plusieurs hôtes Data Sense pour fournir une puissance de traitement supplémentaire pour analyser vos sources de données.</p>
+</li>
+<li>
+<p>Dans la page Configuration, une nouvelle section affiche les groupes de scanner que vous avez configurés et les nœuds de scanner qui se trouvent dans chaque groupe.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-deploy-compliance-onprem.html">"En savoir plus sur l&#8217;installation de Data Sense sur un serveur hôte unique et sur plusieurs hôtes"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="13-novembre-2022-version-1-17">13 novembre 2022 (version 1.17)</h3>
 <div class="sect3">
 <h4 id="prise-en-charge-de-la-numérisation-des-comptes-sharepoint-sur-site">Prise en charge de la numérisation des comptes SharePoint sur site</h4>
@@ -1149,79 +1185,42 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="7-août-2022-version-1-15">7 août 2022 (version 1.15)</h3>
-<div class="sect3">
-<h4 id="cinq-nouveaux-types-de-données-personnelles-de-la-nouvelle-zélande-sont-identifiés-par-data-sense">Cinq nouveaux types de données personnelles de la Nouvelle-Zélande sont identifiés par Data Sense</h4>
-<div class="paragraph">
-<p>Data Sense peut identifier et catégoriser les fichiers contenant les types de données suivants :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Numéro de compte bancaire de la Nouvelle-Zélande</p>
-</li>
-<li>
-<p>Numéro de permis de conduire de la Nouvelle-Zélande</p>
-</li>
-<li>
-<p>Numéro IRD de Nouvelle-Zélande (ID taxe)</p>
-</li>
-<li>
-<p>Numéro NHI (National Health Index) de la Nouvelle-Zélande </p>
-</li>
-<li>
-<p>Numéro de passeport de la Nouvelle-Zélande</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><a href="reference-private-data-categories.html#types-of-personal-data">"Consultez tous les types de données personnelles que Data Sense peut identifier dans vos données"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="possibilité-dajouter-un-fichier-de-navigation-pour-indiquer-pourquoi-un-fichier-a-été-déplacé">Possibilité d&#8217;ajouter un fichier de navigation pour indiquer pourquoi un fichier a été déplacé</h4>
-<div class="paragraph">
-<p>Lorsque vous utilisez la fonction détection de données pour déplacer les fichiers source vers un partage NFS, vous pouvez maintenant laisser un fichier de navigation à l&#8217;emplacement du fichier déplacé. Un fichier de navigation permet à vos utilisateurs de comprendre pourquoi un fichier a été déplacé de son emplacement d&#8217;origine. Pour chaque fichier déplacé, le système crée un fichier de navigation à l&#8217;emplacement source nommé <code>&lt;filename&gt;-breadcrumb-&lt;date&gt;.txt</code> pour afficher l&#8217;emplacement où le fichier a été déplacé et l&#8217;utilisateur qui a déplacé le fichier. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share" target="_blank" rel="noopener">"En savoir plus &gt;&gt;"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="les-données-personnelles-et-les-données-personnelles-sensibles-contenues-dans-vos-répertoires-sont-affichées-dans-les-résultats-de-lenquête">Les données personnelles et les données personnelles sensibles contenues dans vos répertoires sont affichées dans les résultats de l&#8217;enquête</h4>
-<div class="paragraph">
-<p>La page Data Investigation affiche maintenant les résultats des données personnelles et des données personnelles sensibles trouvées dans vos répertoires (dossiers et partages). <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-controlling-private-data.html#viewing-files-that-contain-personal-data" target="_blank" rel="noopener">"Voir un exemple ici"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="afficher-létat-du-nombre-de-volumes-de-compartiments-etc-classés">Afficher l&#8217;état du nombre de volumes, de compartiments, etc. Classés</h4>
-<div class="paragraph">
-<p>Lorsque vous visualisez les différents référentiels, Data Sense est analyse (volumes, compartiments, etc.), vous pouvez maintenant voir combien d&#8217;entre eux ont été « mappés » et combien d&#8217;entre eux ont été « classés ». Le classement est plus long lorsque l&#8217;identification complète de l&#8217;IA est effectuée sur toutes les données. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-repo-scanning.html#viewing-the-scan-status-for-your-repositories" target="_blank" rel="noopener">"Voir comment afficher ces informations"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="vous-pouvez-maintenant-ajouter-des-modèles-personnalisés-que-data-sense-identifie-dans-vos-données">Vous pouvez maintenant ajouter des modèles personnalisés que Data Sense identifie dans vos données</h4>
-<div class="paragraph">
-<p>Il existe deux façons d&#8217;ajouter des « données personnelles » personnalisées que Data Sense identifiera dans les analyses futures. Vous disposez ainsi d&#8217;une vision globale de l&#8217;emplacement des données potentiellement sensibles dans les fichiers de votre entreprise.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Vous pouvez ajouter des mots-clés personnalisés à partir d&#8217;un fichier texte.</p>
-</li>
-<li>
-<p>Vous pouvez ajouter un motif personnel à l&#8217;aide d&#8217;une expression régulière (regex).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ces mots-clés et modèles sont ajoutés aux modèles prédéfinis existants que Data Sense utilise déjà et les résultats seront visibles sous la section modèles personnels. <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-data-fusion.html" target="_blank" rel="noopener">"En savoir plus &gt;&gt;"</a>.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="cloud-sync">Cloud Sync</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="11-décembre-2022">11 décembre 2022</h3>
+<div class="sect3">
+<h4 id="filtrez-les-répertoires-par-nom">Filtrez les répertoires par nom</h4>
+<div class="paragraph">
+<p>Un nouveau paramètre <strong>exclure les noms de répertoire</strong> est maintenant disponible pour les relations de synchronisation. Les utilisateurs peuvent filtrer un maximum de 15 noms de répertoire depuis leur synchronisation. Les répertoires .copy-Offload, .snapshot, ~snapshot sont exclus par défaut.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html#settings">"En savoir plus sur le paramètre exclure les noms de répertoire"</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="prise-en-charge-supplémentaire-damazon-s3-et-de-ontap-s3-storage">Prise en charge supplémentaire d&#8217;Amazon S3 et de ONTAP S3 Storage</h4>
+<div class="paragraph">
+<p>Cloud Sync prend désormais en charge des relations de synchronisation supplémentaires pour AWS S3 et ONTAP S3 Storage :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS S3 vers le stockage ONTAP S3</p>
+</li>
+<li>
+<p>Stockage ONTAP S3 vers AWS S3</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-sync/reference-supported-relationships.html">"En savoir plus sur les relations de synchronisation prises en charge"</a>.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
 <h3 id="30-octobre-2022">30 octobre 2022</h3>
 <div class="sect3">
@@ -1510,6 +1509,15 @@
 <h2 id="cloud-volumes-ontap">Cloud Volumes ONTAP</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="8-décembre-2022">8 décembre 2022</h3>
+<div class="sect3">
+<h4 id="cloud-volumes-ontap-9-12-1">Cloud Volumes ONTAP 9.12.1</h4>
+<div class="paragraph">
+<p>BlueXP peut désormais déployer et gérer Cloud Volumes ONTAP 9.12.1, qui inclut également la prise en charge de nouvelles fonctionnalités et de régions de fournisseurs de cloud supplémentaires.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Découvrez les nouvelles fonctionnalités de cette version d&#8217;Cloud Volumes ONTAP"^]</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="4-décembre-2022-2">4 décembre 2022</h3>
 <div class="paragraph">
 <p>Les modifications suivantes ont été introduites avec la version 3.9.24 du connecteur.</p>
@@ -1528,81 +1536,17 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="6-novembre-2022-3">6 novembre 2022</h3>
+<h3 id="15-novembre-2022">15 novembre 2022</h3>
 <div class="paragraph">
 <p>Les modifications suivantes ont été introduites avec la version 3.9.23 du connecteur.</p>
 </div>
 <div class="sect3">
-<h4 id="déplacement-de-groupes-de-ressources-dans-azure">Déplacement de groupes de ressources dans Azure</h4>
+<h4 id="licence-ontap-s3-dans-gcp">Licence ONTAP S3 dans GCP</h4>
 <div class="paragraph">
-<p>Vous pouvez maintenant déplacer un environnement de travail d&#8217;un groupe de ressources vers un autre groupe de ressources dans Azure dans le même abonnement Azure.</p>
-</div>
-<div class="paragraph">
-<p>Pour plus d&#8217;informations, voir <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-moving-resource-groups-azure.html">"Déplacement de groupes de ressources"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="certification-ndmp-copie">Certification NDMP-copie</h4>
-<div class="paragraph">
-<p>NDMP-copy est désormais certifié pour Cloud Volume ONTAP.</p>
+<p>Une licence ONTAP S3 est désormais incluse sur les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.12.1 ou une version ultérieure dans Google Cloud Platform.</p>
 </div>
 <div class="paragraph">
-<p>Pour plus d&#8217;informations sur la configuration et l&#8217;utilisation de NDMP, reportez-vous à la section <a href="https://docs.netapp.com/us-en/ontap/ndmp/index.html">"Présentation de la configuration NDMP"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="prise-en-charge-du-chiffrement-de-disque-géré-pour-azure">Prise en charge du chiffrement de disque géré pour Azure</h4>
-<div class="paragraph">
-<p>Une nouvelle autorisation Azure a été ajoutée qui vous permet maintenant de chiffrer tous les disques gérés lors de leur création.</p>
-</div>
-<div class="paragraph">
-<p>Pour plus d&#8217;informations sur cette nouvelle fonctionnalité, voir <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-azure-encryption.html">"Configuration de Cloud Volumes ONTAP pour utiliser une clé gérée par le client dans Azure"</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="18-septembre-2022-2">18 septembre 2022</h3>
-<div class="paragraph">
-<p>Les modifications suivantes ont été introduites avec la version 3.9.22 du connecteur.</p>
-</div>
-<div class="sect3">
-<h4 id="améliorations-du-portefeuille-numérique">Améliorations du portefeuille numérique</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Le porte-monnaie numérique présente maintenant un résumé du package de licences d&#8217;E/S optimisées et de la capacité WORM provisionnée pour les systèmes Cloud Volumes ONTAP de votre compte.</p>
-<div class="paragraph">
-<p>Ces informations vous permettront de mieux comprendre la facturation et l&#8217;achat de capacité supplémentaire.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Découvrez comment afficher la capacité consommée dans votre compte"</a>.</p>
-</div>
-</li>
-<li>
-<p>Vous pouvez désormais passer d&#8217;une méthode de charge à la méthode de charge optimisée.</p>
-<div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html">"Apprenez à changer les méthodes de charge"</a>.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="optimisation-des-coûts-et-des-performances">Optimisation des coûts et des performances</h4>
-<div class="paragraph">
-<p>Vous pouvez désormais optimiser les coûts et les performances d&#8217;un système Cloud Volumes ONTAP directement à partir de la fenêtre Canvas.</p>
-</div>
-<div class="paragraph">
-<p>Après avoir sélectionné un environnement de travail, vous pouvez choisir l&#8217;option <strong>optimiser les coûts et les performances</strong> pour changer le type d&#8217;instance de Cloud Volumes ONTAP. La sélection d&#8217;une instance de plus petite taille peut vous aider à réduire les coûts, tandis que le passage à une instance de plus grande taille peut vous aider à optimiser les performances.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-optimize-cost-performance.png" alt="Capture d&#8217;écran de l&#8217;option optimiser le coût et les performances disponible sur la toile après avoir sélectionné un environnement de travail."></span></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="notifications-autosupport">Notifications AutoSupport</h4>
-<div class="paragraph">
-<p>BlueXP va maintenant générer une notification si un système Cloud Volumes ONTAP ne parvient pas à envoyer de messages AutoSupport. La notification comprend un lien vers des instructions qui vous aideront à résoudre les problèmes de mise en réseau.</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/object-storage-management/index.html" target="_blank" rel="noopener">"Découvrez comment configurer et gérer les services de stockage objet S3 dans ONTAP"</a></p>
 </div>
 </div>
 </div>
@@ -1691,7 +1635,7 @@
 <h2 id="systèmes-e-series">Systèmes E-Series</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="18-septembre-2022-3">18 septembre 2022</h3>
+<h3 id="18-septembre-2022-2">18 septembre 2022</h3>
 <div class="sect3">
 <h4 id="prise-en-charge-des-baies-e-series">Prise en charge des baies E-Series</h4>
 <div class="paragraph">
@@ -1788,7 +1732,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="18-septembre-2022-4">18 septembre 2022</h3>
+<h3 id="18-septembre-2022-3">18 septembre 2022</h3>
 <div class="paragraph">
 <p>Vous pouvez désormais importer des clusters OpenShift autogérés dans Cloud Manager.</p>
 </div>
@@ -1866,7 +1810,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="18-septembre-2022-5">18 septembre 2022</h3>
+<h3 id="18-septembre-2022-4">18 septembre 2022</h3>
 <div class="paragraph">
 <p>Les modifications suivantes ont été introduites avec la version 3.9.22 du connecteur.</p>
 </div>
@@ -1916,6 +1860,28 @@
 <h2 id="protection-contre-les-ransomwares">Protection contre les ransomwares</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="11-décembre-2022-2">11 décembre 2022</h3>
+<div class="sect3">
+<h4 id="de-nouvelles-actions-recommandées-ont-été-ajoutées-au-panneau-score-de-protection-contre-les-attaques-par-ransomware">De nouvelles actions recommandées ont été ajoutées au panneau Score de protection contre les attaques par ransomware</h4>
+<div class="paragraph">
+<p>Deux nouvelles actions recommandées sont maintenant affichées pour les problèmes de protection par ransomware suivants rencontrés sur vos systèmes de stockage :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Réduire les autorisations pour les éléments X sensibles avec des autorisations larges</em> - les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données</p>
+</li>
+<li>
+<p><em>Patch X Open CDE à travers les sources de données y</em> - des CVC non corrigés ont été trouvés sur vos systèmes ONTAP</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vous pouvez sélectionner ces actions dans l&#8217;interface utilisateur, puis suivre le workflow pour résoudre les problèmes sous-jacents. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#list-of-recommended-actions">"Voir la liste de toutes les actions recommandées"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="13-novembre-2022">13 novembre 2022</h3>
 <div class="sect3">
 <h4 id="nouveaux-panneaux-pour-afficher-votre-score-global-de-protection-contre-les-attaques-par-ransomware-et-les-actions-recommandées">Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées</h4>
@@ -1933,28 +1899,13 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="7-août-2022">7 août 2022</h3>
-<div class="sect3">
-<h4 id="nouveau-panneau-pour-afficher-les-failles-de-sécurité-sur-vos-clusters">Nouveau panneau pour afficher les failles de sécurité sur vos clusters</h4>
-<div class="paragraph">
-<p>Le panneau « <em>Storage system VulnerVulnerfaille</em> » affiche le nombre total de vulnérabilités de sécurité élevées, moyennes et faibles que l&#8217;outil conseiller numérique Active IQ a trouvées sur chacun de vos clusters ONTAP. Il est important d&#8217;immédiatement vérifier que vos systèmes ne sont pas ouverts aux attaques. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#storage-system-vulnerabilities" target="_blank" rel="noopener">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nouveau-panneau-pour-afficher-les-fichiers-numérisés-immuables">Nouveau panneau pour afficher les fichiers numérisés immuables</h4>
-<div class="paragraph">
-<p>Le panneau <em>Critical Data immuabilité</em> affiche le nombre d&#8217;éléments de vos environnements de travail protégés contre les modifications et suppressions sur le stockage WORM grâce à la technologie ONTAP SnapLock. Vous pouvez ainsi afficher la quantité de données dont la copie est inaltérable, pour mieux comprendre vos plans de sauvegarde et de restauration par rapport aux attaques par ransomware. <a href="https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#data-in-your-volumes-that-are-being-protected-using-snaplock" target="_blank" rel="noopener">"Cliquez ici pour plus d&#8217;informations"</a>.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="la-réplication">La réplication</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="18-septembre-2022-6">18 septembre 2022</h3>
+<h3 id="18-septembre-2022-5">18 septembre 2022</h3>
 <div class="sect3">
 <h4 id="fsx-pour-ontap-vers-cloud-volumes-ontap">FSX pour ONTAP vers Cloud Volumes ONTAP</h4>
 <div class="paragraph">
@@ -2013,7 +1964,7 @@
 <h2 id="storagegrid">StorageGRID</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="18-septembre-2022-7">18 septembre 2022</h3>
+<h3 id="18-septembre-2022-6">18 septembre 2022</h3>
 <div class="sect3">
 <h4 id="prise-en-charge-de-storagegrid">Prise en charge de StorageGRID</h4>
 <div class="paragraph">
